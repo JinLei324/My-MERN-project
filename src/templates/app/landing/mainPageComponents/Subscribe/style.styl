@@ -1,0 +1,97 @@
+.subscribeSection
+    margin-top: 60px
+    padding: 35px
+    .subscribePanel
+        display: flex
+        align-items: center
+        background-color: #1aaaff
+        border-radius: 10px
+        padding: 45px
+        justify-content: space-evenly
+        .caption
+            flex-basis: content
+            color: #ffffff
+            font-size: 19px
+            margin-right: 30px
+        .inputBody
+            display: flex
+            background-color: #ffffff
+            padding: 10px
+            border-radius: 5px
+            min-width: 500px
+            height: 25px
+            .email
+                width: 100%
+                outline: none
+                font-size: 14px
+                border: none
+                font-weight: bold
+            .subscribeBtn
+                cursor: pointer
+                background-color: #1AAAFF
+                border: none
+                padding: 5px 10px
+                border-radius: 8px
+                color: #ffffff
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+@media all and (max-width: 425px)
+    .subscribeSection
+        padding: 5px
+        .subscribePanel
+            display: block
+            padding: 10px 20px
+            .caption
+                margin-right: 0
+            .inputBody
+                min-width: 250px
+                display: block
+                background-color: #1aaaff
+                height: 90px
+                > input
+                    padding: 10px
+                    border-radius: 5px
+                    text-align: center
+                .subscribeBtn
+                    margin-top: 20px
+                    background-color: #ffffff
+                    color: #1aaaff
+
+@media (max-width: 575.98px)
+	.subscribeSection
+        margin-top: 60px
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+	.subscribeSection
+        margin-top: 60px
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+	.subscribeSection
+        margin-top: 60px
+
+// Extra large devices 1 (large desktops, 1024px and up)
+@media (min-width: 1024px) and (max-width: 1279.98px)
+	.subscribeSection
+        width: 900px
+
+// Extra large devices 2 (large desktops, 1200px and up)
+@media (min-width: 1280px) and (max-width: 1365.98px)
+	.subscribeSection
+        width: 900px
+
+// Extra large devices 3 (large desktops, 1366px and up)
+@media (min-width: 1366px) and (max-width: 1599.98px)
+	.subscribeSection
+        width: 1024px
+
+// Extra large devices 4 (large desktops, 1600px and up)
+@media (min-width: 1600px) and (max-width: 1921.98px)
+	.subscribeSection
+        width: 1024px
+
+// Extra large devices 5 (large desktops, 1920px and up)
+@media (min-width: 1920px)
+    .subscribeSection
+        width: 1024px

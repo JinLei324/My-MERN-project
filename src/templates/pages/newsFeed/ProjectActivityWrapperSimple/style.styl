@@ -1,0 +1,69 @@
+.project-activity-wrapper
+	.activity-wrapper
+		.captionFlexBody
+			display: flex
+			justify-content: space-between
+			p
+				margin: 5px 0 0 0
+				font-weight: bold
+		.valueFlexBody
+			display: flex
+			justify-content: space-between
+			> div
+				display: flex
+				justify-content: space-between
+				width: 100%
+			p
+				margin: 5px 0
+				&.total
+					color: #20AFFF
+		.summary
+			display: flex
+			width: 100%
+			justify-content: space-between
+			align-items: center
+			margin-top: 5px
+			> div
+				text-align: center
+				border-right: 1px solid #eeeeee
+				justify-content: center
+				&.col-5
+					flex-basis: 41.66666666%
+					width: 41.66666666%
+				&.col-4
+					flex-basis: 33.33333333%
+					width: 33.33333333%
+				&.col-3
+					flex-basis: 25%
+					width: 25%
+				&:last-child
+					border-right: none
+				> div
+					text-align: center
+					&.current
+						p
+							color: #1AAAFF
+					p
+						font-family: Roboto
+						font-style: normaldate, location, type
+						font-weight: normal
+						font-size: 11px
+						line-height: 14px
+						margin: 0
+						color: #666666
+						&:first-child
+							margin-right: 5px
+				.more
+					margin-top: 0
+					button
+						padding: 5px 20px !important
+						border-radius: 0
+
+@media all and (max-width: 576px)
+	.project-activity-wrapper
+		.activity-wrapper
+			.summary
+				> div
+					.more
+						button
+							padding: 5px 15px !important

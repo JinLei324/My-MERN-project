@@ -1,0 +1,508 @@
+@import './FollowNoti/style.styl'
+@import './NotifyItem/style.styl'
+
+.headerMenu
+	flex 1
+	position relative
+	max-width: 70px
+	.desktop-view
+		display block
+	.mobile-view
+		display none
+	.noti-icon
+		position relative
+		margin-right 10px
+		cursor pointer
+		.menu-notify
+			width 22px
+			height 22px
+			background-image url('/images/ui-icon/landing/icon-notify.svg')
+			background-repeat round
+		.notify-count
+			background #FF3627
+			m-font(Roboto, normal, bold, normal, 12px)
+			color #fff
+			m-flex()
+			width 18px
+			height 18px
+			border-radius 50%
+			position absolute
+			top -10px
+			right -5px
+		.notify-list
+			background #fff
+			box-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+			border-radius 0
+			position relative
+			margin-top 16px	
+			position absolute
+			padding 10px 15px
+			margin 0px
+			top 45px
+			right -40px
+			width 300px
+			display none
+			&.open
+				display block
+			&:after
+				content: ' ';
+				position: absolute;
+				top: -8px;
+				right: 41px;
+				border-bottom: 15px solid #fff;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				width: 0;
+				height: 0;
+			.title-row
+				m-flex(space-between)
+				border-bottom 1px solid #CCCCCC
+				padding 6px 0px
+				._title
+					m-font(Roboto, normal, bold, normal, 14px)
+					color #666
+				.noti-type
+					m-flex()
+					.noti-but
+						position relative						
+						border 1px solid #CCCCCC
+						padding 3px
+						border-radius 50%
+						&.noti
+							margin-right 10px
+						._icon
+							width 15px
+							height 15px							
+							background-repeat round
+							&.noti
+								background-image url('/images/ui-icon/landing/icon-notify.svg')
+							&.add
+								background-image url('/images/ui-icon/sidemenu/menu_volunteer.svg')	
+						._count
+							background #FF3627
+							m-font(Roboto, normal, bold, normal, 12px)
+							color #fff
+							m-flex()
+							width 18px
+							height 18px
+							border-radius 50%
+							position absolute
+							top -10px
+							right -7px
+						&.active
+							border 1px solid $first-color
+							._icon
+								&.noti
+									background-image url('/images/ui-icon/landing/active-icon-notify.svg')
+								&.add
+									background-image url('/images/ui-icon/sidemenu/active_menu_volunteer.svg')	
+			.notification-list				
+				max-height 50vh
+				overflow-y scroll
+				.notification-type-title
+					color: #666666
+					margin: 25px 0 0px 0
+	.menu-toggle
+		width 22px
+		height 22px
+		background-image url('/images/ui-icon/landing/menu-toggle.svg')
+		background-repeat round
+	.wrapper
+		m-flex(flex-end, center)
+		.drop-down-menu
+			margin-left -10px
+			.menu
+				width 110px
+			.submenu-item
+				color #1aaaff 
+		.guest-menu
+			font-size: 17px
+			line-height: 21px
+			font-weight: normal
+			color $first-color
+			padding 0px 15px
+			m-flex()
+			text-align center
+			&.home-guest-menu
+				color white
+		a
+			text-decoration: none
+		.m-r-10
+			margin-right 10px
+		/*.info-wrapper
+			display: flex
+			justify-content: center
+			align-items: center
+			.userName
+				font-weight 500
+				pointer-events none
+				font-size 14px
+				margin 0 15px 0 11px
+				text-transform capitalize
+				color #333333
+				display block
+				white-space nowrap
+				text-overflow ellipsis
+				width 100px
+				overflow hidden
+		.myAvatar
+			position relative
+			width 32px
+			height 32px
+			border-radius 15px
+			background-size 75%
+			background-repeat no-repeat
+			background-position 50% 100%
+			background-image url("/images/ui-icon/avatar_placeholder.svg")
+			&:before
+				content ''
+				display block
+				width 100%
+				height 100%
+				position absolute
+				top 0
+				left 0
+				background-size cover
+				background-image url('/images/ui-icon/avatar_ellipse.svg')
+			.userTypeIconWrapper
+				position absolute
+				display block
+				right 0
+				bottom 0
+				width 13px
+				height 13px
+				background linear-gradient(0deg, #5A62FB, #5A62FB), linear-gradient(0deg, #AB64F5, #AB64F5), #FFFFFF
+				border 1px solid #FFFFFF
+				border-radius 10px
+				.userTypeIcon
+					height 8px
+					display block
+					background-size cover
+					width 6px
+					position absolute
+					top 20%
+					left 30%*/
+		.toggleProfile
+			position relative
+			cursor pointer
+			margin-right 15px
+			.profile
+				display block
+				width 22px
+				height 22px
+				pointer-events none
+				background-image url('/images/ui-icon/icon-profile.svg')
+				background-repeat round
+		.toggleBlockForMenu			
+			cursor pointer
+			position relative
+			&.mobile
+				display: none
+			&.desktop
+				display: flex
+			.hamburger
+				width 22px
+				height 22px
+				pointer-events none
+				background-image url('/images/ui-icon/top-menu-inactive.svg')
+				background-repeat round
+			&.open
+				.hamburger
+					background-image url('/images/ui-icon/top-menu-active.svg')
+	.top-menu
+		position: absolute
+		top: 30px
+		right: -10px
+		z-index: 131
+		width: 300px
+		height: 0px
+		transition: .3s
+		overflow: hidden
+		border-radius: 0
+		&.open
+			height: auto
+			overflow: visible
+		&:before
+			content: ' ';
+			position: absolute;
+			top: -10px;
+			right: 14px;
+			border-bottom: 15px solid #fff;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			width: 0;
+			height: 0;
+		.content		
+			padding: 20px 32px
+			.button-group
+				background:  linear-gradient(90deg, $first-color 0%, $second-color 100%) left  bottom no-repeat; 
+				background-size:100% 2px ;
+				padding: 5px 0px
+				display: inline-flex
+				width: 100%
+				.but-signin
+					text-align: left
+					width: 50%
+					font-weight: 500
+					color: #000000;
+					font-size: 14px
+					cursor:pointer
+					.settings-img
+						margin-left: 10px
+						width: 25px
+				.but-join
+					color: #000000;
+					font-weight: 500
+					font-size: 14px
+					width: 50%
+					cursor:pointer
+					.logout-img
+						margin-right: 8px
+						width: 25px
+				.but-seperator
+					border-radius: 40px;
+					width: 2px
+					background:  linear-gradient(180deg, $first-color 0%, $second-color 100%) right  bottom no-repeat; 
+			.button-list
+				display: flex
+				justify-content: space-between
+				width: 100%
+				flex-wrap: wrap
+				padding: 10px 0px
+				.icon-button
+					padding: 10px 0px 0px
+					cursor:pointer
+					img
+						object-fit contain
+	.sideMenubar
+		display none
+	.postCardModalBody
+		.modalContent
+			width: 620px !important
+			max-width: 620px !important
+			.modalHeader
+				.closeBtn
+					z-index: 999
+
+@media all and (max-width: 768px)
+	.headerMenu
+		.menu-toggle
+			cursor pointer
+		.sideMenubar
+			position absolute
+			flex-direction column
+			background rgba(255, 255, 255, 0.9);
+			mix-blend-mode normal
+			box-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+			border-radius 0
+			transition transform .3s
+			transform translateX(202px)
+			width 200px
+			height 100vh
+			right -15px
+			top -22px
+			box-sizing border-box
+			padding 70px 20px 20px
+			overflow-y auto
+			&.open
+				display flex
+			.sidebarMenu
+				list-style none
+				margin 0
+				padding-left 30px
+				li
+					margin-bottom 10px
+			.submenu
+				opacity 0
+				visibility hidden
+				height auto
+				max-height 0
+				transition .3s
+				a
+					display block
+					margin-top 10px
+				&.open
+					opacity 1
+					visibility visible
+					max-height 1000px
+			.discoveryLink
+				margin 0 auto 25px
+				border: 1px solid #1aaaff
+			.searchBox
+				position relative
+				margin-bottom 25px
+				.icon-button
+					position absolute
+					top 10px
+					left 10px
+				input
+					background #fff
+					box-shadow 0px 4px 4px rgba(0,0,0,0.25)
+					border-radius 30px
+					border none
+					outline none
+					font-size 12px
+					padding 11px 11px 11px 30px
+					width 100%
+					box-sizing border-box
+					&::placeholder
+						color #9C9B9F
+			.auth-buttons
+				margin-bottom 25px
+				background linear-gradient(90deg,#1aaaff,#5eedfd) 0 100% no-repeat
+				background-size 100% 1px
+				padding 5px 0
+				display inline-flex
+				width 100%
+				.but-join
+					font-weight bold
+					text-decoration none
+					color #666666
+					width 50%
+					text-align center
+					.logout-img
+						margin-right: 0
+						width: 25px
+				p
+					margin: 0
+					font-size: 15px
+					font-weight: 700
+					line-height: 20px
+				.iconBody
+					height: 35px
+				a
+				.auth-btn
+					width 50%
+					text-align center
+					m-font(Roboto, normal, bold, normal, 14px)
+					color #666
+					text-decoration none
+					> div
+						height: 35px
+						.settings-img
+							width: 26px
+							height: auto
+						.logout-img
+							width: 20px
+							height: auto
+				.btn-seperator
+					width 1px
+					background linear-gradient(180deg, $first-color 0%, $second-color 100%) right  bottom no-repeat
+			a
+				font-weight bold
+				text-decoration none
+				color #666666
+			.nav-link
+				.icon-button
+					.font-icon
+						color $first-color
+						font-size 28px
+					span
+						margin-left 10px
+			.icon-button
+				span
+					margin-left 10px
+		.noti-icon
+			.notify-list
+				right: -80px
+				&:after
+					right: 81px
+		.wrapper
+			.toggleBlockForMenu
+				.hamburger
+					width: 20px
+					height: 20px
+				&.mobile
+					display: flex
+				&.desktop
+					display: none
+			.info-wrapper
+				.user	
+					margin-right: 20px				
+					width 20px
+					height 20px
+					pointer-events none
+					background-image url('/images/ui-icon/icon-profile.svg')
+					background-repeat round
+				.search				
+					margin-right: 20px
+					width 20px
+					height 20px
+					pointer-events none
+					background-image url('/images/ui-icon/search.svg')
+					background-repeat round
+		.desktop-view
+			display none !important
+		.mobile-view
+			display flex !important
+		.postCardModalBody
+			.modalContent
+				width: 100% !important
+				max-width: 100% !important
+				padding: 0 !important
+				.modalHeader
+					.closeBtn
+						z-index: 999
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+	.headerMenu
+		.wrapper
+			.guest-menu
+				font-size: 14px
+				line-height: 16px
+
+// Extra large devices 1 (large desktops, 1024px and up)
+@media (min-width: 1024px) and (max-width: 1279.98px)
+	.headerMenu
+		.wrapper
+			.guest-menu
+				font-size: 14px
+				line-height: 16px
+			.drop-down-menu
+				.menu
+					width 110px !important
+
+// Extra large devices 2 (large desktops, 1200px and up)
+@media (min-width: 1280px) and (max-width: 1365.98px)
+	.headerMenu
+		.wrapper
+			.guest-menu
+				font-size: 17px
+				line-height: 21px
+			.drop-down-menu
+				.menu
+					width 130px !important
+
+// Extra large devices 3 (large desktops, 1366px and up)
+@media (min-width: 1366px) and (max-width: 1599.98px)
+	.headerMenu
+		.wrapper
+			.guest-menu
+				font-size: 18px
+				line-height: 22px
+			.drop-down-menu
+				.menu
+					width 130px !important
+
+// Extra large devices 4 (large desktops, 1600px and up)
+@media (min-width: 1600px) and (max-width: 1921.98px)
+	.headerMenu
+		.wrapper
+			.guest-menu
+				font-size: 21px
+				line-height: 26px
+			.drop-down-menu
+				.menu
+					width 150px !important
+
+// Extra large devices 5 (large desktops, 1920px and up)
+@media (min-width: 1920px)
+	.headerMenu
+		.wrapper
+			.guest-menu
+				font-size: 26px
+				line-height: 31px
+			.drop-down-menu
+				.menu
+					width 170px !important

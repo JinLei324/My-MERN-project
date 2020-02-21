@@ -1,0 +1,66 @@
+footer
+    padding-top 30px
+    padding-bottom 30px
+    box-sizing border-box
+    .links
+        display: flex
+        margin: 30px auto 90px
+        max-width: 800px
+        justify-content: space-around
+        ul
+            margin: 0
+            padding: 0
+            width: 100%
+            &.horizMenu
+                list-style: none
+                display: flex
+                align-items: center
+                justify-content: space-around
+                li
+                    flex: 0 1 auto
+                    list-style-type: none
+                    line-height: 30px
+                    font-size: 14px
+                    font-weight: normal
+                    cursor: pointer
+                    ul
+                        list-style: none
+                        &.vertMenu
+                            li
+                                list-style-type: none
+                                text-align: left
+                                color: #666666
+                                &:first-child
+                                    text-transform: uppercase
+                                    font-size: 15px
+                                    font-weight: bold
+                                    color: #324148
+                                a
+                                    text-decoration: none
+                                    color: #666666
+                                    line-height: 30px
+                                    font-size: 14px
+                                    &.privacyLink
+                                        font-size: 16px
+                                        color: #666666
+                                        cursor: pointer
+                                        text-decoration: none
+                                    &.termsLink
+                                        fontSize: 16px
+                                        color: #666666
+                                        cursor: pointer
+                                        text-decoration: none
+    .copyright
+        display: flex
+        justify-content: space-between
+        font-size: 12px
+        color: #1AAAFF
+
+@media all and (max-width: 425px)
+    footer
+        .links
+            margin: 30px auto
+        .copyright
+            display: block
+            p
+                margin-top: 25px

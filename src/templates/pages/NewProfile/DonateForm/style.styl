@@ -1,0 +1,286 @@
+.donateFormSection
+    padding: 10px 15px 0 15px
+    .donationStep-1
+        .titleBody
+            display: flex
+            img
+                width: 30px
+                height: 30px
+                margin-right: 10px
+                vertical-align: middle
+            p
+                color: #20AFFF
+                font-size: 25px
+                font-weight: bold
+                line-height: 32px
+        .modal-title
+            font-size: 16px
+            font-weight: 400
+        .donate-input
+            flex-basis: 100px
+            text-align: right
+            align-self: flex-end
+            .input-wrapper
+                position: relative
+                margin-left: 15px
+                &:before
+                    content: "$"
+                    position: absolute
+                    bottom: 0
+            .donationValue
+                font-family: Roboto
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                font-size: 12px
+                border: none
+                border-bottom: 1px solid #1aaaff
+                outline: none
+                color: #333
+                width: 60px
+                padding-left: 10px
+        .flexBody
+            display: flex
+            .left
+                flex: 2 1
+                .caption
+                    color: #000000
+                    font-weight: bold
+                    font-size: 15px
+                    line-height: 21px
+            .right
+                flex: 3 1
+                p
+                    color: #000000
+                    font-weight: normal
+                    font-size: 15px
+                    line-height: 20px
+                input
+                    width: 100px
+                    border: 1px solid #20AFFF
+                    padding: 10px 20px
+                    color: #000000
+                    font-size: 15px
+                    line-height: 21px
+                    font-weight: normal
+        .tabBody
+            ul
+                &:after
+                    content: ' '
+                    display: table
+                    clear: both
+                &.tabs
+                    position: relative
+                    margin: 0
+                    padding: 0
+                    list-style: none
+                li
+                    text-align: center
+                    display: inline-block
+                    &.tab
+                        padding: 30px 10px 10px 10px
+                        cursor: pointer
+                        font-size: 15px
+                        font-weight: bold
+                        line-height: 21px
+                        color: #828282
+                        &.active
+                            color: #000000
+                        &:hover
+                            color: #000000
+                    &.tabs
+                        &__tab
+                            float: left
+                            width: 50%
+                            text-align: center
+                            &:first-child.active ~ .tabs__presentation-slider
+                                left: 0
+                            &:nth-child(2).active ~ .tabs__presentation-slider
+                                left: 50%
+                        &__presentation-slider
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            width: 50%
+                            height: 5px
+                            background-color: #20AFFF
+                            transition: left .25s
+        .tabContent
+            padding: 20px 0
+            .row
+                padding: 0 0 15px 0
+                p
+                    margin: 5px 0
+                    color: #000000
+                    font-size: 15px
+                    font-weight: normal
+                    line-height: 19px
+                input
+                    border: 2px solid #E0E0E0
+                    font-size: 15px
+                    line-height: 20px
+                    padding: 10px 15px
+                    width: 100%
+                    &::placeholder
+                        color: #4F4F4F
+                .frequencyValue, .value
+                    > div
+                        border-radius: 0
+                        border-color: #E0E0E0
+                        border-width: 2px
+                        height: 45px
+                        > div
+                            height: 44px
+            .center
+                text-align: center
+                margin-top: 10px
+                button
+                    border-radius: 0
+                    padding: 13px 60px
+                    span
+                        font-size: 18px !important
+                        font-weight: bold
+                        line-height: 22px
+    .donation-type
+        border-radius 40px
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow hidden
+        .button 
+            m-font(Roboto, normal, 500, normal, 14px)
+            background #fff
+            outline none
+            border none
+            color #666
+            &.active
+                background $first-color
+                border-radius 40px
+                color #fff
+            &.give
+                padding 10px 18px
+            &.recur
+                padding 10px 10px
+            &.receipt
+                padding 10px 24px
+            &.done
+                padding 10px 45px
+    .modal-row
+        .label-amount
+            m-font(Roboto, normal, bold, normal, 14px)
+            color $first-color
+        .amount-wrapper
+            position relative
+            margin-left 15px
+            &:before
+                content "$"
+                position absolute
+                bottom 0
+        .value-amount
+            border none
+            border-bottom 1px solid $first-color
+            outline none
+            max-width 60px
+            text-align center
+            padding-left 10px
+            box-sizing border-box
+            m-font(Roboto, normal, bold, normal, 12px)
+        .label
+            padding 0px
+            m-font(Roboto, normal, normal, normal, 12px)
+            color #666
+            display block
+            margin-bottom 5px
+        .memo-input
+            padding 8px
+            width 100%
+            background: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            box-sizing: border-box;
+            border-radius: 16px;
+            outline none
+            color #666
+            &:placeholder
+                m-font(Open Sans, normal, normal, normal, 14px)
+                color #DDD
+        .frequency-value
+            max-width 160px
+    .modal-title
+        m-font(Roboto, normal, bold, 25px, 14px)
+    .form-row
+        display flex
+        flex-wrap wrap
+        .form-group
+            margin 0
+            flex 1
+    .form-group
+        margin-bottom 20px
+        padding 0 5px
+        box-sizing border-box
+        .control-label
+            display block
+            font-size 12px
+            font-weight normal
+            margin-bottom 5px
+    .globalErrorHandler
+        opacity 0
+        margin 5px 0
+        transform translateY(10px)
+        transition-property opacity, transform
+        transition-duration 0.35s
+        transition-timing-function cubic-bezier(0.165, 0.84, 0.44, 1)
+        svg
+            margin-right 5px
+            vertical-align bottom
+            .base
+                fill #ff4060
+        &.show
+            opacity 1
+            transform none
+    .form-control
+        border-radius 0
+        border 1px solid #DDD
+        font-size 14px
+        padding 8px
+        width 100%
+        box-sizing border-box
+        outline none
+        &::placeholder
+            color #CCC
+    .donation-information
+        color #666
+        m-flex(space-between)
+        margin-bottom 15px
+        span
+            color #ccc
+    .accordion
+        &.open
+            .accordion-header
+                .caret
+                    transform rotate(180deg)
+                    display: none
+            .accordion-content
+                opacity 1
+                max-height unset
+                padding 10px 0
+        .accordion-header
+            cursor pointer
+            color #CCC
+            font-weight 500
+            .caret
+                transition transform .3s
+                display: none
+        .accordion-content
+            max-height 0
+            opacity 0
+            transition height .3s
+            color #ccc
+    ._stripeForm
+        margin 0 -5px
+        .card-element
+            background-color #fff
+            border 1px solid #ddd
+            border-radius 0
+            color #000
+            padding 6px
+        .form-group
+            margin-bottom 10px

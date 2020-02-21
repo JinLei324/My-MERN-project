@@ -1,0 +1,56 @@
+.games-page
+    font-weight 500
+    text-align center
+    max-width 920px
+    margin auto
+    box-sizing border-box
+    h2
+        font-size 32px
+        color #333
+    h4
+        font-size 18px
+        margin 10px 0
+        color #666
+    p
+        font-size 14px
+        font-weight normal
+        color #333
+        margin 0
+    .games-wrapper
+        display flex
+        flex-wrap wrap
+        margin-top 40px
+        .game-panel
+            display flex
+            flex-basis 20%
+            box-sizing border-box
+            margin 0 auto 20px
+            .game-body
+                display flex
+                flex-wrap wrap
+                box-sizing border-box
+                margin 0 auto auto
+                .game-img
+                    display flex
+                    justify-content center
+                    border-radius: 20px;
+                    background-color: #ec6433;
+                    margin: auto;
+                    cursor: pointer;
+                    width: 120px;
+                    height: 120px;
+                    padding 10px
+                    img
+                        align-self center
+                        width 100px
+                .game-text
+                    flex-basis 100%
+                    h4
+                        color #333
+
+@media all and (max-width: 768px)
+    .games-page
+        width 100%
+        .games-wrapper
+            .game-panel
+                flex-basis 100%

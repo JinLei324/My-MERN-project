@@ -1,0 +1,159 @@
+.contactDetailModal
+    .modalContent
+        width: 750px !important
+        max-width: 750px !important
+        max-height calc(100vh - 200px)
+        overflow: auto
+        .modalHeader
+            position: sticky
+        .content            
+            padding: 9px 10px
+            display: flex
+            flex-wrap: wrap
+            .left-content                
+                flex-basis: 65%
+                padding: 0px 10px
+                box-sizing: border-box                
+                .main-info
+                    display: flex
+                    .left-wrap
+                        flex: 2
+                        display: flex
+                        flex-direction column
+                        .info-wrapper
+                            display: flex
+                            align-items: center
+                            .empty-avatar
+                                width: 40px
+                                height: 40px
+                                background: rgba(188, 187, 187, 0.5)
+                                box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1)
+                                border-radius: 20px
+                            .label-name
+                                font-size: 20px
+                                color: $first-color
+                            .label-contact
+                                color: #979797
+                                font-size: 14px
+                                font-weight: bold
+                        .social-buttons
+                            display: flex
+                            margin-top: 20px
+                            .social-btn
+                                margin-right: 15px
+                    .right-wrap
+                        flex: 2
+                        display: flex
+                        flex-direction: column
+                        .icon-button
+                            padding: 0px 0px 10px 0px
+                            ._label
+                                font-size: 13px !important
+                                color: #666666
+                .donation-info
+                    padding: 40px 0px 20px 0
+                    background: linear-gradient(90deg, $first-color 0%, $first-color 100%) left bottom no-repeat
+                    background-size: 100% 1px
+                    display: flex
+                    align-items: center
+                    .info
+                        display: flex
+                        flex-direction: column
+                        text-align: center
+                        &.tot
+                            flex: 2.5
+                        &.last
+                            flex: 2.5
+                        &.volunteer
+                            flex: 2
+                        ._value
+                            padding-bottom: 10px
+                            color: $first-color
+                            font-size: 16px
+                        ._label
+                            color: #666666
+                            font-size: 14px
+                            font-weight: 500
+                .detail-info
+                    display: flex
+                    padding: 14px 0px
+                    &.border
+                        border-bottom: 1px solid #F6EFEF
+                    ._label
+                        color: #666666
+                        font-size: 14px
+                        font-weight: 500
+                        flex: 5
+                    ._value
+                        color: #666666
+                        font-size: 12px
+                        flex: 2
+                        text-align: center
+            .right-content
+                padding: 0px 10px 
+                box-sizing: border-box
+                flex-basis: 35%
+                display: flex
+                flex-direction: column
+                .icon-button
+                    padding: 0px 0px 10px 0px
+                    ._label
+                        font-size: 12px
+                        color: #666666
+                .activity
+                    display: flex
+                    background: linear-gradient(90deg, $first-color 0%, $first-color 100%) left bottom no-repeat
+                    background-size: 100% 1px
+                    padding: 30px 0px 15px
+                    align-items: flex-end
+                    ._icon
+                        width: 23px
+                        height: auto
+                        margin-right: 15px
+                    ._label
+                        color: #666666
+                        font-size: 18px
+                        font-weight: 500
+                        line-height normal
+                .activity-year
+                    color: #666666
+                    font-size: 18px
+                    line-height: normal
+                    margin: 30px 0 10px 0
+                .timeline
+                    position: relative
+                    &:before
+                        content: ""
+                        width: 1px
+                        height: 100%
+                        background: $first-color
+                        top: 0
+                        position: absolute
+                        left: 10px
+                    .timeline-item 
+                        margin-bottom: 30px
+                        position: relative
+                        &.no-bottom
+                            margin-bottom: 0px
+                        .timeline-icon
+                            background: white
+                            position: absolute
+                            top: 0
+                            img 
+                                position: relative
+                                padding: 8px 0px
+                                width: 20px
+                                height: 20px
+                        .timeline-content
+                            display: flex
+                            flex-direction: column
+                            padding-left: 30px
+                            .date
+                                color: #979797
+                                font-size: 12px
+                                line-height: normal
+                                margin-bottom: 8px
+                            .act
+                                color: #666666
+                                font-size: 13px
+                                line-height: normal

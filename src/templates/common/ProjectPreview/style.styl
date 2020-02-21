@@ -1,0 +1,45 @@
+.project-preview
+	size(100%, 100%)
+	position relative
+	.gradientPreview
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height  100%
+		background-image url(/images/proj_gradient.svg)
+		background-size cover
+	img.preview
+		size(100%, 100%)
+		max-height 170px
+		max-width 620px
+		object-fit cover
+	img.type
+		size(100%, 100%)
+		transform scale(0.5)
+
+	.type-project
+		size(40px, 40px)
+		disp-pos(absolute)
+		border 2px solid white
+		border-radius 50%
+		z-index 1
+		top -20px
+		right -20px
+		&.type-0
+			background linear-gradient(180deg, #F5A623 0%, #FBD249 100%);
+		&.type-1
+			background linear-gradient(180deg, #43A047 0%, #C3DEA5 100%)
+		&.type-2
+			background linear-gradient(180deg, #1AAAFF 0%, #5EEDFD 100%)
+
+	.text
+		m-font(Roboto, normal, 500, 18px, 18px)
+		color #333333
+		margin 0 25px
+		&-float
+			position absolute
+			bottom 25px
+			left 0
+			z-index 1
+			color white

@@ -1,0 +1,111 @@
+@import './PeopleYouKnow/style.styl'
+@import './ProjectsWeLove/style.styl'
+@import './ProjectCardSimple/style.styl'
+@import './ProjectActivityWrapperSimple/style.styl'
+
+.NewsFeedPage
+    margin 20px auto
+    box-sizing: content-box
+    display: flex
+    justify-content: center
+    .news-left
+        box-sizing: border-box
+        margin-right: 50px
+        min-width: 250px
+        display:none
+    .news-list
+        max-width: 100%;
+        box-sizing: border-box
+        .post-options
+            .post-lower
+                .rightFlexBody
+                    .shareBtn
+                        padding: 14px 80px !important
+        h1
+            color black
+        .postListPage
+            margin-top: 25px
+            .postCard
+                width: 620px
+                max-width: 620px
+    .news-right
+        box-sizing: border-box
+        margin-left: 50px
+        min-width: 350px
+        display: block
+        .right-sidebar
+            width: 350px
+            .projectsWeLoveBody
+                p
+                    &.title
+                        font-size: 22px
+                        font-weight: 500
+                        line-height: 30px
+                        color: #000000
+                        margin-bottom: 10px
+                .discoverMore
+                    margin-top: 20px
+                    > a
+                        color: #20AFFF
+                        text-decoration: underline
+
+@media all and (max-width: 1280px)
+    .NewsFeedPage
+        .news-list
+            .post-options
+                width: 500px
+                .post-lower
+                    .rightFlexBody
+                        .shareBtn
+                            padding: 10px 55px !important
+            .postListPage
+                max-width: 500px
+                .postCard
+                    width: 500px
+                    max-width: 500px
+                    &.post
+                        .post-main
+                            .post-preview
+                                .preview
+                                    width: 500px
+                                    max-width: 500px
+                            .postBottom
+                                .actionBody
+                                    padding: 15px 10px
+                                    .socialButton
+                                        padding: 0 15px 0 0
+        .news-right
+            margin-left: 40px
+
+@media all and (max-width: 1024px)
+    .NewsFeedPage
+        .news-list
+            .post-options
+                width: 450px
+                .post-lower
+                    .rightFlexBody
+                        .shareBtn
+                            padding: 10px 45px !important
+            .postListPage
+                max-width: 450px
+                .postCard
+                    width: 450px
+                    max-width: 450px
+                    &.post
+                        .post-main
+                            .post-preview
+                                .preview
+                                    width: 450px
+                                    max-width: 450px
+                            .postBottom
+                                .actionBody
+                                    padding: 15px 10px
+                                    .socialButton
+                                        padding: 0 10px 0 0
+        .news-right
+            margin-left: 30px
+
+@media all and (max-width: 962px)
+    .NewsFeedPage
+        .news-right
+            display: none

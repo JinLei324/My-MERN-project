@@ -1,0 +1,12 @@
+deploy:
+    only:
+        - master
+    script:
+        - git checkout master;
+        - git pull;
+        - npm i;
+        - npm run build;
+    stage: deploy
+
+stages:
+    - deploy

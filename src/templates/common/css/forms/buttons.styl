@@ -1,0 +1,124 @@
+@import "../vars.styl";
+
+/*--------------------------------------------------------------
+# BTN Styles
+--------------------------------------------------------------*/
+
+.btn {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 20px 30px;
+  border-color: transparent;
+
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 200ms ease-in;
+
+  &--brdr {
+    padding: 10px 30px;
+    min-width: 120px;
+    font-weight: 500;
+    font-size: 16px;
+
+    &-b {
+      background: transparent;
+      color: $blue;
+      border: 1px solid $blue;
+
+      &:hover {
+        background-color: $blue;
+        color: #ffffff;
+      }
+    }
+
+    &-w {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: $blue;
+      }
+    }
+  }
+
+  &--blue {
+    min-width: 270px;
+    background-color: $blue;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+  }
+
+  &--white {
+    min-width: 270px;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    color: $blue;
+  }
+
+  &--rounded {
+    border-radius: 20px;
+  }
+
+  &--sm {
+    padding: 5px 23px;
+    width: auto;
+    min-width: 1px;
+    font-weight: normal;
+  }
+
+  &--small {
+    min-width: 180px;
+    padding: 14px 50px;
+    background-color: $blue;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #F2F2F2;
+    cursor: pointer;
+  }
+
+  &--full {
+    min-width: 250px;
+    padding: 15px 42px;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.4;
+    text-transform: none;
+    transition: all 200ms ease-in;
+
+    &:hover {}
+  }
+
+  &--empty {
+    min-width: 270px;
+    padding: 19px 30px;
+    background-color: #FFFFFF;
+    border: 1px solid $blue;
+    font-weight: 500;
+    font-size: 18px;
+    color: $blue;
+  }
+}
+
+.btn-group {
+  display: block;
+
+  &--r {
+    text-align: right
+  }
+
+  &--c {
+    text-align: center
+  }
+
+  .btn:not(:last-child) {
+    margin-right: 30px
+  }
+}

@@ -1,0 +1,41 @@
+.nonprofitsCategoriesSection
+    display: none
+    margin-top: 15px
+    justify-content: space-between
+    padding: 0
+    .span
+            flex: 1 1
+    button
+        flex: 10 1
+        width: 100%
+        padding: 15px 20px !important
+        &.button-main-class
+            border-radius: 0
+            background: linear-gradient(to right, $blue-color 2.75%, $blue-color 88.2%)
+        &.categoriesBtn
+            background: linear-gradient(to right, #5A62FB 2.75%, #5A62FB 88.2%)
+        ._label
+            font-weight: bold
+
+@media all and (max-width: 425px)
+        .nonprofitsCategoriesSection
+                display: flex
+
+@media all and (max-width: 768px)
+	.nonprofitsCategoriesSection
+                display: flex
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)
+	.nonprofitsCategoriesSection
+                display: flex
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+	.nonprofitsCategoriesSection
+                display: flex
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+	.nonprofitsCategoriesSection
+                display: flex

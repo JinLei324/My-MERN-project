@@ -1,0 +1,43 @@
+.message
+    display: flex
+    padding-top: 15px
+    .message-body
+        display: flex;
+        flex-direction: column;
+        .message-box    
+            width: fit-content
+            margin-right: 8px
+            margin-left: 8px
+            border-radius: 8px;
+            background: #F7F7F7;
+            padding: 2px 8px
+            .user-name
+                color: #333333
+                font-size: 14px
+            .message-text
+                color #666666
+                font-size 14px
+                line-height 24px
+                font-weight normal
+                word-break break-all
+        .date-time
+            margin: 5px 8px
+            color: #CCCCCC;
+            font-size: 12px;
+            font-weight: normal
+    .message-avatar
+        visibility: visible
+    .message-avatar-right
+        visibility: hidden
+    &.current
+        justify-content: flex-end
+        .message-body
+            align-items: flex-end;
+            .message-box
+                background: $first-color;
+            .message-text
+                color: #fff
+        .message-avatar
+            visibility: hidden
+        .message-avatar-right
+            visibility: visible

@@ -1,0 +1,37 @@
+.CompainContainer
+	m-flex(space-between)
+	.DashboardHeader
+		font-size 20px
+		color #666666
+		font-weight bold
+		margin-top 20px
+		margin-left 10px
+		.DashCompanyName
+			color $first-color
+	.DashNavContainer
+		m-flex()
+		.DashNavLink
+			text-align center
+			padding 10px
+			position relative
+			.UnreadBadge
+					right 15px
+					top 0px
+					padding 5px 8px
+					border-radius 50%
+					background #ff3627
+					box-shadow 0px 4px 4px rgba(0,0,0,0.25)
+					color #fff
+					font-family Roboto
+					font-style normal
+					font-weight bold
+					line-height normal
+					font-size 14px
+					position absolute
+
+@media all and (max-width: 768px)
+	.CompainContainer
+		.DashboardHeader
+			font-size 14px
+		.DashNavContainer
+			display none

@@ -1,0 +1,59 @@
+.LayoutNotificationModal
+	position fixed
+	width 100vw
+	height 100vh
+	background-color rgba(0, 0, 0, .3)
+	top 0
+	left 0
+	display flex
+	z-index 9999
+	opacity 0
+	transition .3s
+	visibility hidden
+	justify-content center
+	align-items center
+	&.open
+		opacity 1
+		visibility visible
+	.wrapperForForm
+		width 352px
+		background #FFFFFF
+		box-shadow 0px 10px 20px rgba(0, 0, 0, 0.25)
+		border-radius 8px
+		box-sizing border-box
+		padding 40px 20px
+		position relative
+		.NotificationModal
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			h1
+				margin 0
+				font-weight bold
+				font-size 24px
+				text-align center
+				color $first-color
+			h4
+				margin 31px 0 0 0
+				font-family 'Open Sans'
+				font-style normal
+				font-weight normal
+				line-height normal
+				font-size 16px
+				text-align center
+				color #666666
+			> button
+				margin 40px 0 0 0
+			p
+				margin 35px 0 0 0
+				font-size 14px
+				text-align center
+				color #666666
+				> button
+					color $first-color
+					background-color transparent
+					border none 
+					cursor pointer
+					font-size 14px
+					text-decoration underline
+					outline none

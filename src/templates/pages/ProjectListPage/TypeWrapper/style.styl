@@ -1,0 +1,45 @@
+.typeWrapper
+	m-flex(space-around)
+	background #FFFFFF
+	.wrapper
+		m-flex()
+		padding 9px 0
+		flex 1
+		position relative
+		outline none
+		border none
+		background none
+		cursor pointer
+		overflow hidden
+		color inherit
+		.label
+			padding 0
+			color $gray-color1			
+		&[disabled]
+			opacity 0.5
+		&.active
+			border-bottom: 5px solid $blue-color
+			padding-bottom: 4px
+			.label
+				color black
+				padding 0
+
+	.type-project
+		size(40px, 40px)
+		disp-pos(absolute)
+		cursor pointer
+		border 2px solid #FFF
+		border-radius 50%
+		z-index 1
+		top 25px
+		right 25px
+		&.type-0
+			background linear-gradient(180deg, #F5A623 0%, #FBD249 100%);
+		&.type-1
+			background linear-gradient(180deg, #43A047 0%, #C3DEA5 100%)
+		&.type-2
+			background linear-gradient(180deg, #1AAAFF 0%, #5EEDFD 100%)
+	.label
+		m-font(Roboto, normal, normal, 19px, 14px)
+		padding-left 16px
+		padding-right 16px

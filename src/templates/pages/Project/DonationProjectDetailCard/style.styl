@@ -1,0 +1,53 @@
+.donationProjectDetailCardSection
+    width: 350px
+    margin-left: 50px
+    .donationProjectDetailCard
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)
+        margin-top: 0
+        .titleBody
+            display: flex
+            img
+                width: 30px
+                height: 30px
+                margin-right: 10px
+                vertical-align: middle
+            p
+                color: #20AFFF
+                font-size: 25px
+                font-weight: bold
+                line-height: 32px
+        .donatesListBody
+            margin-top: 20px
+            .eachDonate
+                display: flex
+                padding: 7px 0
+                align-items: center
+                justify-content: space-between
+                > div
+                    display: flex
+                    align-items: center
+                p
+                    margin: 0
+                    color: #333333
+                    font-weight: 500
+                    font-size: 15px
+                    &.name
+                        margin-left: 10px
+            .seeAllBtnBody
+                margin-top: 20px
+                .seeAllBtn
+                    cursor: pointer
+                    width: 100px
+                    margin: auto
+                    border: 1px solid #1aaaff
+                    padding: 12px 16px
+                    text-align: center
+                    p
+                        margin: 0
+                        font-size: 14px
+                        line-height: 16px
+                        color: #1aaaff
+
+@media all and (max-width: 768px)
+    .donationProjectDetailCardSection
+        display: none

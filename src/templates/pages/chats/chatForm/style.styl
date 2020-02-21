@@ -1,0 +1,113 @@
+
+::-webkit-scrollbar
+    background: #F7F7F7;
+    border-radius: 8px;
+    width: 8px
+::-webkit-scrollbar-thumb
+    background: #E5E0DE;
+    border-radius: 8px;
+.chat-form
+    max-width 500px
+    width: 100%
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 8px 8px 0px;
+    position: relative
+    height: calc(100vh - 120px)    
+    display: flex;
+    flex-direction: column
+    a
+        text-decoration none
+        m-flex()    
+    .info-wrapper
+        m-flex()
+        position: absolute
+        background: white
+        padding: 15px 30px
+        top: 0px
+        z-index: 5
+        box-sizing: border-box;
+        left: 0px
+        right: 8px
+        .btn-back
+            display none
+            cursor pointer
+    .chat-body
+        padding: 70px 30px 100px
+        overflow: auto
+        .load-more-wrapper
+            m-flex()
+        .day-separate
+            color: #666666;
+            font-size: 12px;
+            font-weight: normal
+            text-align: center
+            padding: 10px 0px
+    .input-message
+        position: absolute
+        bottom 0px
+        z-index 5
+        background : white
+        padding: 10px 30px 30px
+        left: 0px
+        right: 8px
+        box-sizing: border-box;
+        .typing-indicator
+            height: 20px
+            padding: 5px 0px
+            font-size: 12px
+            color: #666
+        .comment-wrapper
+            display: flex
+            .btn-send
+                cursor pointer
+            .comment-input
+                border: 1px solid #DDDDDD;
+                box-sizing: border-box;
+                border-radius: 0
+                padding: 6px 8px
+                width: 100%
+                m-flex(space-between)
+                margin-right 10px
+                #projectFileCreate
+                    display: none
+                ._input
+                    width: 100%
+                    font-size:14px
+                    border: none
+                    outline: none
+                    &::placeholder
+                        color: #B9BFCA;
+                .comment-button 
+                    padding: 0px 10px
+                    color: #CCCCCC
+                    border: none
+                    outline: none
+                    background: transparent
+@media all and (max-width: 768px)
+    .chat-form
+        display: none
+        &.active
+            display: flex
+        .info-wrapper
+            .btn-back
+                display block
+                position absolute
+                top 20px
+                left 20px
+            a
+                flex-wrap wrap
+                .avatar-wrapper
+                    flex-basis: 100%
+                    display: flex
+                    justify-content: center
+                .label
+                    flex-basis: 100%
+                    display: flex
+                    justify-content: center
+                    margin-top 10px
+        .chat-body
+            min-height: 320px
+            padding: 95px 12px 100px
+        .input-message
+            padding: 10px 12px

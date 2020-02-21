@@ -1,0 +1,88 @@
+.interests-wrapper
+	margin 10px 0
+	.interest
+		font-size 12px
+		color #666666
+		background #FFFFFF
+		box-shadow 0px 5px 10px rgba(0, 0, 0, 0.08)
+		border-radius 40px
+		display inline-block
+		padding 5px 10px
+		margin-top 10px
+		margin-right 10px
+.projectCardSimple
+	size(560px, fit-content)
+	padding: 0 !important
+	max-width: 100%
+	cursor: pointer
+	box-sizing: border-box
+	position: relative
+	box-shadow: 0 0 20px rgba(0, 0, 0, .15)
+	border-radius: 0
+	&.full
+		width 100%
+	.project-header
+		m-flex(justifyContent = space-between)
+		a
+			text-decoration none
+		.info-wrapper
+			m-flex()
+	.separator
+		size(100%, 25px)
+		&.separator-line
+			border-bottom 2px solid #999
+	.description
+		size(100%, fit-content)
+		position relative
+		margin-bottom: 10px
+		padding: 0 15px
+		p
+			position relative
+			overflow hidden
+			color #000000 !important
+			margin 15px 0
+			text-align left
+			white-space pre-wrap
+			word-break break-all
+			&.title
+				m-font(Roboto, normal, normal, 20px, 16px)
+			&.text
+				m-font(Roboto, normal, normal, 17px, 14px)
+				height: 68px
+		.action-button
+			width 90px
+			position absolute
+			right 0
+			top 0
+	.project-activity-wrapper
+		padding: 5px 15px 20px 15px
+	.summary
+		m-flex(space-between)
+		margin-top 5px
+		.current
+			font-size 14px
+			color $first-color
+	.more
+		m-flex()
+		margin-top 10px
+	.actions
+		m-flex(justifyContent = space-between)
+		color #999
+		.user-activity
+			m-font(Roboto, normal, normal, 16px, 14px)
+			.icon
+				margin-right 15px
+		.action
+			margin-right 30px
+			border-radius 15px
+			padding px
+			&:after
+				background linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%,rgba(205, 204, 204, 0.4) 100%)
+		
+		.share
+			margin-right 0
+			margin-left 15px	
+			.icon
+				margin-right 0
+				margin-left 15px
+		

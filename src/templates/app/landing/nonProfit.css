@@ -1,0 +1,54 @@
+.white-rnd-btn {
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #1AAAFF;
+    border: 1px solid #1AAAFF;
+    font-size: 16px;
+    font-weight: bold;
+    width: 170px;
+}
+
+.sky-rnd-btn {
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: #1AAAFF;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    width: 170px;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.cursor-btn {
+    cursor: pointer;
+}
+
+.schedule-btn {
+    padding: 10px 15px;
+    border-radius: 18px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #1AAAFF;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;    
+}
+
+.no-outline-btn {
+    outline: none;
+}
+
+.signup-free-btn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    color: #1AAAFF;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    font-size: 14px;
+    width: 140px;
+}

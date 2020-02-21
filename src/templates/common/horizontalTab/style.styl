@@ -1,0 +1,80 @@
+.innerTab
+    position relative
+    z-index 1
+    .CropperModal
+        padding 0
+        .MyEditor
+            h3
+                display none
+            .absoluteBorderForCropper
+                top 48px
+    .input-wrapper-date
+        display flex
+        align-items center
+        justify-content space-between
+        margin 12px 0
+        width 100%
+        .input-label
+            font-weight 500
+            font-size 14px
+            color #666
+        .date-input
+            width  150px
+            background-color transparent
+            padding 5px 0 1px 5px
+            position relative
+            z-index 2
+            font-size 14px
+            color #333333
+            height 40px
+            font-size 20px
+            outline none
+            border none
+            border-bottom 1px solid $first-color
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button,
+            &::-webkit-clear-button
+                -webkit-appearance none
+                margin 0
+            &::-webkit-calendar-picker-indicator 
+                color $first-color
+                background transparent
+	.input-wrapper-avatar
+		position relative
+		width 100%
+		.changeAvaProfileButton
+			margin 0 auto 24px auto
+			display block
+		.input-modal-auth-avatar
+			display none
+		label
+			margin 16px auto 24px auto
+			position relative
+			width 64px
+			border-radius 50px
+			height 64px
+			background-size 70%
+			display flex
+			justify-content center
+			align-items center
+			background-position 50% 100%
+			background-repeat no-repeat
+			cursor pointer
+			background-image url("/images/ui-icon/avatar_placeholder.svg")
+			.icon-placeholder
+				width 64px
+				height 64px
+				border-radius 20px
+				background-position center
+				background-size cover
+				background-repeat no-repeat
+				background-image url("/images/ui-icon/avatar_ellipse.svg")
+			.placeholder-avatar
+				display block
+				position absolute
+				top calc(100% + 19px)
+				width 120%
+				text-align center
+				font-size 14px
+				text-align center
+				color #999999

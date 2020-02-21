@@ -1,0 +1,113 @@
+.header
+    .header-top
+        .cn
+            .header-top__logo
+                &.loggedIn
+                    min-width: 310px
+                .logo
+                    width: 130px
+            .sign-up
+                margin-left: 20px
+                background-color: #20afff
+                color: #ffffff
+                &:hover
+                    color: #20afff
+                    background-color: #ffffff
+            .main-mnu
+                margin: auto
+                &.loggedIn
+                    margin: auto
+                ul
+                    li
+                        &.loggedInDiscoveryMenu
+                            flex: 10 1
+                            padding: 0
+                            > a
+                                display: flex
+                                border: 1px solid #20AFFF
+                                padding: 8px 30px
+                                > span
+                                    color: #20AFFF
+                                > img
+                                    margin-left: 5px
+            .searchWrapper
+                position: relative
+                margin-right: 20px
+                .search
+                    > input
+                        &.search-field
+                            &::placeholder
+                                color: #000000
+                .search-result
+                    position: absolute
+                    z-index: 1
+                    width: 220px
+                    left: 0
+                    top: 45px
+                    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15) 
+                    border-radius: 0
+                    background-color: #ffffff
+                    a
+                        text-decoration: none
+                    .all-result
+                        cursor: pointer
+                        padding: 8px 16px
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        border-bottom: 1px solid #DDDDDD;
+                        ._label
+                            color: #666666;
+                            line-height: 24px;
+                            font-size: 12px;
+                        ._img
+                            width: 8px
+                            height: 4px
+                            transform: rotate(-90deg);
+                    .search-body
+                        padding: 0px 16px 10px 16px
+                        max-height: 500px
+                        overflow: scroll
+                        .no-result
+                            padding: 10px 10px
+                            color: #666666
+                            font-size: 10px
+                            font-weight: normal
+                        .group-label
+                            padding: 8px 0px
+                            color: #666666
+                            font-size: 12px
+                            text-align: left
+                        .info-wrapper
+                            cursor: pointer
+                            display: flex
+                            align-items: center
+                            padding-bottom: 10px
+                            .label-name
+                                color: #333333;
+                                font-size: 12px
+                                line-height: 15px
+                                height: 30px
+                                padding-left: 10px
+                                text-align: left
+                                text-overflow: ellipsis
+                                white-space: pre-wrap
+                                overflow: hidden
+                
+@media all and (max-width: 768px)
+    .header
+        .header-top
+            .cn
+                .header-top__logo
+                    &.loggedIn
+                        min-width: 130px
+                    .logo
+                        width: 130px
+                .main-mnu
+                    &.loggedIn
+                        margin: 0
+                    ul
+                        li
+                            &.loggedInDiscoveryMenu
+                                flex: 10 1
+                                padding: 0

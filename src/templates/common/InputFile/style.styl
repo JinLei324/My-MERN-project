@@ -1,0 +1,65 @@
+.inputfile
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+    & + label
+        font-size: 1.25rem
+        font-weight: 700
+        text-overflow: ellipsis
+        white-space: nowrap
+        cursor: pointer
+        display: inline-block
+        overflow: hidden
+        color: #d3394c
+        border: 1px solid #d3394c
+        padding: 0
+        border-radius 20px
+        outline none
+        &:hover
+            border-color: #722040
+            strong
+                background -webkit-linear-gradient(left, #ad0c00 0%, #dd8200 100%)
+                background linear-gradient(90deg, #ad0c00 0%, #dd8200 100%)
+        span, strong
+            padding: 8px 16px
+            font-size: 16px;
+            font-weight: normal;
+        span
+            width: 200px
+            min-height: 2em
+            display: inline-block
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow: hidden
+            vertical-align: top
+            box-sizing border-box
+        strong
+            height 100%
+            color #f1e5e6
+            display inline-block
+            margin-right -1px
+            box-sizing border-box
+            background -webkit-linear-gradient(left, $first-color 0%, $second-color 100%)
+            background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+            transition .3s
+        svg 
+            width: 1em
+            height: 1em
+            vertical-align: middle
+            fill: currentColor
+            margin-top: -0.25em
+            margin-right: 0.25em
+
+    &:focus + label,
+    &.has-focus + label 
+        outline: none
+        border-color: #722040
+        strong
+            background-color: #722040
+
+@media screen and (max-width: 50em) 
+	.inputfile + label strong 
+		display: block

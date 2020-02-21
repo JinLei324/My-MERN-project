@@ -1,0 +1,171 @@
+.AuthModal
+	box-sizing border-box
+	background #FFFFFF
+	box-shadow 0px 10px 20px rgba(0, 0, 0, 0.25)
+	border-radius 0
+	> div 
+		display flex
+		flex-direction column
+		justify-content space-between
+	.form-wrapper
+		display flex
+		flex-wrap wrap
+		align-items center
+		justify-content center
+		max-width 352px
+		padding 20px
+		box-sizing border-box
+		.select-button
+			margin-top 20px
+			border-radius: 0
+			&.without-bottom-link
+				margin 20px 0
+		.change-route-in-modal
+			margin-top 20px
+			text-align center
+			flex-basis 100%
+			.text-to-type
+				line-height 36px
+				font-size 14px
+				text-align center
+				color #666666
+				margin-right 10px
+			.link-to-type
+				outline none 
+				border none 
+				cursor pointer
+				background none
+				font-size 14px
+				text-align center
+				color $first-color
+				text-decoration underline
+			&.second-in-page
+				margin 10px 0 0 0
+				.link-to-type
+					margin-top 10px
+		.input-wrapper
+			position relative
+			margin 16px 0
+			padding 0 5px
+			flex-basis 100%
+			box-sizing border-box
+			&.width-50
+				flex-basis 50%
+			&.with-location
+				z-index 2
+			&.with-billing
+				z-index 2
+			&.interest-sel
+				z-index 5
+			.control-label
+				font-size 14px
+				color #999999
+				margin-bottom 5px
+			.autocomplete-dropdown-container
+				position absolute
+				/*top 47px*/
+				bottom 35px
+				background-color white
+				left 0
+				width 98%
+				z-index 999
+				font-size 14px
+				color #999
+				box-sizing border-box
+			.globalErrorHandler
+				position absolute
+				left 5px
+				top 104%
+				font-size 12px
+				color #FF4060
+			.input-modal-auth
+				width 96%
+				background-color transparent
+				padding 5px 0 1px 5px
+				position relative
+				z-index 2
+				font-size 14px
+				color #333333
+				height 34px
+				font-size 20px
+				outline none
+				border none
+				border-bottom 1px solid $first-color
+				box-sizing border-box
+				+ .placeholder
+					font-size 14px
+					color #999999
+					position absolute
+					left 5px
+					transition .1s
+					z-index 1
+					top 10px
+				&:not([value=""]),
+				&:focus
+					+ .placeholder
+						transition .1s
+						top -20px
+		.input-wrapper-avatar
+			position relative
+			width 100%
+			.input-modal-auth-avatar
+				display none
+			label
+				margin 10px auto 40px auto
+				position relative
+				width 80px
+				border-radius 50px
+				height 80px
+				display flex
+				justify-content center
+				align-items center
+				background-position 50% 100%
+				background-repeat no-repeat
+				cursor pointer
+				background-image url("/images/ui-icon/avatar_placeholder.svg")
+				.icon-placeholder
+					width 80px
+					height 80px
+					border-radius 20px
+					background-position center
+					background-repeat no-repeat
+					background-image url("/images/ui-icon/avatar_ellipse.svg")
+				.placeholder-avatar
+					display block
+					position absolute
+					top calc(100% + 19px)
+					width 120%
+					text-align center
+					font-size 14px
+					text-align center
+					color #999999
+		.input-wrapper-date
+			display flex
+			align-items center
+			justify-content space-between
+			margin 12px 0
+			width 90%
+			.input-label
+				font-size 14px
+				color #999999
+			.date-input
+				width  150px
+				background-color transparent
+				padding 5px 0 1px 5px
+				position relative
+				z-index 2
+				font-size 14px
+				color #333333
+				height 40px
+				font-size 20px
+				outline none
+				border none
+				border-bottom 1px solid $first-color
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button,
+				&::-webkit-clear-button
+					-webkit-appearance none
+					margin 0
+				&::-webkit-calendar-picker-indicator 
+					color $first-color
+					background transparent

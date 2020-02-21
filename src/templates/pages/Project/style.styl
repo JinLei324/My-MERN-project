@@ -1,0 +1,643 @@
+@import './DonationProjectDetailCard/style.styl'
+
+.react-confirm-alert-body
+	text-align: center;
+	width: 300px
+	> h1
+		font-size: 20px
+		color: #1aaaff
+		padding: 0 0 10px 0
+	.react-confirm-alert-button-group
+		justify-content: center
+
+.facebookFlexWrapper
+	// display: flex
+	.facebook-btn
+		cursor: pointer
+		flex-basis: 1 1
+		width: 300px
+		margin: auto
+		.facebookIconWrapper
+			// display: flex
+			margin-top: 8px
+			border: 1px solid #1aaaff
+			background-color: #ffffff
+			padding: 12px 16px
+			text-align: center
+			p
+				margin: 0
+				font-size: 14px
+				line-height: 16px
+				color: #1aaaff
+			.facebookShareIcon
+				margin-left: 5px
+				width: 15px
+	.control-project
+		m-flex(flex-end)
+		width: 100%
+		button
+			margin-left 5px
+			width 70px
+			&.turnOffBtn
+				width: 70px
+			&.cancelBtn
+				width: 50px
+			&.editBtn
+				width: 50px
+			&.controll-button
+				min-width 50px
+				width fit-content
+.request-users
+	margin 0
+	padding 0
+	list-style none
+	li
+		display inline-block
+		vertical-align middle
+		margin-left 5px
+		margin-bottom 5px
+		width: 30px
+		height: 30px
+		&.rest-users
+			background-color #979797
+			border-radius 15px
+			padding 3px 5px
+			font-size 18px
+			font-weight: bold
+			font-weight lighter
+			color #fff
+			margin-left: 5px
+			width: 30px !important
+			height: 30px !important
+		.UserAvatar
+			width: 30px !important
+			height: 30px !important
+			min-width: 30px !important
+			min-height: 30px !important
+			.avatar-wrapper
+				width: 30px !important
+				height: 30px !important
+				min-width: 30px !important
+				min-height: 30px !important
+				&:before
+					width: 30px !important
+					height: 30px !important
+				img
+					width: 26px !important
+					height: 26px !important
+.success-box
+	width 110px
+	height 110px
+	border-radius 100%
+	box-shadow 0 0 10px $first-color
+	display: flex;
+	justify-content center
+	align-items center
+	margin auto
+	._icon
+		color $first-color
+		font-size 40px
+.relativeBlockforProjectWrapper
+	position relative
+	margin-top 16px
+	> div
+		&.mainBody
+			display: flex
+			max-width: $max-card-width
+			margin: auto
+		&.withDonationCard
+			max-width: 837px
+			margin: 0 auto
+.progressBar
+	display flex
+	flex-wrap wrap
+	flex-basis 100%
+	width 100%
+	.needName
+		m-font(Roboto, normal, 500, 24px, 14px)
+		color #666
+		margin 0
+	.progress-wrapper
+		width 100%
+		flex-basis 100%
+		.values
+			m-flex(space-between)
+			span
+				m-font(Roboto, normal, 600, 24px, 12px)
+				&.current
+					color $first-color
+				&.of
+					color #CCC
+		.progress
+			height 12px
+			border-radius: 0
+			background #DDDDDD
+			position relative
+			&-contain
+				height 10px
+				border-top-left-radius 0
+				border-bottom-left-radius 0
+				position absolute
+				left 0
+				top 0
+				background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+.project-wrapper
+	max-width $max-card-width
+	margin 0 auto
+	box-shadow: 0 0 20px rgba(0, 0, 0, .15)
+	border-radius: 0
+	&.withDonationCard
+		margin: 0
+	.btn-back
+		cursor pointer
+	.activiti-wrapper
+		margin-bottom 10px
+		.clickedPart
+			m-flex(space-between)
+			cursor pointer
+			position relative
+		.give-button
+			align-self flex-end
+			button
+				border-radius: 0
+		.switchRefuseButton
+			padding 8px 10px !important
+			width 60px
+			&:disabled
+				cursor not-allowed
+		&.myTabs
+			&.active
+				.ulWrapperForPeople
+					transition .5s
+					transition-delay .5s
+					max-height 2000000px
+				.arrowBlock
+					.arrow
+						transition .3s
+						transform rotateX(180deg)
+			&.empty
+				/*filter grayscale(1)*/
+				.clickedPart
+					cursor default
+			&.donation
+				.clickedPart
+					.flex-wrapper
+						margin-top 20px
+			.ulWrapperForPeople
+				transition .3s
+				max-height 0
+				overflow hidden
+				.listOfPeople
+					padding 0
+					margin-top 10px
+					position relative
+					list-style none
+					li
+						padding 12px 2px
+						display flex
+						justify-content space-between
+						align-items center
+						.rowForUsersInActivity
+							m-flex()
+							text-decoration none
+					.button-group
+						m-flex()
+						.button-main-class:not(:last-child)
+							margin-right 10px
+					.loadMoreButton
+						margin 20px auto 0 auto
+						display block
+			.arrowBlock			
+				position relative	
+				border-radius 48px
+				width 24px
+				height 24px
+				background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+				align-self flex-end
+				.arrow
+					transition .3s
+					width 8px
+					height 5px 
+					position absolute
+					right 8px
+					top 10px
+					z-index 2
+					display block
+					background-size cover
+					background-image url(/images/ui-icon/close_tab_icon.svg)
+				&:before
+					content ''
+					display block
+					position absolute
+					width calc(100% - 2px)
+					height calc(100% - 2px)
+					border-radius 48px
+					left 1px
+					top 1px
+					background-color white
+
+	.flex-wrapper
+		width 100%
+		margin-right 20px
+		m-flex(space-between)
+		a
+			text-decoration none
+		.user-avatar
+			justify-content flex-start
+	.title
+		m-font(Roboto, normal, 500, 32px, 14px)
+		letter-spacing: 0
+		margin 0
+	.description
+		m-font(Roboto, normal, 300, 24px, 14px)
+		text-align left
+		color #666
+		white-space pre-line
+		word-break break-word
+		white-space pre-wrap
+	.is-center
+		m-flex(center)
+	.date-texts
+		m-font(Roboto, normal, normal, 24px, 14px)
+		color #666666
+		padding 0
+		margin 10px 0
+		span
+			word-break break-word
+			white-space pre-wrap
+			text-align left
+			display block
+			&.date
+				font-weight 600
+	.text
+		m-font(Roboto, normal, normal, 32px, 24px)
+		color #fff
+		margin 0 20px
+		span
+			color $first-color
+
+	.yourRequest
+		m-font(Roboto, normal, normal, 24px, 14px)
+		margin-top 20px
+		.request-info
+			m-flex(space-between,flex-start)
+			flex-wrap wrap
+			.UserAvatar
+				margin-right 10px
+			.project-info
+				flex 1 0
+				.project-title
+					font-weight 500
+				.address
+					font-size 12px
+					line-height 14px
+			.activity-info
+				text-align left
+				flex auto 0
+				margin-left 10px
+				word-break break-word
+				white-space pre-wrap
+			.items
+				padding 0
+				margin 0
+				li
+					display inline-block
+					&:before
+						content ""
+						width 8px
+						height 8px
+						display inline-block
+						background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+						border-radius 100%
+						margin-right 5px
+		.request-result
+			margin-top 10px
+			.action-buttons
+				m-flex()
+				> *
+					margin-right 10px
+					&:last-child
+						margin-right 0
+
+	.rightBar
+		margin-left 10px
+		width: 120px;
+		text-align: center;
+		.control
+			outline none
+			border none
+			border-bottom 4px solid #ec6433
+			width 120px
+			height 40px
+			text-align right
+		.button-group
+			m-flex()
+			margin-top 5px
+			min-height 35px
+	p.text
+		width fit-content
+	.projectDateLocation
+		padding 10px 20px
+		background #FFFFFF
+		box-shadow 0px -1px 16px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25)
+		border-radius 8px
+.interests
+	.interest
+		.label
+			font-size 12px
+			font-weight 300
+.badge
+	background transparent
+	border-radius 10px
+	font-size 12px
+	display inline-block
+	padding 5px 15px
+	margin-bottom 5px
+	color #fff
+	&.success
+		background #3cc267
+	&.danger
+		background $first-color
+
+.projectNeeds
+	.give-button
+		m-flex()
+
+.donationModal
+	border-radius: 0
+	.modalContent
+		border-radius: 0
+		.modal-title
+			font-size: 16px
+	label, .label
+		font-weight 500
+	p
+		margin 0
+	.p-20
+		padding-left 20px
+		padding-right 20px
+	.success-text
+		max-width 200px
+		margin auto
+		font-weight bold
+		text-align center
+	.form-row
+		display flex
+		flex-wrap wrap
+		.form-group
+			flex 1
+	.form-group
+		margin-bottom 20px
+		padding 0 5px
+		box-sizing border-box
+		.control-label
+			display block
+			font-size 12px
+			margin-bottom 5px
+	.form-control
+		border-radius 0
+		border 1px solid #DDD
+		font-size 14px
+		padding 8px
+		width 100%
+		box-sizing border-box
+		outline none
+		&::placeholder
+			color #CCC
+	.globalErrorHandler
+		opacity 0
+		margin 5px 0
+		transform translateY(10px)
+		transition-property opacity, transform
+		transition-duration 0.35s
+		transition-timing-function cubic-bezier(0.165, 0.84, 0.44, 1)
+		svg
+			margin-right 5px
+			vertical-align bottom
+			.base
+				fill #ff4060
+		&.show
+			opacity 1
+			transform none
+	.pickupDate
+		.react-datepicker-wrapper,.react-datepicker__input-container
+			width 100%
+		input
+			border none
+			outline none
+			width 100%
+		img
+			position absolute
+			right 20px
+	.give-button
+		m-flex()
+	.donate-input
+		flex-basis 100px
+		text-align right
+		align-self flex-end
+		.donationValue
+			m-font(Roboto, normal, normal, normal, 12px)
+			border none
+			border-bottom 1px solid $first-color
+			outline none
+			color #333
+			width 60px
+			padding-left: 10px
+		.input-wrapper
+			position relative
+			margin-left 15px
+			&:before
+				content "$"
+				position absolute
+				bottom 0
+	.donation-information
+		color #666
+		m-flex(space-between)
+		margin-bottom 15px
+	.accordion
+		&.open
+			.accordion-header
+				.caret
+					transform rotate(180deg)
+			.accordion-content
+				opacity 1
+				max-height unset
+				padding 10px 0
+		.accordion-header
+			cursor pointer
+			color #CCC
+			font-weight 500
+			.caret
+				transition transform .3s
+				display: none
+		.accordion-content
+			max-height 0
+			opacity 0
+			transition height .3s
+			color #ccc
+	.add-payment
+		border 1px solid $first-color
+		border-radius 16px
+		padding: 15px
+	.searchWrapper
+		position relative
+		.icon-search
+			position absolute
+			top 10px
+			left 10px
+		.search-input
+			outline: none;
+			border: none;
+			padding: 10px 10px 10px 30px;
+			background-color: #F4F4F4;
+			border-radius: 9px;
+			width: 100%;
+			box-sizing: border-box;
+			&::placeholder
+				color #A4A4A4
+	.button-main-class
+		margin auto
+		border-radius: 0
+
+.volunteerDonationModal
+	width 250px
+	margin auto
+	text-align center
+	.title
+		text-align left
+	.activities
+		display flex
+		align-items center
+		span
+			margin 0 5px
+		.control
+			width 100px
+			padding 5px
+			border 1px solid #DDD
+			border-radius 8px
+			&::placeholder
+				color #CCC
+	
+.projectMoney
+	.activiti-wrapper
+		.clickedPart
+			display: block
+			.give-button
+				margin: 10px 0
+				button
+					width: 300px
+					margin: auto
+					padding: 12px 16px !important
+					span
+						font-size: 14px !important
+						font-weight: 600
+			.values
+				padding: 5px 0 15px 0
+				.current
+					font-size: 24px
+					color: #20AFFF
+					line-height: 30px
+				.goal
+					font-size: 15px
+					color: #666666
+					line-height: 19px
+			.statusBody
+				display: flex
+				border-top: 1px solid #C4C4C4
+				padding: 8px 0
+				> div
+					width: 80px
+					p
+						color: #666666
+						margin: 2px
+						&.caption
+							font-size: 14px
+							font-weight: normal
+							line-height: 17px
+						&.value
+							font-size: 17px
+							font-weight: bold
+							line-height: 19px
+	.description
+		m-font(Roboto, normal, 500, normal, 16px)
+		margin 0
+		color #333
+		word-break break-word
+		white-space pre-wrap
+		text-align left
+.given-result
+	margin-top: 35px
+	.user-avatar
+		.desc
+			margin-left: 10px
+			p
+				margin: 0
+				font-weight: normal
+				font-size: 14px
+				&.note
+					font-weight: bold
+					line-height: 17px
+	.other
+		justify-content: flex-end
+		margin-right: 0
+		.amount
+			font-weight: bold
+			color: #1aaaff
+			font-size: 14px
+		.action
+			cursor: pointer
+			float: right
+			border: none
+			outline: none
+			background: none
+			color: #ccc
+			font-size: 18px
+			padding: 0px 10px
+.stripeFormWrapper
+	position relative
+	z-index 100
+	.stripeForm
+		margin 0 -5px
+		.card-element
+			background-color #fff
+			border 1px solid #ddd
+			border-radius 0
+			color #000
+			padding 6px
+		.form-group
+			margin-bottom 10px
+@media all and (max-width: 576px)
+	.project-wrapper
+		.progressBar
+			flex-basis: 100%;
+		.rightBar
+			margin 0
+			flex-basis 100%
+			.control
+				height 30px
+		.flex-wrapper
+			margin-right: 5px
+		.yourRequest
+			.request-info
+				.project-info
+					flex auto
+				.activity-info
+					width 100%
+					text-align left
+					margin-top 10px
+					word-break break-word
+					white-space pre-wrap
+
+	.react-confirm-alert-body
+		width: 300px
+
+	.projectMoney
+		.activiti-wrapper
+			.clickedPart
+				.give-button
+					button
+						width: 100%
+	.projectHeader
+		.facebookFlexWrapper
+			.facebook-btn
+				width: 100%

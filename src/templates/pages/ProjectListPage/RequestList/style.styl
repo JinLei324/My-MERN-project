@@ -1,0 +1,56 @@
+.request-list
+	margin-bottom 30px
+	.select-day
+		flex-direction column
+		padding 45px 80px
+		.react-datepicker
+			border none
+			.react-datepicker__month-container
+				.react-datepicker__header
+					border none
+					background #FFF
+					.react-datepicker__current-month
+						m-font(Roboto, normal, bold, normal, 16px)
+						color #686868
+						margin-bottom 20px
+					.react-datepicker__day-names
+						padding 15px 0px
+						.react-datepicker__day-name
+							m-font(Roboto, normal, bold, normal, 12px)
+							color #686868						
+				.react-datepicker__month
+					.react-datepicker__week					
+						.react-datepicker__day
+							m-font(Roboto, normal, normal, 1.7rem, 13px)
+							color #686868
+							&.react-datepicker__day--outside-month							
+								opacity 0.4
+							&.pickup-day
+								background linear-gradient(180deg, #1AAAFF 0%, #5EEDFD 100%)
+								border-radius 50%
+								color #FFF
+							&.volunteer-day
+								background linear-gradient(180deg, rgba(251, 210, 73, 0.743886) 0%, rgba(245, 166, 35, 0.838995) 100%)
+								border-radius 50%
+								color #FFF
+		.row
+			m-flex()
+			.col
+				m-flex()
+				.icon
+					display block
+					border-radius 4px
+					width 8px
+					height 8px
+					&.pickup
+						background linear-gradient(180deg, #1AAAFF 0%, #5EEDFD 100%)
+					&.volunteer
+						background linear-gradient(180deg, rgba(251, 210, 73, 0.743886) 0%, rgba(245, 166, 35, 0.838995) 100%)
+				.label
+					m-font(Roboto, normal, normal, normal, 14px)
+					color #686868
+                    
+@media all and (max-width: 768px)
+	.request-list
+		.select-day
+			padding 45px 15px

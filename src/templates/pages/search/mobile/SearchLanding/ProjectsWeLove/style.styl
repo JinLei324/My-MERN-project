@@ -1,0 +1,157 @@
+.projectsWeLove
+    &.mobile
+        margin-top: 20px
+        height: 280px
+        background-color: #ffffff
+        .title
+            font-size: 16px
+            font-weight: 500
+            text-align: left
+            padding: 15px 0 0 0
+        .slider
+            width: 100%
+            margin: 20px auto
+            .slick-list
+                padding: 0 25% !important
+                .slick-slide
+                    width: 180px !important
+                    .sliderBox
+                        width: 100%
+                        padding: 2px
+                        box-sizing: border-box
+                        ouline: none 
+                        display: inline-block
+                        .boxContent
+                            padding: 1px
+                            background-color: #ffffff
+                            height: 100%
+                            display: flex
+                            flex-direction: column
+                            box-sizing: border-box
+                            .projectMiniCard
+                                flex-basis: 50%
+                                padding: 0 5px
+                                margin-bottom: 10px
+                                box-sizing: border-box
+                                .cardBody
+                                    position: relative
+                                    background: #fff
+                                    border-radius: 0
+                                    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.07)
+                                    overflow: hidden
+                                    .cardHeader
+                                        position: absolute
+                                        padding: 10px
+                                        display: flex
+                                        width: 100%
+                                        box-sizing: border-box
+                                    .coverImg
+                                        cursor: pointer
+                                        img
+                                        &.preview
+                                            width: 100%
+                                            height: 80px
+                                            object-fit: cover
+                                    .cardContent
+                                        padding: 5px
+                                        p
+                                            text-overflow: ellipsis
+                                            overflow: hidden
+                                            text-align: left
+                                            &.title
+                                                font-size: 14px
+                                                font-weight: 700
+                                                color: #333333
+                                                margin: 0
+                                                padding-top: 0
+                                                padding-left: 0
+                                                white-space: nowrap
+                                            &.description
+                                                font-size: 12px
+                                                font-weight: 500
+                                                color: #969696
+                                                margin: 5px 0 0 0
+                                                line-height: 16px
+                                                height: 32px
+                                        .activityWrapper
+                                            margin-bottom: 10px
+                                            .clickedPart
+                                                display: flex
+                                                justify-content: space-between
+                                                align-items: center
+                                                cursor: pointer
+                                                position: relative
+                                                .flexWrapper
+                                                    margin-top: 10px
+                                                    margin-right: 0
+                                                    width: 100%
+                                                    display: flex
+                                                    justify-content: space-between
+                                                    align-items: center
+                                                    .progressBar
+                                                        display: flex
+                                                        flex-wrap: wrap
+                                                        flex-basis: 100%
+                                                        width: 100%
+                                                        .progressWrapper
+                                                            width: 100%
+                                                            flex-basis: 100%
+                                                            .values
+                                                                display: flex
+                                                                justify-content: space-between
+                                                                align-items: center
+                                                                span
+                                                                    font-family: Roboto
+                                                                    font-style: normal
+                                                                    font-weight: 600
+                                                                    line-height: 16px
+                                                                    font-size: 12px
+                                                                    color: #333333
+                                                                    &.of
+                                                                        &.text-right
+                                                                            text-align: right !important
+                                                            .label
+                                                                padding: 0
+                                                                display: flex
+                                                                justify-content: space-between
+                                                                align-items: center
+                                                                span
+                                                                    font-family: Roboto
+                                                                    font-style: normal
+                                                                    font-weight: 600
+                                                                    line-height: 16px
+                                                                    font-size: 12px
+                                                                    color: #969696
+                                                                    &.of
+                                                                        &.text-right
+                                                                            text-align: right !important
+                                                            .progress
+                                                                height: 10px
+                                                                border-radius: 0
+                                                                background: #ddd
+                                                                position: relative
+                                                                .progressContain
+                                                                    height: 10px
+                                                                    position: absolute
+                                                                    border-top-left-radius: 0
+                                                                    border-bottom-left-radius: 0
+                                                                    left: 0
+                                                                    top: 0
+                                                                    background: -webkit-gradient(linear, left top, right top, from(#1aaaff), to(#5eedfd))
+                                                                    background: -webkit-linear-gradient(left, #1aaaff 0%, #5eedfd 100%)
+                                                                    background: linear-gradient(90deg, #1aaaff 0%, #5eedfd 100%)
+                                            
+@media screen and (min-width: 1900px)
+    .projectsWeLove
+        &.mobile
+            display: none
+
+@media screen and (min-width: 1600px)
+    .projectsWeLove
+        &.mobile
+            display: none
+
+@media screen and (min-width: 1400px)
+    .projectsWeLove
+        &.mobile
+            display: none

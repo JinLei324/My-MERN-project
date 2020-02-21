@@ -1,0 +1,133 @@
+@import "vars.styl";
+
+.learn-more {
+  &-section {
+    padding: 7vh 15px;
+    @media screen and (min-width: 480px) {
+      padding: 7vh 0;
+    }
+    .b-indent-left {
+      @media screen and (max-width: 1050px) {
+        width: 100%;
+        flex: 1 1 100%;
+      }
+    }
+
+    &__item {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 7vh;
+      }
+      @media screen and (min-width: 1050px) {
+        margin-bottom: 100px;
+        box-shadow: none;
+      }
+      @media screen and (min-width: 1050px) {
+        box-shadow: none;
+      }
+    }
+
+    &__title {
+      font-family: $montserrat-font;
+      font-weight: 600;
+      font-size: 25px;
+      text-align: center;
+      &:first-child {
+        margin-top: 20px;
+        margin-bottom: 12px;
+        @media screen and (min-width: 1050px) {
+          margin-top: 0;
+          margin-bottom: 1.3em;
+        }
+      }
+
+      @media screen and (min-width: 1050px) {
+        text-align: left;
+      }
+    }
+    &__thumb {
+      display: block;
+      //width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      background-size: cover;
+      padding-bottom: 50%;
+      @media screen and (max-width: 1050px) {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      @media screen and (min-width: 1050px) {
+        padding-bottom: 83%;
+        margin-right: 6vw;
+      }
+    }
+
+    &__content {
+      padding: 45px 0 30px;
+      @media screen and (min-width: 1050px) {
+        padding: 45px 0;
+      }
+      h3, .h3 {
+        font-family: $montserrat-font;
+        font-weight: 600;
+        font-size: 25px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .hide-content {
+        display: inline-block;
+        margin-top: 1.1em;
+        margin-left: 15px;
+        @media screen and (min-width: 992px) {
+          display: none;
+        }
+        &.link {
+          .more, .less {
+            color: $blue;
+            text-decoration: underline;
+            transition: all 150ms ease-in;
+            cursor: pointer
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+
+      .btn-group {
+        margin-top: 25px;
+        text-align: center;
+        @media screen and (min-width: 1050px) {
+          margin-top: 30px;
+          text-align: left;
+        }
+      }
+    }
+
+    &__text {
+      height: auto;
+      margin-top: 10px;
+      overflow: hidden;
+      transition: height 400ms ease-in;
+
+      @media screen and (max-width: 1050px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        &.off {
+          height: 3em;
+        }
+      }
+      @media screen and (min-width: 1050px) {
+        &.off {
+          height: auto;
+        }
+      }
+    }
+  }
+}

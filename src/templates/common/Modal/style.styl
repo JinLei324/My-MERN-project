@@ -1,0 +1,38 @@
+@import './ConfirmModal/style.styl'
+.modal
+	position fixed
+	height 100vh
+	background-color rgba(0, 0, 0, .3)
+	top 0
+	left 0
+	right 0
+	display flex
+	z-index 999
+	opacity 0
+	transition .3s
+	visibility hidden
+	justify-content center
+	align-items center
+	overflow-y scroll
+	&.open
+		opacity 1
+		visibility visible
+	.modalHeader
+		h2
+			margin 0
+			padding 20px 0
+			font-size 18px
+	.modalContent
+		background #fff
+		box-shadow 0px 10px 20px rgba(0,0,0,0.25)
+		border-radius 0
+		padding 20px
+		box-sizing border-box
+		top 0
+		left 0
+		right 0		
+		margin 50px auto 100px
+		transform none
+		position absolute
+		&.zeroBorderRadius
+			border-radius: 0 !important

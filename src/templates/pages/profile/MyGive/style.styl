@@ -1,0 +1,106 @@
+@import './RecuringItem/style.styl'
+@import './DonateItem/style.styl'
+@import './RecuringSubItem/style.styl'
+@import './MyAchivementItem/style.styl'
+
+.donor-stats
+    max-width $max-card-width
+    margin 20px auto
+    box-sizing border-box
+    border-radius: 0
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
+    .title
+        m-font(Roboto, normal, bold, normal, 14px)
+        color #666
+    .select-avatar
+        m-flex(center, center)
+        flex-direction column        
+        .avatar-wrap
+            display flex
+            flex-wrap wrap
+            .avatar
+                width 95px
+                height 95px
+                box-sizing border-box
+                &.active
+                    border 2px solid $first-color
+                    border-radius 50%
+        ._description
+            m-font(Roboto, normal, normal, normal, 14px)
+            color #666
+            text-align center
+            max-width 70%
+    .stat-wrapper
+        .total-label
+            .label
+                m-font(Roboto, normal, bold, 17px, 14px)
+                color #666
+        .stat-btn
+            m-font(Roboto, normal, normal, normal, 14px)
+            color #333
+            flex-basis 50%
+            text-align center
+            padding 10px 0px
+            cursor: pointer
+        .row
+            padding 10px 20px
+            m-flex(space-between)
+            .col
+                m-flex(space-between)
+                flex-direction column
+                .value
+                    margin-bottom 8px
+            .label
+                m-font(Roboto, normal, normal, normal, 14px)
+                color #666
+            .value
+                m-font(Roboto, normal, bold, normal, 16px)
+                color $first-color
+                &.number
+                    font-weight bold
+                    font-size 16px
+                &.center
+                    text-align center
+                    flex-basis 50%
+                &.right
+                    margin-right 25px
+            .gray
+                color #666
+            &.bot-border
+                border-bottom: 1px solid #333333
+        .back-title
+            position relative
+            margin-top: 0
+            margin-left: 0
+            padding: 0 0 15px 0
+            border-bottom: 2px solid #666666
+            &.subRecurring
+                border-bottom: none
+            .btn-back
+                width 17px
+                height 17px
+                position absolute
+                left 0px
+                cursor pointer
+            .btn-camera
+                width 17px
+                height auto
+                position absolute
+                top -4px
+                right -5px
+                zoom 4
+                cursor pointer
+            .subRecurring
+                margin-top 15px
+                .nonprofitName
+                    margin-left 10px
+        .avatar-wrap
+            flex-direction column
+            border-bottom: 1px solid #333333
+            .avatar
+                width 95px
+                height 95px
+            .donor-level
+                m-font(Roboto, normal, bold, normal, 14px)
+                color #666
+            

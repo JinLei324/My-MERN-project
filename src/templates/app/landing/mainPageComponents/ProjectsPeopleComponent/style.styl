@@ -1,0 +1,77 @@
+.projectsPeopleComponent
+    .project-scroll
+        ul
+            li
+                .project
+                    border-radius: 0
+                    .project-activity-wrapper
+                        .activity-wrapper
+                            .summary
+                                > div
+                                    justify-content: center
+                                    .more
+                                        button
+                                            border-radius: 0
+                    .project-preview
+                        height: 175px
+                        .project-cover
+                            height: 175px
+                        .gradientPreview
+                            height: 175px
+    .nonprofit-scroll
+        ul
+            li
+                .charitySection
+                    border-radius: 0
+                    .headerPicture
+                        height: 200px
+                        .no-picture
+                            height: 200px
+                            .main-picture
+                                height: 200px
+                            .gradient-overlay
+                                height: 200px
+                    .profileInfo
+                        .flex-wrapper
+                            .label
+                                .line
+                                    .name
+                                        text-overflow: ellipsis
+                                        white-space: nowrap
+                                        overflow: hidden
+                        .chairty-desc
+                            p
+                                font-size: 14px
+                                line-height: 17px
+                                height: 68px
+                                text-overflow: ellipsis
+                                min-height: 68px
+                                white-space: pre-wrap
+                                overflow: hidden
+                                margin: 0
+
+@media all and (max-width: 425px)
+    .projectsPeopleComponent
+        .project-scroll
+            ul
+                li
+                    .project
+                        .project-activity-wrapper
+                            .activity-wrapper 
+                                .summary
+                                    height: 42px
+                                    .col-5
+                                        .total
+                                            p
+                                                font-size: 10px
+                                    .col-3
+                                        .current
+                                            p
+                                                margin-right: 0
+                                                font-size: 10px
+                                    .col-4
+                                        justify-content: flex-end
+                                        .more
+                                            button
+                                                border-radius: 0 !important
+                                                padding: 5px 10px !important

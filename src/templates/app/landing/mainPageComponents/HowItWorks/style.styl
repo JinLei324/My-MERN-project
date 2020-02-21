@@ -1,0 +1,113 @@
+.how-it-works
+    width: 900px
+    margin: 20px auto
+    .title
+        margin: 30px 0 10px 0
+        text-align: center
+        color: #1AAAFF
+        font-size: 24px
+        font-weight: bold
+        line-height: 28px
+    .sub-title
+        margin: 10px 0
+        text-align: center
+        color: #324148
+        font-size: 16px
+        font-weight: normal
+        font-style: normal
+        line-height: 24px
+    .main
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        .decorator
+            position: absolute
+            left: -50px
+            top: 66px
+            width: 1000px
+            height: 3px
+            background-color: #1AAAFF
+            z-index: -1
+        .each
+            margin: 0 auto
+            flex-basis: 25%
+            width: 25%
+            text-align: center
+            img
+                z-index 9999
+            .title
+                color: #1AAAFF
+                font-size: 16px
+                line-height: 19px
+                font-weight: bold
+                font-style: normal
+            .desc
+                word-break: break-word
+                white-space: pre-wrap
+                text-align: center
+                padding: 0 37px
+                color: #324148
+                font-size: 16px
+                line-height: 24px
+                font-weight: normal
+                font-style: normal
+                min-height: 100px
+            a
+                text-decoration: none
+            button
+                margin: 0 auto
+                padding: 9px 25px !important
+                span
+                    font-size: 18px !important
+                    font-weight: bold
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)
+    .how-it-works
+        width: 100%
+        .main
+            .decorator
+                display: none
+            .each
+                flex-basis: 50%
+                width: 50%
+                margin-bottom: 40px
+                .title
+                    margin: 10px 0 10px 0
+                .desc
+                    padding: 0 26px
+                    min-height: 70px
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+    .how-it-works
+        width: 100%
+        .main
+            .decorator
+                display: none
+            .each
+                flex-basis: 50%
+                width: 50%
+                margin-bottom: 40px
+                .title
+                    margin: 10px 0 10px 0
+                .desc
+                    padding: 0 26px
+                    min-height: 70px
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px)
+    .how-it-works
+        width: 100%
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px)
+    .how-it-works
+        width: 900px
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+    .how-it-works
+        width: 900px

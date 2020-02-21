@@ -1,0 +1,111 @@
+.discoverIdentity
+    margin: 20px auto 0
+    text-align: center
+    .title
+        margin: 10px auto
+        color: #1AAAFF
+        font-size: 24px
+        font-weight: bold
+        line-height: 28px
+    .description
+        margin: 0 0 20px 0
+        color: #324148
+        font-size: 16px
+        line-height: 32px
+        font-weight: normal
+    .box
+        margin-top: 50px
+        ul
+            list-style: none
+            display: flex
+            align-items: stretch
+            justify-content: space-evenly
+            width: 100%
+            margin: 0
+            padding: 0
+            li
+                display: block
+                flex: 0 1 auto
+                list-style-type: none
+                .hideDesktop
+                    display: none
+                .showDesktop
+                    display: block
+                    span
+                        font-size: 16px
+                img
+                    height: 210px
+                > p
+                    padding: 25px 35px 15px 35px
+                    &.subDesc
+                        font-size: 14px
+                        font-weight: normal
+                        line-height: 20px
+                        min-height: 80px
+                        color: #324148
+                > div
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin-bottom: 30px
+                    .iconBtn
+                        cursor: pointer
+                        width: 35px
+                        height: 35px
+                        vertical-align: middle
+                    > span
+                        margin-left: 5px
+
+@media all and (max-width: 425px)
+    .discoverIdentity
+        margin: 20px 25px 0 25px
+        .description
+            font-size: 17px
+        .box
+            ul
+                display: block
+                li
+                    margin-bottom: 50px
+                    .hideDesktop
+                        display: block
+                    .showDesktop
+                        display: none
+
+@media (max-width: 575.98px)
+	.discoverIdentity
+        margin: 20px auto
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+	.discoverIdentity
+        margin: 20px auto
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+	.discoverIdentity
+        margin: 20px auto
+
+// Extra large devices 1 (large desktops, 1024px and up)
+@media (min-width: 1024px) and (max-width: 1279.98px)
+	.discoverIdentity
+        width: 900px
+
+// Extra large devices 2 (large desktops, 1200px and up)
+@media (min-width: 1280px) and (max-width: 1365.98px)
+	.discoverIdentity
+        width: 900px
+
+// Extra large devices 3 (large desktops, 1366px and up)
+@media (min-width: 1366px) and (max-width: 1599.98px)
+	.discoverIdentity
+        width: 1024px
+
+// Extra large devices 4 (large desktops, 1600px and up)
+@media (min-width: 1600px) and (max-width: 1921.98px)
+	.discoverIdentity
+        width: 1024px
+
+// Extra large devices 5 (large desktops, 1920px and up)
+@media (min-width: 1920px)
+    .discoverIdentity
+        width: 1024px

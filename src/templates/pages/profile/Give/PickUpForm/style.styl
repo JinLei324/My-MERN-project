@@ -1,0 +1,104 @@
+.modal-pickup-form
+    .donation-type
+        border-radius 40px
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        overflow hidden
+        .button 
+            m-font(Roboto, normal, 500, normal, 14px)
+            background #fff
+            outline none
+            border none
+            color #666
+            &.active
+                background $first-color
+                border-radius 40px
+                color #fff
+            &.give
+                padding 10px 18px
+            &.recur
+                padding 10px 10px
+            &.receipt
+                padding 10px 24px
+            &.done
+                padding 10px 45px
+    .pickup-content-0
+        .modal-title
+            m-font(Roboto, normal, bold, 25px, 14px)
+            color #333
+        .modal-row
+            .pick-up-description
+                max-width 290px
+                m-font(Roboto, normal, normal, 25px, 14px)
+                color #333
+                text-align center
+            .btn-add
+                m-font(Open Sans, normal, 300, normal, 30px)
+                color #999
+                background #fff
+                outline none
+                border 1px solid $first-color
+                border-radius 50%
+                padding 0px 13px
+        .pick-up-list
+            .pick-up-item
+                m-flex()
+                padding 10px 0px
+                .label
+                    m-font(Roboto, normal, normal, normal, 14px)
+                    color #666
+                .value
+                    border none
+                    border-bottom 1px solid $first-color
+                    outline none
+                    max-width 60px
+                    text-align center
+                    m-font(Roboto, normal, bold, normal, 12px)    
+                .delete
+                    m-font(Open Sans, normal, 300, normal, 10px)
+                    color #666
+                    padding 5px
+    .pickup-content-1
+        .modal-title
+            m-font(Roboto, normal, 500, normal, 12px)
+            color #333
+        .modal-row 
+            &.time
+                m-flex(space-between)
+                .label
+                    display block
+                    m-font(Roboto, normal, normal, normal, 12px)
+                    color #666
+                    padding 10px 0px
+                .control
+                    color #333
+            &.pick-at
+                .label
+                    display block
+                    m-font(Roboto, normal, normal, normal, 12px)
+                    color #666
+                    padding 10px 0px
+                .value
+                    background: #FFFFFF;
+                    border: 1px solid #DDDDDD;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    padding 8px
+                    color #333
+                    outline none
+                    &:placeholder
+                        color #eee
+    .pickup-content-2
+        padding 20px 0px
+        .donation-result
+            m-font(Roboto, normal, bold, normal, 14px)
+            color #666
+        .donation-result-img
+            width 110px
+            height 110px
+        .donation-result-desc
+            m-font(Roboto, normal, 500, normal, 14px)
+            letter-spacing -0.38px
+            max-width 210px
+            text-align center
+            color #666

@@ -1,0 +1,324 @@
+@import "vars.styl";
+
+.b-mTop {
+  // padding-top: 15vh;
+  padding-top: 15px;
+  @media screen and (min-width: 1050px) {
+    padding-top: 0;
+  }
+
+  &-items {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: calc(100% + 32.5*2);
+    margin: 6vw auto;
+    z-index: 1;
+    @media screen and (min-width: 1050px) {
+      top: -80px;
+      flex-flow: row nowrap;
+      margin-top: 0;
+      margin-left: -32.5px;
+      margin-right: -32.5px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 10px;
+    span {
+      display: block;
+      width: 36px;
+      height: 36px;
+      -webkit-animation-name: bounce;
+      animation-name: bounce;
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+      transition: all 600ms ease-in;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding: 46px 40px;
+    margin: 0 auto 30px;
+    max-width: 580px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    transition: all 300ms ease-in;
+    & * {
+      user-select: none;
+    }
+    &:hover {
+      transform: translate3d(0, -15px, 140px);
+      .b-mTop__icon {
+        span {
+          animation: bouceRotate 1.2s;
+        }
+      }
+    }
+    @keyframes bouceRotate  {
+      from,
+      20%,
+      53%,
+      80%,
+      to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        transform: translate3d(0, 0, 0);
+      }
+
+      40%,
+      43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+        transform: translate3d(0, -30px, 0);
+      }
+
+      70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -15px, 0);
+      }
+
+      90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+      }
+
+    }
+
+    @media screen and (min-width: 1050px) {
+      max-width: 100%;
+      margin: 0 32.5px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 43px;
+    vertical-align: top;
+    font-family: $montserrat-font;
+    font-weight: 600;
+    font-size: 25px;
+    min-width: 147px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 5px;
+      background-color: $blue;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 10px;
+  }
+}
+
+.b-indent {
+  .cn {
+    flex-flow: row wrap;
+    @media screen and (min-width: 1050px) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &-left {
+    flex: 0 0 100%;
+    margin-bottom: 3vw;
+    @media screen and (min-width: 480px) {
+      flex: 0 0 426px;
+
+    }
+    @media screen and (min-width: 1050px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &-right {
+    flex: 1 1 auto;
+    @media screen and (min-width: 1050px) {
+      flex: 1 1 auto;
+    }
+
+  }
+
+  &-full {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.nonprofit {
+  &-scroll {
+    &__content {
+      div[class*='date-location'] {
+        display: flex;
+        align-items: flex-start;
+        justify-items: flex-start;
+        margin-bottom: 10px;
+        font-size: 15px;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+
+      .date-location {
+        &__title {
+          font-family: $montserrat-font;
+          font-weight: 600;
+        }
+      }
+
+      .btn-group {
+        margin-top: 15px;
+      }
+
+    }
+  }
+}
+
+.page {
+  &-about {
+    .t-group {
+      max-width: 355px;
+
+      h2 {
+      }
+    }
+
+    &-section {
+      margin: 7vh 0 9vh;
+    }
+  }
+
+  &-learn-more {
+    .header-description {
+      &__title {
+        font-size: 50px;
+        @media screen and (min-width: 375px) {
+          font-size: 55px;
+
+        }
+        @media screen and (min-width: 768px) {
+          font-size: 68px;
+        }
+      }
+    }
+    .b-scroll {
+      background-color: $blue;
+      padding: 7vh 0;
+
+      .t-group {
+        color: #ffffff;
+      }
+    }
+
+    .faq {
+      &-scroll {
+        &__count {
+          max-width: 54%;
+          margin-bottom: 40px;
+          border-bottom: 5px solid $blue;
+          font-family: $montserrat-font;
+          font-weight: 600;
+          font-size: 52px;
+        }
+      }
+
+      .controls {
+        .next {
+          background-color: #ffffff;
+
+          i {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+  }
+
+  &-nonprofit {
+    .header-description {
+      background-position: 70% center;
+      @media screen and (min-width: 992px) {
+        background-position: center;
+      }
+      &__title {
+        font-size: 58px;
+      }
+    }
+    .content-list {
+      .t-group {
+        max-width: 416px;
+      }
+    }
+  }
+}
+
+// Old !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.animated {
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  // -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0 * 100);
+  // filter: alpha(opacity=0 * 100);
+}
+
+.activate {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+  // -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=1 * 100);
+  // filter: alpha(opacity=1 * 100);
+}
+
+.slick-dots {
+  min-width: 100%;
+  padding: 0;
+  margin-top: 0;
+  list-style-type: none;
+  text-align: center;
+
+  li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 10px;
+    height: 10px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    padding: 5px 0;
+    cursor: pointer;
+
+    background: #20AFFF;
+    opacity: 0.3;
+    border-radius: 10px;
+
+    &.slick-active {
+      opacity: 1;
+
+      &:before {
+        background-color: #007BFF;
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
+}

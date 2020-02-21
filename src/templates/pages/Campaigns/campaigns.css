@@ -1,0 +1,90 @@
+.CampaignsPage .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    box-sizing: border-box;
+}
+
+.CampaignsPage .row .col-4 {
+    padding-right: 35px;
+    flex-basis: 25%;
+    width: 25%;
+}
+
+.withdrawal-card {
+    text-align: center;
+}
+
+.action-picture {
+    position: absolute;
+    top: 18px;
+    right: 23px;
+    cursor: pointer;
+    color: #1aaaff;
+}
+
+.available-donation {
+    margin: 7px;
+    font-size: 18px;
+}
+
+.available-donation-money {
+    margin: 8px;
+    font-size: 20px;
+}
+
+.withdrawal-amount {
+    margin: 10px;
+}
+
+.withdrawal-card input {
+    border-radius: 30px;
+    padding: 7px;
+    width: 70px;
+}
+
+.withdrawal-card button {
+    margin: 0 auto;
+}
+
+.withdrawal-card button span {
+    font-size: 16px !important;
+}
+
+@media only screen and (min-width: 320px) {
+    .CampaignsPage .row .col-4 {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 480px) {
+    .CampaignsPage .row .col-4 {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 576px) {
+    .CampaignsPage .row .col-4 {
+        flex-basis: 50%;
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .CampaignsPage .row .col-4 {
+        flex-basis: 40%;
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .CampaignsPage .row .col-4 {
+        flex-basis: 25%;
+        width: 25%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .CampaignsPage .row .col-4 {
+        flex-basis: 25%;
+        width: 25%;
+    }
+}

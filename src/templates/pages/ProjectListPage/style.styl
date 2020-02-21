@@ -1,0 +1,344 @@
+@import './CharityForm/style.styl';
+@import './RequestList/style.styl';	
+@import './RequestForm/style.styl';
+@import './CharityFilter/style.styl';
+@import './NonprofitsCategoriesToggle/style.styl';
+@import './NonprofitsWeLove/style.styl'
+@import './TypeWrapper/style.styl'
+@import './CategoryList/style.styl'
+@import './NonprofitList/style.styl'
+
+.projectListPage
+	display: flex
+	max-width: 805px
+	margin: 16px auto 10px
+	&.smallWidth
+		width: 500px
+	.projectListSection
+		width $max-project-card-width
+		.hint-add-project
+			border-radius: 0
+		.titleSection
+			display: flex
+			.topTitle
+				width: 100%
+				text-align: center
+				p
+					color: #1AAAFF
+					margin: auto
+					text-overflow: ellipsis
+					white-space: nowrap
+					overflow: hidden
+					padding: 0 10px
+					&.title
+						font-size: 18px
+						font-weight: bold
+						line-height: 25px
+					&.subTitle
+						font-size: 16px
+						font-weight: normal
+						line-height: 18px
+		img
+			&.btn-back
+				cursor: pointer
+				margin-left: 12px
+		a
+			text-decoration none
+		.btn-group
+			m-flex(center, center)
+			margin-top: 20px
+			a
+				text-decoration none
+			._label
+				font-size: 12px
+				font-weight: normal
+			.btn-invite
+				margin-right: 10px
+				border-radius: 0
+			.btn-game
+				margin-left: 10px
+		.modalContent
+			border-radius: 0
+			.input-name
+				margin: 20px 30px
+				padding: 10px 0px
+				background: linear-gradient(90deg, $first-color 0%, $first-color 100%) left bottom no-repeat
+				background-size: 100% 1px 
+				._input
+					width: 100%
+					border: none
+					outline: none
+					font-size: 14px
+					font-weight: normal
+					color: #999999
+					&::placeholder
+						color: #999999
+			.bottom-box
+				m-flex(center, center)
+				padding: 30px 0px
+				.invite
+					border-radius: 0
+					._label
+						m-font(Roboto, normal, normal, normal, 14px)
+	.filterCategorySection
+		margin-left: 40px
+		width: 280px
+		
+.filterCategoryWrapper
+	background-color: $blue-color
+	// padding-bottom: 15px
+	&.onlyShowInMobile
+		display: none	
+		margin-top: 15px
+
+.filterWrapper
+	display: block
+	padding-top: 20px
+	&.noPadding
+		padding-top: 0
+	.project-filter
+		flex-basis: 60%
+	.my-request-wrapper
+		flex-basis: 30%
+		background-color: #5A62FB
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+		border-radius: 0
+		width: unset
+		margin: 0px 20px 10px 20px
+		text-align: center
+		cursor: pointer
+		.label
+			padding: 0
+			color: #ffffff
+			m-font(Roboto, normal, normal, normal, 14px)
+		.count
+			position: absolute
+			right: -10px
+			top: -10px
+			padding: 5px 8px
+			border-radius: 50%
+			background: #FF3627
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			color: #FFFFFF
+			m-font(Roboto, normal, bold, normal, 14px)			
+	&.discover-page
+		.project-filter
+			flex-basis: 100%
+		.charity-filter
+			flex-basis: 100%
+
+.project-filter
+	padding: 8px 20px	
+	.card-body
+		.filter
+			m-flex(center, center)
+			padding 1.2rem 0
+	.card-header
+		position relative
+		margin-top: 10px
+		cursor: default
+        &.isOnlyDesktop
+			display: block
+		&.isOnlyMobile
+			display: none
+		h3
+			cursor pointer
+		.caret
+			position: absolute;
+			right: 0;
+			top: 5px;
+			transition: 0.3s;
+			width: 15px;
+			height: 9px;
+			z-index 2
+			display block
+			background-size cover
+			background-image url(/images/ui-icon/close_tab_white_icon.svg)
+			cursor pointer
+	&.open
+		max-height 1000px!important
+		.card-body
+			visibility visible!important
+		.card-header
+			.caret
+				transform rotateX(180deg)
+	.input-control-wrapper
+		display: flex
+		flex-direction: row
+		align-items: center
+		align-content: stretch
+		height: 38px
+		background-color: white
+		padding-right: 5px
+		margin-top: 5px
+		&.isOnlyMobile
+			display: none
+		.icon-search
+			flex-basis: 20px
+			color: #828282
+			background-color: white
+			//padding-right: 5px
+			order: 2              
+		.control
+			flex-basis: calc(100vh - 20px)        
+			border: none
+			color rgb(150, 150, 150)
+			text-indent: 10px
+			order: 1
+			&:focus
+				outline none
+	.react-datepicker-wrapper, 
+	.react-datepicker__input-container
+		width 100%
+	.react-datepicker-popper
+		z-index 110
+.Select-menu-outer
+	position relative
+	z-index 100
+
+@media all and (max-width: 425px)
+	.projectListPage
+		&.smallWidth
+			width: 100%
+		.filterCategoryWrapper
+			&.onlyShowInMobile
+				display: block
+		.filterCategorySection
+			display: none
+		.projectListSection
+			width: 100%
+	.project-filter
+		max-height: 100px
+		transition: max-height .3s
+		.card-header
+			&.isOnlyDesktop
+				display: none
+			&.isOnlyMobile
+				display: block
+			h3
+				cursor: pointer
+		.card-body
+			visibility: hidden
+			transition: visibility .1s
+		.input-control-wrapper
+			.isOnlyMobile
+				display: flex
+
+@media all and (max-width: 768px)
+	.filterCategoryWrapper
+		&.onlyShowInMobile
+			display: block
+		.filterWrapper
+			.project-filter
+				flex-basis 100%
+			.charity-filter
+				flex-basis 100%
+			.my-request-wrapper
+				flex-basis 100%
+	.filterCategorySection
+		display: none
+	.projectListSection
+		width: 100%
+	.project-filter
+		max-height: 100px
+		transition: max-height .3s
+		.card-header
+			&.isOnlyDesktop
+				display: none
+			&.isOnlyMobile
+				display: block
+			h3
+				cursor: pointer
+		.card-body
+			visibility: hidden
+			transition: visibility .1s
+		.input-control-wrapper
+			&.isOnlyMobile
+				display: flex
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)
+	.projectListPage
+		&.smallWidth
+			width: 100%
+		.filterCategoryWrapper
+			&.onlyShowInMobile
+				display: block
+		.filterCategorySection
+			display: none
+		.projectListSection
+			width: 100%
+	.project-filter
+		max-height: 100px
+		transition: max-height .3s
+		.card-header
+			&.isOnlyDesktop
+				display: none
+			&.isOnlyMobile
+				display: block
+			h3
+				cursor: pointer
+		.card-body
+			visibility: hidden
+			transition: visibility .1s
+		.input-control-wrapper
+			&.isOnlyMobile
+				display: flex
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+	.projectListPage
+		&.smallWidth
+			width: 100%
+		.filterCategoryWrapper
+			&.onlyShowInMobile
+				display: block
+		.filterCategorySection
+			display: none
+		.projectListSection
+			width: 100%
+	.project-filter
+		max-height: 100px
+		transition: max-height .3s
+		.card-header
+			&.isOnlyDesktop
+				display: none
+			&.isOnlyMobile
+				display: block
+			h3
+				cursor: pointer
+		.card-body
+			visibility: hidden
+			transition: visibility .1s
+		.input-control-wrapper
+			&.isOnlyMobile
+				display: flex
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+	.projectListPage
+		&.smallWidth
+			width: 100%
+		.filterCategoryWrapper
+			&.onlyShowInMobile
+				display: block
+		.filterCategorySection
+			display: none
+		.projectListSection
+			width: 100%
+	.project-filter
+		max-height: 100px
+		transition: max-height .3s
+		.card-header
+			&.isOnlyDesktop
+				display: none
+			&.isOnlyMobile
+				display: block
+			h3
+				cursor: pointer
+		.card-body
+			visibility: hidden
+			transition: visibility .1s
+		.input-control-wrapper
+			&.isOnlyMobile
+				display: flex

@@ -1,0 +1,390 @@
+@import './component/Headers/style.styl'
+@import './component/UpdateModal/style.styl'
+
+.CampaignsPage
+	padding 0px 40px 0px 110px
+	.button-group
+		.button-main-class
+			margin-right 10px
+	.CampaignsPageHeader
+		padding 0 10px
+		.button-group
+			display flex
+	.ProjectsWrapper
+		position relative
+		.slick-track
+			margin-left 0
+		.slick-prev
+			left -35px
+			z-index: 99
+		.slick-next
+			right -35px
+			z-index: 99
+		.slick-prev:before, .slick-next:before
+			content none
+		.ProjectsList
+			.withdrawPayoutPanel
+				padding 10px 10px 10px 10px !important
+				margin-top: 0
+				height: 285px
+				border-radius: 0
+				.withdrawal-card
+					text-align: center
+					position: relative
+					.hint-modal
+						background-color: white
+						position: absolute
+						width: 210px
+						top: 30px
+						right: 0
+						display: none
+						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+						border-radius: 0
+						z-index: 999
+						padding: 10px 8px
+						&.show
+							display: block
+						&.hidden
+							display: none
+						.panel-body
+							background-color: white
+							color: #666666
+							border-radius: 8px
+							z-index: 999
+							p
+								font-size: 16px
+								line-height: 20px
+								margin: 0
+								.contact-support
+									color: #1AAAF1
+					.action-picture
+						position: absolute
+						top: 0
+						right: 0
+						color: #FFF
+						cursor: pointer
+						img
+							width: 27px
+							cursor: pointer
+					.available-donation-money
+						font-weight bold
+					.available-donation
+						font-size 14px
+						margin-bottom 25px
+					.btnGroup
+						button
+							padding: 8px 35px
+							span
+								font-size 16px !important
+					.iconMoneyImg
+						margin 0 auto
+			.ProjectMiniCard
+				flex-basis 25%
+				padding 0 10px
+				margin-bottom 30px
+				box-sizing border-box
+				&.active
+					.CardBody
+						border 2px solid $first-color
+						box-shadow 0px 20px 20px rgba(254, 113, 51, 0.07)
+				.CardBody
+					position relative
+					background #FFFFFF
+					border-radius 0
+					box-shadow 0px 20px 20px rgba(0, 0, 0, 0.07)
+					overflow hidden
+					.CardHeader
+						position absolute
+						padding 10px
+						display flex
+						width 100%
+						box-sizing border-box
+						.bullets
+							margin-left auto
+					.CoverImg
+						cursor pointer
+					.CardContent
+						padding 10px
+						h4
+							font-size: 18px
+							font-weight: 500
+							font-style: normal
+							line-height: 25px
+							height: 30px
+							&.completed-title
+								color: #1AAAFF
+								margin: 0
+							&.canceled-title
+								color: #FF3627;
+						.description
+							font-weight normal
+							line-height 20px
+							font-size 16px
+							color #333333
+							overflow hidden
+							text-align left
+							width: 100%
+							word-break: break-word
+							white-space: pre-wrap
+							height: 45px
+							&.bottom
+								height: 30px
+						.ActionButtons
+							a
+								text-decoration none
+							display flex
+							.button-main-class
+								min-width 78px
+							.btn-view
+								margin-left auto
+					.title
+						font-weight bold
+						line-height 25px
+						font-size 21px
+						letter-spacing -0.5px
+						color #1F2126
+						height 35px
+						overflow hidden
+						margin 0
+						cursor pointer
+				.preview
+					width 100%
+					height 130px
+					object-fit cover
+	.CampaignsDetailModal
+		.modalContent
+			max-height 90%
+			overflow auto
+	.CampaignsPageRequests
+		padding 0 10px
+	.RequestsHeader
+		display flex
+		flex-wrap wrap
+		margin 10px 0
+		.tab
+			flex 1
+			text-align center
+			text-decoration none
+			color #666666
+			&.active
+				color $first-color
+	.RequestsBody
+		background #FFFFFF
+		box-shadow 0px 10px 14px rgba(0, 0, 0, 0.1)
+		border-radius 8px
+		padding-bottom 20px
+	.RequestsTable
+		width 100%
+		margin 0
+		padding 0
+		border-collapse collapse
+		border-spacing 0
+		thead
+			box-shadow 0px 7px 20px rgba(0, 0, 0, 0.08)
+			border-radius 8px
+		tbody
+			tr:not(:first-child):not(:last-child)
+				border-bottom 1px solid #F6EFEF
+		th,td
+			padding 15px
+			text-align left
+			color #666666
+			font-size 14px
+			font-weight 400
+			&:first-child
+				padding-left 40px
+		td
+			.FilterWrapper
+				position relative
+				.InputFilter
+					width 100%
+					border none
+					border-bottom 1px solid #D6D6D6
+					color rgba(51, 51, 51, 1)
+					outline none
+					padding 10px 0 10px 30px;
+					box-sizing border-box
+					font-size 12px
+					&::placeholder
+						color rgba(51, 51, 51, 0.2)
+						font-style italic
+				.search-icon
+					position absolute
+					top 5px
+					left 5px
+		.accept
+			font-weight 500
+			font-size 14px
+			color $first-color
+		.reject
+			font-weight 500
+			font-size 14px
+			color #666666
+		.fullname
+			font-weight bold
+		.clock-icon
+			margin-left 20px
+			margin-right 5px
+		.round-icon
+			width 6px
+			height 6px
+			display inline-block
+			border-radius 3px
+			background-color $first-color
+			vertical-align middle
+			margin-right 5px
+		.UserAvatar
+			display inline-block
+			vertical-align middle
+			margin-right 10px
+	.paginationWrapper
+		text-align right
+	.CampaignsGiftModal
+		.giftWrapper
+			display flex
+			flex-wrap wrap
+			padding 0 40px
+			h4
+				font-size 20px
+				color #333
+				margin-top 0
+			.btn-large
+				font-size 16px
+				line-height 20px
+			.giftForm
+				flex-basis 50%
+			.newContact
+				flex-basis 40%
+				margin-left auto
+			.contactNotfound
+				flex-basis 50%
+				text-align center
+				.noMatches
+					display block
+					line-height 150px
+					margin-bottom 20px
+					color #ccc
+					font-weight 500
+					font-size 24px
+			.giftForm,.newContact
+				padding 0 15px
+				box-sizing border-box
+				.form-group
+					margin-bottom 20px
+					position relative
+					&.selected:after
+						content ''
+						position absolute
+						display block
+						right 10px
+						top 12px
+						width 10px
+						height 8px
+						background url(/images/ui-icon/check.svg)
+					.control,.placeholder
+						width 100%
+						padding 8px 10px
+						outline none
+						box-sizing border-box
+						min-height 34px
+						&::placeholder
+							color #999
+					.placeholder
+						border 1px solid #DDDDDD
+						box-sizing border-box
+						border-radius 8px
+						&:disabled
+							background-color #FFFFFF
+					.control
+						border none
+						border-bottom 1px solid $first-color
+					.phone
+						display flex
+						flex-wrap wrap
+						.phone_prefix
+							flex-basis 55px
+						.phone_suffix
+							flex-basis calc(100% - 70px)
+							margin-left auto
+					.gift
+						display flex
+						flex-wrap wrap
+						label
+							font-weight 400
+							font-size 14px
+							color #999
+							margin-bottom 5px
+							display block
+						.giftType
+							flex-basis 55%
+						.giftAmount
+							flex-basis 40%
+							margin-left auto
+							position relative
+							&:before
+								content '$'
+								position absolute
+								top 30px
+								left 10px
+							.placeholder
+								padding-left 25px
+				.button-group
+					.button-main-class
+						margin-right 0
+						&:first-child
+							margin-right 40px
+			.giftTemplate
+				flex-basis 50%
+				padding 0 15px
+				margin-top 80px
+				box-sizing border-box
+				.card-mail-class
+					box-shadow 0px 10px 14px rgba(0, 0, 0, 0.1)
+					.fullName
+						font-size 16px
+						font-weight 500
+						display block
+						color #000
+					.infoWrapper
+						display flex
+						flex-wrap wrap
+						.contactInfo
+							flex-basis 60%
+							padding-right 10px
+							box-sizing border-box
+						.contactInfo,.giftInfo
+							.info
+								margin-bottom 10px
+								span,label
+									font-size 12px
+									font-weight 500
+									color #666
+								label
+									font-weight 400
+									min-width 80px
+									display inline-block
+				.createNewContact
+					cursor pointer
+					font-size 14px
+					margin-top 10px
+@media all and (max-width: 1200px)
+	.CampaignsPage
+		.ProjectsWrapper
+			.slick-arrow
+				top unset
+				bottom -30px
+				&.slick-prev
+					left 50%
+					transform translateX(-39px)
+				&.slick-next
+					left 50%
+					transform translateX(13px)
+@media all and (max-width: 768px)
+	.CampaignsPage
+		.ProjectsWrapper
+			.ProjectMiniCard
+				flex-basis 100%
+
+@media all and (max-width: 568px)
+	.CampaignsPage
+		padding 0px 10px 0px 10px

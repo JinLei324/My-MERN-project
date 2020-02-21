@@ -1,0 +1,486 @@
+$first-color = #1AAAFF
+$second-color = #5EEDFD
+$text-color = #323C5A
+$red-color = #FF3627
+$blue-color = #20AFFF
+$gray-color1 = #666
+
+$max-card-width = 437px
+$max-project-card-width = 500px
+$max-nonprofit-profile-width = 777px
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.2s;
+}
+
+@keyframes fadeOut {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.2s;
+}
+
+.fade-out {
+	-webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+m-flex(justifyContent = center, alignItems = center)
+	display flex
+	justify-content justifyContent
+	align-items alignItems
+
+m-font(fn = Roboto, fst = normal, fw = normal, lh = 12px, fs = 16px)
+	font-family fn
+	font-style fst
+	font-weight fw
+	line-height lh
+	font-size fs
+
+size(w, h)
+	width w !important
+	height h !important
+
+.introjs-hints
+	.introjs-hint
+		z-index 1
+		.introjs-hint-pulse
+			border 5px solid $first-color
+			background-color $second-color
+.introjs-hintReference
+	.introjs-tooltip 
+		.introjs-tooltiptext
+			p
+				m-font(Open Sans, normal, normal, normal, 14px)
+				color #333
+.rc-trigger-popup 
+	left unset !important
+	text-align center
+
+body
+	position relative
+	-moz-user-select none
+	-khtml-user-select none
+	-webkit-user-select none
+	user-select none
+	background-color #fafafa
+	-webkit-overflow-scrolling touch
+	m-font(Roboto, normal, normal, normal, 14px)	
+	color $text-color
+	margin 0	
+	&[class^="modal-open"]		
+		overflow hidden
+	> div.placeholder
+		width 100vw
+		background-size 50%
+		background-repeat no-repeat
+		background-position center 40%
+		background-image url("/images/ui-icon/placeLogoToMob.svg")
+		height 100vh
+		.buttonToApp
+			position absolute
+			bottom 150px
+			left 50%
+			white-space nowrap
+			transform translateX(-50%)
+			display block
+			outline none
+			border none
+			background none
+			text-decoration none
+			border-radius 30px
+			cursor pointer
+			overflow hidden
+			font-weight 500
+			line-height normal
+			font-size 13px
+			padding 17px 30px
+			letter-spacing 0.05em
+			text-transform uppercase
+			color #FFFFFF
+			background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+	.app
+		// background linear-gradient(336.58deg, #EEF1F6 3.21%, #FCFDFD 92.88%)		
+		background-color: #fff
+		position relative
+		z-index 1
+		transition transform .3s
+		.mainAppContainer
+			margin-left: 70px
+			// background url(/images/ui-icon/landing/donation_background.svg)
+			background-size: auto;
+			background-repeat: repeat;
+			position relative
+			min-height calc(100vh - 53px)
+			padding-bottom 70px
+			box-sizing border-box
+			
+	.rowForScroll
+		position fixed
+		max-width 1130px
+		margin 0 auto
+		left 50%
+		transform translateX(-50%)
+		width 100%
+		padding 0 32px
+		display flex
+		justify-content flex-end
+		opacity 0
+		visibility hidden
+		transition .3s
+		box-sizing border-box
+		bottom 0
+		pointer-events none
+		z-index 2
+		&.show
+			opacity 1
+			visibility visible
+			transition .3s
+		.scrollTotop
+			pointer-events auto
+			position relative
+			bottom 20px
+			&:before
+				content ''
+				display block
+				position absolute
+				background-image url(/images/ui-icon/arrow.svg)
+				background-size 30%
+				background-repeat no-repeat
+				background-position 50%
+.main-font
+	m-font(Roboto, normal, 500, normal, 14px)
+img
+	max-width 100%
+h1,h2,h3,h4,h5,h6{
+	// margin: 0;
+}
+h2
+	font-size 2.2rem
+h4
+	font-size 1.5rem
+h5
+	font-size 1.2rem
+	font-weight normal
+
+.show-mobile
+	display none
+
+.m-b-10
+	margin-bottom 10px
+.m-b-20
+	margin-bottom 20px
+.container
+	width 100%
+	padding-right 15px
+	padding-left 15px
+	margin-right auto
+	margin-left auto
+	box-sizing border-box
+.title
+	line-height normal
+	font-size 38px
+	letter-spacing -1.09px
+	color #233539
+
+.text-center
+	text-align center !important
+.text-left
+	text-align left !important
+.text-right
+	text-align right !important
+.text-success
+	color #3cc267 !important
+.text-danger
+	color $red-color !important
+.text-grey
+	color #666 !important
+.text-gradient-blue
+	background linear-gradient(#1AAAFF, #5EEDFD)
+	-webkit-background-clip text
+	-webkit-text-fill-color transparent
+.text-blue
+	color $first-color !important
+.orange
+	color $first-color
+.complete
+	color $first-color
+	font-weight 500
+.accept
+	color $first-color
+	font-weight 500
+.cancel
+	color $red-color
+	font-weight 500
+.reject
+	color #666
+	font-weight 500
+.m-0
+	margin 0 !important
+.m-t-15
+	margin-top 15px !important
+.m-t-20
+	margin-top 20px !important
+.m-r-5
+	margin-right 10px
+
+.p-0
+	padding 0 !important
+.p-b-10
+	padding-bottom 10px !important
+.p-l-20
+	padding-left 20px !important
+.d-block
+	display: block!important
+.d-flex
+	display: flex!important
+.d-none
+	display: none!important
+	
+.m-auto
+	margin auto
+
+.label
+	font-weight bold
+	font-size 14px
+	color #323C47
+
+.p
+	font-size 14px
+	color #323C47
+
+.span
+	font-weight 500
+	font-size 12px
+	letter-spacing 0.3px
+
+.show
+	display block
+
+.hide
+	display none
+
+.feature-divider
+	border-bottom 1px solid $first-color
+	margin 20px 0
+
+.animation-click-effect
+	position relative
+	outline none
+	border none
+	background none
+	cursor pointer
+	overflow hidden
+	color inherit
+	&:focus:not(:active)::after
+		animation click-effect-g 0.6s ease-out
+	&:after
+		content ''
+		position absolute
+		top 50%
+		left 50%
+		width 5px
+		height 5px
+		background linear-gradient(90deg, $first-color 0%, $second-color 100%);
+		opacity 0
+		border-radius 100%
+		transform: scale(1, 1) translate(-50%)
+		transform-origin 50% 50%
+
+.contentWrapper
+	width: 100%;
+	max-width: $max-card-width;
+	margin: 16px auto 0;
+	box-sizing: border-box;
+
+.globalErrorHandler
+	font-size 12px
+	color #FF4060
+	transition .3s
+	&.show
+		display block
+
+.separator
+	&-10
+		height 10px
+	&-15
+		height 15px
+	&-20
+		height 20px
+	&-25
+		height 25px
+	&-30
+		height 30px
+	&-40
+		height 40px
+	&-50
+		height 50px
+.separator-h
+	&-10
+		width 10px
+	&-15
+		width 15px
+	&-20
+		width 20px
+
+#loading
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.3);
+	display: flex;
+	z-index: 1000;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	justify-content: center;
+	align-items: center;
+	&.hide
+		visibility: hidden;
+		opacity: 0;
+	&.show
+		visibility: visible;
+		opacity: 1;
+	.spinner-wrapper
+		background #fff
+		width: 200px;
+		height: 120px;
+		border-radius: 10px;
+		box-shadow 0px 10px 20px rgba(0,0,0,0.25)
+		display: flex;
+		justify-content: center;
+	.spinner
+		position: relative;
+		width: 77.1429px;
+		height: 77.1429px;
+		align-self center
+		animation: animation-w3w02u 0.6s linear 0s infinite normal forwards running;
+		.item1
+			opacity: 0.1;
+			border-width: 8.57143px;
+			border-style: solid;
+			border-color: $first-color;
+			border-image: initial;
+			width: 60px;
+			height: 60px;
+			border-radius: 100%;
+		.item2
+			width: 8.57143px;
+			height: 8.57143px;
+			border-radius: 100%;
+			background-color: $first-color;
+			opacity: 0.8;
+			position: absolute;
+			top: 25.7143px;
+			animation: animation-w3w02u 0.6s linear 0s infinite normal forwards running;
+
+.pagination
+	list-style none
+	padding 0
+	li
+		display inline-block
+		&.active
+			a
+				background-color $first-color
+				color #FFFFFF
+				cursor auto
+		&.disabled
+			a
+				cursor not-allowed
+		a
+			font-size 14px
+			display block
+			padding 8px 13px
+			border-radius 5px
+			box-shadow 0px 3px 8px rgba(0,0,0,0.1)
+			outline none
+			margin-right 10px
+			box-sizing border-box
+			text-align center
+			cursor pointer
+#tawkchat-minified-box
+	color $first-color
+	#icon-mail
+		&:before
+			color: $first-color
+	
+@keyframes animation-w3w02u
+	100%
+		transform: rotate(360deg);
+
+@keyframes click-effect-g
+	0%
+		transform scale(0, 0)
+		opacity 1
+	20%
+		transform scale(25, 25)
+		opacity 1
+	100%
+		opacity 0
+		transform scale(40, 40)
+
+@media all and (max-width: 768px)
+	body
+		.app
+			&.open-sidemenu
+				transform translateX(-200px)
+			.mainAppContainer
+				margin-left: 0
+				// padding-left 15px
+				// padding-right 15px
+				min-height calc(100vh - 53px)
+			.mobileSearch
+				margin-left: 10px
+				margin-right: 10px
+	.hide-mobile
+		display none !important
+	.show-mobile
+		display block
+	.title
+		font-size 28px
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}

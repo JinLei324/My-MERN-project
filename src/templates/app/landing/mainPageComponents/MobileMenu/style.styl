@@ -1,0 +1,21 @@
+.hidden-mnu
+    display: none
+    &.show
+        display: block
+    .hidden-mnu__box
+        .hidden-mnu__box--top
+            .header-toggle
+                .toggle-mnu
+                    &.hidden-toggle
+                        display: none
+                        &.on
+                            display: block
+        .hidden-mnu__box--middle
+            .main-mnu
+                display: inline-block
+                ul
+                    li
+                        &.login, &.signup
+                            > a
+                                > span
+                                    color: #000000

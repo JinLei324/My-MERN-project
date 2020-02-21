@@ -1,0 +1,84 @@
+@import "./RatingItem/style.styl"
+
+.profile-user-info
+    max-width $max-card-width
+    margin 20px auto
+    box-sizing border-box
+    .title
+        color $first-color
+        m-font(Roboto, normal, bold, normal, 14px)
+        letter-spacing 0px
+        padding 5px 0px
+    .star-rating
+        m-flex(flex-start)
+        .dv-star-rating
+            .dv-star-rating-star
+                i
+                    font-size 30px        
+        .review-count
+            margin-left 20px
+            color: #666
+            m-font(Roboto, normal, 500, normal, 14px)
+    .description
+        m-font(Roboto, normal, 500, 17px, 14px)
+        m-flex(space-between, flex-start)
+        color #666
+        padding 3px 0px
+        .user-select
+            user-select: text
+    .flex-start
+        m-flex(flex-start)
+    .col
+        flex-basis 50%
+        display flex
+        m-font(Roboto, normal, 500, 25px, 14px)
+        color #666
+        flex-direction column
+    .m-b-5
+        margin-bottom 5px
+    .review-title
+        m-flex(space-between)
+        img
+            cursor: pointer
+        .btn-new
+            width 20px
+            height 18px
+            background-color #c4c4c4
+            visibility hidden
+            &.active
+                visibility visible
+    .review-tab
+        m-flex()
+        .dv-star-rating
+            .dv-star-rating-star
+                padding 0px 10px
+    .new-review
+        ._review
+            m-font(Open Sans, normal, normal, normal, 14px )
+            color #666
+            background #FFFFFF
+            border 1px solid #DDDDDD
+            box-sizing border-box
+            border-radius 16px
+            outline none
+            padding 10px
+            width 100%
+            resize none
+            &:placeholder
+                color #CCCCCC
+        .bot-border
+            border-bottom 1px solid #F3ECEC
+        .submit-btn
+            m-flex(flex-end)
+    .ein-section
+        .ein
+            color: #1aaaff
+            font-family: Roboto
+            font-style: normal
+            font-weight: bold
+            line-height: normal
+            font-size: 14px
+            letter-spacing: 0px
+            padding: 5px 0px
+        p
+            margin-top: 0

@@ -1,0 +1,62 @@
+.line-contact
+    padding: 10px 5%
+    display: flex
+    justify-content: space-between
+    color: #666666;
+    font-size: 12px;
+    line-height: normal    
+    align-items: center;
+    &.border
+        border-bottom: 1px solid #f6efef
+    cursor: pointer
+    .line-contact-info
+        padding-right 20px
+        word-break break-word
+        flex: 1
+        &.action
+            flex 0.1
+        &.birthday
+            flex 0.5
+        &.phone
+            flex 0.5
+        .action
+            cursor: pointer
+            color: #C4C4C4
+            float: right
+            padding: 10px 20px 10px 0px;
+        a
+            text-decoration: none
+        .info-wrapper
+            display: flex
+            align-items: center
+            .empty-avatar
+                width: 40px
+                height: 40px
+                background: rgba(188, 187, 187, 0.5);
+                box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1);
+                border-radius: 20px
+        .edit-menu
+            margin-top: 10px;
+            background: white
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            position: absolute
+            transition: .3s
+            overflow: hidden;
+            height: 0
+            .submenu
+                color: #666666;
+                cursor: pointer
+                &.edit
+                    padding: 5px 10px
+                &.trash
+                    padding: 5px 10px
+                &:hover
+                    background: #eee
+                ._label
+                    margin-left: 8px
+                    font-size: 12px;
+                    font-weight: normal
+                    line-height: normal
+            &.open
+                height: auto
+                transition: .3s

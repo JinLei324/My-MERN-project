@@ -1,0 +1,35 @@
+.withdrawal-card {
+    text-align: center;
+}
+
+.action-picture {
+    position: absolute;
+    top: 18px;
+    right: 23px;
+    cursor: pointer;
+    color: #1aaaff;
+}
+
+.available-donation {
+    margin: 7px;
+    font-size: 18px;
+}
+
+.available-donation-money {
+    margin: 8px;
+    font-size: 20px;
+}
+
+.withdrawal-amount {
+    margin: 10px;
+}
+
+.withdrawal-card input {
+    border-radius: 30px;
+    padding: 7px;
+    width: 70px;
+}
+
+.withdrawal-card button span {
+    font-size: 16px !important;
+}

@@ -1,0 +1,458 @@
+@import './mainPageComponents/SliderSection/style.styl'
+@import './mainPageComponents/SliderIntro/style.styl'
+@import './mainPageComponents/ModalSearch/style.styl'
+@import './mainPageComponents/WhatsOneGivv/style.styl'
+@import './mainPageComponents/DiscoverIdentity/style.styl'
+@import './mainPageComponents/HowItWorks/style.styl'
+@import './mainPageComponents/OfferNonprofits/style.styl'
+@import './mainPageComponents/Discovers/style.styl'
+@import './mainPageComponents/Subscribe/style.styl'
+@import './mainPageComponents/Footer/style.styl'
+@import './mainPageComponents/MobileMenu/style.styl'
+@import './mainPageComponents/ProjectsPeopleComponent/style.styl'
+
+@import './NewNonprofit/style.styl'
+@import './NewAbout/style.styl'
+@import './NewLearnMore/style.styl'
+
+body .app.landingPageWrapper
+	// background url(/images/ui-icon/landing/donation_background.svg)
+	// background-size: auto;
+	// background-repeat: repeat;
+	min-height 100vh
+	display flex
+	flex-direction column
+
+body .app.homePageWrapper
+	// background-image url(/images/ui-icon/landing/background-mask.png)
+	// background-position right top
+	// background-repeat no-repeat
+	// background-size: 65% auto
+	
+.landingContainer
+	.LandingPage
+		display flex
+		flex-direction column
+		margin: 0 auto
+		align-items: center
+		.nonprofit-givig-panel
+			display: flex
+			max-width: 900px
+			margin: 100px auto
+		.nonprofit-mobile-giving-panel
+			display: none
+		.nonprofit-help-panel
+			display: flex
+			margin: 20px auto
+			max-width: 870px
+			img
+				width: 100%
+				height: auto
+		.nonprofit-mobile-help-panel
+			display: none
+		.nonprofit-subscribe-panel
+			background-color: #1AAAFF
+			padding: 50px
+			margin: 20px auto
+			border-radius: 10px
+			text-align: center
+			min-width: 800px
+			max-width: 1140px
+			margin-top: 95px
+			.schedule-btn
+				padding: 10px 15px
+				border-radius: 18px
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				background: #1AAAFF
+				box-sizing: border-box
+				border: 1px solid #fff
+				color: #fff
+				font-size: 14px
+			.signup-free-btn
+				margin-left: 10px
+				padding: 10px 15px
+				border-radius: 18px
+				box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
+				background: #fff
+				color: #1aaaff
+				box-sizing: border-box
+				border: 2px solid #fff
+				font-size: 14px
+				width: 140px
+			.no-outline-btn
+				outline: none
+		.nonprofit-mobile-subscribe-panel
+			display: none
+	.item-header
+		font-size 18px
+		img
+			display inline-block
+			vertical-align middle
+			margin-right 10px
+	.desc
+		color #8591B0
+		font-size 14px
+		line-height 18px
+	.LearnMore
+		margin-top 100px
+	.aboutContent
+		.leftSide
+			flex-basis 30%
+			padding-top 70px
+		.rightSide
+			padding 20px
+			flex-basis 70%
+	.learnContent
+		width 100%
+		.joins
+			display flex
+			margin-top 20px
+			.join
+				position relative
+				flex-basis 25%
+				flex-shrink 0
+				width 25%
+				padding 10px
+				box-sizing border-box
+				img
+					width 100%
+				.btnJoin
+					position absolute
+					bottom 40px
+					left 50%
+					transform translateX(-50%)
+					border none
+					span
+						font-weight bold
+	.fqaWrapper
+		.fqas
+			display flex
+			flex-wrap wrap
+			margin-top 20px
+			.fqa
+				width 50%
+				box-sizing border-box
+				padding 10px 40px
+				&.open
+					.fqa-content
+						background-color #ffffff
+						border-color #ffffff
+						height 100%
+					.question
+						color $first-color
+						.tab-close
+							transform rotate(180deg)
+							filter unset
+					.answer
+						max-height 1000px
+						padding 15px
+				.fqa-content
+					border 1px solid #606470
+					border-radius 8px
+					transition .3s
+				.question
+					position relative
+					cursor auto
+					color #666
+					padding 15px 30px 15px 15px
+					font-weight 500
+					.tab-close
+						position absolute
+						top 22px
+						right 15px
+						filter brightness(0)
+				.answer
+					max-height 0
+					transition height .3s
+					overflow hidden
+	.detailModal		
+		.modalBody
+			display flex
+			padding-top 10px
+			.caption
+				margin-right 10px
+			.button-group
+				margin-top 30px
+				text-align center
+				button
+					display inline-block
+				button:not(:last-child)
+					margin-right 20px
+			.img-wrapper
+				width 150px
+				flex-basis 150px
+				flex-shrink 0
+				img
+					width: 100%
+	.subscribeModal
+		.AuthModal .form-wrapper .input-wrapper .globalErrorHandler
+			opacity 0
+			visibility hidden
+			&.notValid
+				opacity 1
+				visibility visible
+	.thankyouModal
+		.modalContent
+			text-align center
+			.button-main-class
+				margin auto
+				border-radius: 0
+.modal-search
+	.modalContent
+		top 120px
+		position absolute
+		height 80%
+	.searchWrapper
+		z-index: 5
+		m-flex()
+	.searchBox
+		position relative
+		m-flex(spac-between)
+		width 400px
+		background #FFFFFF
+		box-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+		border-radius 30px
+		padding 8px 8px 8px 20px
+		top -40px
+		box-sizing border-box
+		input
+			width 100%
+			margin-right 10px
+			border none
+			outline none
+			&::placeholder
+				color #9C9B9F
+		.button-submit
+			flex-shrink 0
+			overflow unset
+			box-shadow 0 3px 10px rgba(0,0,0,0.4)
+			&:before
+				content ""
+				position absolute
+				border-radius 30px
+				top 60%
+				left 0
+				width 100%
+				height 50%
+	.search-result
+		z-index: 999
+		background-color: #ffffff
+		max-height 90%
+		overflow-y auto
+@media all and (max-width: 768px)
+	body .app.landingPageWrapper
+		height auto
+		background-image none
+	.landingContainer
+		height auto
+		padding-top 30px
+		.LearnMore
+			margin-top 0
+		.LearnMore
+			.caption-title
+				width 200px
+				margin-left auto
+				margin-right auto
+		.learnContent
+			.joins
+				flex-direction column
+				.join
+					flex-basis 100%
+					width 300px
+					margin auto
+		.detailModal
+			.modalBody
+				flex-direction column
+				.img-wrapper
+					margin 20px auto
+				.caption
+					margin 0px
+				.button-group
+					m-flex()
+					button:not(:last-child)
+						margin-right: 0px
+		.aboutContent
+			.leftSide
+				padding-top 0px
+
+@media all and (max-width: 500px)
+	.subtitle
+		margin-top: 33px
+	.landingContainer
+		padding-top: 0
+		.LandingPage
+			.pageContent
+				margin: 0 auto !important
+			.nonprofit-mobile-giving-panel
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-top: 42px
+			.nonprofit-mobile-subscribe-panel
+				background-color: #1AAAFF
+				border-radius: 15px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				.schedule-btn
+					padding: 10px 15px
+					border-radius: 18px
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+					background: #1AAAFF
+					box-sizing: border-box
+					border: 1px solid #fff
+					color: #fff
+					font-size: 14px
+				.signup-free-btn
+					margin-left: 10px
+					padding: 10px 15px
+					border-radius: 18px
+					box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
+					background: #fff
+					color: #1aaaff
+					box-sizing: border-box
+					border: 2px solid #fff
+					font-size: 14px
+					width: 140px
+				.no-outline-btn
+					outline: none
+		.homeContent
+			.leftSide
+				.sign-up-box
+					margin-top: 7px !important
+	.animated
+		align-self: center
+		margin-top: 53px
+	.discover-panel
+		display: none
+	.give-panel
+		display: none
+	.subscribe-panel
+		display: none
+	.footer
+		display: none
+	.mobile-giving-panel
+		margin-top: 56px
+		display: flex
+		flex-direction: column
+		align-items: center
+	.mobile-subscribe
+		margin-top: 75px
+		background-color: #1AAAFF
+		border-radius: 15px
+		display: flex
+		flex-direction: column
+		align-items: center
+	.mobile-footer
+		margin-top: 20px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	.mobile-footer-links
+		text-align: left
+	.nonprofit-slider
+		.slick-list
+			display: -webkit-box
+	.nonprofit-plan-panel
+		display: none
+	.nonprofit-subscribe-panel
+		display: none
+
+@media all and (max-width: 425px)
+	.landingContainer
+		padding-top: 0
+		.LandingPage
+			.nonprofit-givig-panel,
+			.nonprofit-help-panel
+				display: none
+			.nonprofit-mobile-giving-panel
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-top: 42px
+			.nonprofit-mobile-help-panel
+				display: flex
+				flex-direction: column
+				margin-top: 59px
+				align-items: center
+			.nonprofit-mobile-subscribe-panel
+				background-color: #1AAAFF
+				border-radius: 15px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				.schedule-btn
+					padding: 10px 15px
+					border-radius: 18px
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+					background: #1AAAFF
+					box-sizing: border-box
+					border: 1px solid #fff
+					color: #fff
+					font-size: 14px
+				.signup-free-btn
+					margin-left: 10px
+					padding: 10px 15px
+					border-radius: 18px
+					box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
+					background: #fff
+					color: #1aaaff
+					box-sizing: border-box
+					border: 2px solid #fff
+					font-size: 14px
+					width: 140px
+				.no-outline-btn
+					outline: none
+		.fqaWrapper
+			.fqas
+				.fqa
+					width 100%
+					padding 10px 20px
+
+@media (max-width: 575.98px)
+	.landingContainer
+		.LandingPage
+			font-size: 14px
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+	.landingContainer
+		.LandingPage
+			font-size: 16px
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+	.landingContainer
+		.LandingPage
+			font-size: 18px
+
+// Extra large devices 1 (large desktops, 1024px and up)
+@media (min-width: 1024px) and (max-width: 1279.98px)
+	.landingContainer
+		.LandingPage
+			font-size: 20px
+
+// Extra large devices 2 (large desktops, 1200px and up)
+@media (min-width: 1280px) and (max-width: 1365.98px)
+	.landingContainer
+		.LandingPage
+			font-size: 21px
+
+// Extra large devices 3 (large desktops, 1366px and up)
+@media (min-width: 1366px) and (max-width: 1599.98px)
+	.landingContainer
+		.LandingPage
+			font-size: 22px
+
+// Extra large devices 4 (large desktops, 1600px and up)
+@media (min-width: 1600px) and (max-width: 1921.98px)
+	.landingContainer
+		.LandingPage
+			font-size: 24px
+
+// Extra large devices 5 (large desktops, 1920px and up)
+@media (min-width: 1920px)
+	.landingContainer
+		.LandingPage
+			font-size: 26px

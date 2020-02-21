@@ -1,0 +1,303 @@
+.discover-philanthropic {
+  text-align: center;
+}
+
+.pageContent {
+  margin: 50px auto !important;
+}
+
+.landingContainer .homeContent .leftSide {
+  align-self: flex-start !important;
+  margin-top: 80px;
+}
+
+.animated {
+  background-image: url(/images/ui-icon/landing/mobile_view.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  /* padding-top:95px; */
+  /* margin-bottom:60px; */
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  width: 220px;
+  height: 410px;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated2 {
+  background-image: url(/images/ui-icon/landing/mobile-view-2.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  /* padding-top:95px;
+  margin-bottom:60px; */
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  width: 100%;
+  height: 400px;
+}
+
+.subtitle {
+  margin-top: 20px;
+}
+
+.landingContainer .homeContent .leftSide .sign-up-box {
+  margin-top: 13px !important;
+}
+
+.discover-panel {
+  display: flex;
+  max-width: 954px;
+  margin: 100px auto;
+  margin-top: 30px
+}
+
+.give-panel {
+  display: flex;
+  margin: 100px auto;
+  max-width: 900px;
+  justify-content: space-between;
+  margin-top: 20px
+}
+
+.subscribe-panel {
+  background-color: #1AAAFF;
+  display: flex;
+  margin: 40px auto;
+  border-radius: 10px;
+  width: 934px;
+}
+
+.footer {
+  display: flex;
+  margin-top: 20px
+}
+
+.mobile-giving-panel {
+  display: none !important;
+}
+
+.mobile-subscribe {
+  display: none !important;
+}
+
+.mobile-footer {
+  display: none !important;
+}
+
+.nonprofit-givig-panel {
+  display: flex;
+  max-width: 900px;
+  margin: 100px auto;
+}
+
+.nonprofit-mobile-giving-panel,
+.nonprofit-mobile-subscribe-panel {
+  display: none !important;
+}
+
+.nonprofit-help-panel {
+  max-width: 870px;
+  display: flex;
+  margin: 20px auto;
+}
+
+.nonprofit-slider .slick-list {
+  display: none !important;
+  height: 550px;
+}
+.nonprofit-plan-panel {
+  max-width: 900px;
+  display: flex !important;
+  margin: 20px auto;
+}
+
+.nonprofit-subscribe-panel {
+  background-color: #1AAAFF;
+  padding: 50px;
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 800px;
+  max-width: 1140px;
+  margin-top: 95px;
+}
+
+/** Responsive design*/
+@media (max-width: 500px) {
+  .landingContainer .LandingPage .pageContent {
+    margin: 0 auto !important;
+  }
+
+  .subtitle {
+    margin-top: 33px
+  }
+
+  .landingContainer .homeContent .leftSide .sign-up-box {
+    margin-top: 7px !important;
+  }
+
+  .animated {
+    align-self: center;
+    margin-top: 53px;
+  }
+
+  .discover-panel {
+    display: none !important;
+  }
+
+  .give-panel {
+    display: none !important;
+  }
+
+  .subscribe-panel {
+    display: none !important;
+  }
+
+  .footer {
+    display: none !important;
+  }
+
+  .mobile-giving-panel {
+    margin-top: 56px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center
+  }
+
+  .mobile-subscribe {
+    margin-top: 75px;
+    background-color: #1AAAFF;
+    border-radius: 15px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-footer {
+    margin-top: 20px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-footer-links {
+    text-align: left;
+  }
+
+
+  .nonprofit-mobile-giving-panel {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 42px;
+  }
+
+  .nonprofit-slider .slick-list {
+    display: -webkit-box !important;   
+  }
+
+  .nonprofit-plan-panel,
+  .nonprofit-subscribe-panel,
+  .nonprofit-givig-panel,
+  .nonprofit-help-panel {
+    display: none !important;
+  }
+
+  .nonprofit-mobile-subscribe-panel {
+    background-color: #1AAAFF;
+    border-radius: 15px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+ 
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+@media (min-width: 320px) {
+  .landingContainer .homeContent .leftSide {
+    margin-top: 0px;
+  }
+  .landingContainer .LandingPage .pageContent {
+    margin-top: 0 !important;
+  }
+  .landingContainer .homeContent .rightSide {
+    margin-top: 30px;
+  }
+}
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .landingContainer .homeContent .leftSide {
+    margin-top: 0px;
+  }
+  .landingContainer .LandingPage .pageContent {
+    margin-top: 0 !important;
+  }
+  .landingContainer .homeContent .rightSide {
+    margin-top: 25px;
+  }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  .landingContainer .homeContent .leftSide {
+    margin-top: 50px;
+  }
+  .landingContainer .LandingPage .pageContent {
+    margin-top: 0 !important;
+  }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .landingContainer .homeContent .leftSide {
+    margin-top: 80px;
+  }
+  .landingContainer .LandingPage .pageContent {
+    margin-top: 0 !important;
+  }
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  .landingContainer .homeContent .leftSide {
+    margin-top: 80px;
+  }   
+  .landingContainer .LandingPage .pageContent {
+    margin-top: 50px !important;
+  }
+}

@@ -1,0 +1,410 @@
+@import './MediaList/style.styl'
+@import './Give/DonationForm/style.styl'
+@import './Give/PickUpForm/style.styl'
+@import './Give/VolunteerForm/style.styl'
+@import './MyGive/style.styl'
+@import './AboutMe/style.styl'
+
+.myProfileWrapper
+	max-width $max-card-width
+	margin auto
+	position relative
+	.btn-back
+		cursor: pointer
+	.btn-go-back
+		cursor: pointer
+		margin-top: 10px
+	.ApproveBanner
+		p
+			margin 0
+			white-space pre-wrap
+			text-align left
+			word-break break-word
+			&.hasCloseBtn
+				position relative
+				.closeBtn
+					height 12px
+					width 12px
+					position absolute
+					right 0px
+					top 5px
+					cursor pointer
+					background-size cover
+					background-image url("/images/ui-icon/close_modal.svg")
+		.submitDocumentForm
+			text-align center
+			.form-group
+				margin-bottom 20px
+	.modal-content
+		overflow: auto;
+		width: 437px;
+		padding: 10px;
+	.MyProfilePage
+		position relative		
+		box-sizing border-box
+		border-radius 8px
+		width 100%
+		max-width $max-card-width
+		margin 10px auto 0
+		.profile-info
+			.header-picture
+				position relative
+				input
+					display none
+				.real-picture
+					height 90px
+					position relative
+					img
+						border-radius 8px
+						width 100%
+						height 100%
+						object-fit cover
+					.action-picture
+						position absolute
+						top 18px
+						right 23px
+						color #FFF
+						cursor pointer
+					.edit-menu
+						background: #FFF
+						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+						position: absolute
+						transition: .3s
+						overflow: hidden;
+						border-radius: 8px;
+						height: 0
+						top 40px
+						right -34px
+						padding 0px
+						z-index 80
+						&:before
+							content: ' ';
+							position: absolute;
+							top: -8px;
+							left: 6px;
+							border-bottom: 15px solid #fff;
+							border-left: 10px solid transparent;
+							border-right: 10px solid transparent;
+							width: 0;
+							height: 0;
+						.submenu
+							color: #666666;
+							cursor: pointer
+							padding: 5px 15px 5px 10px
+							m-flex(flex-start)
+							&:hover
+								background: #eee
+							img
+								width 13px
+								height 13px
+							._label
+								margin-left: 8px
+								m-font(Roboto, normal, normal, normal, 14px)
+						.header
+							padding 0px 10px
+							font-size 10px
+							svg
+								cursor pointer
+						&.open
+							padding 5px 0px
+							overflow: visible
+							height: auto
+							transition: .3s
+				.main-picture
+					height 90px
+					m-flex()
+					.content
+						m-flex()
+						flex-direction column
+						img
+							width 14px
+							height 12px
+							margin-bottom 5px
+						span
+							color: #666666;
+							m-font(Roboto, normal, bold, normal, 10px)
+							letter-spacing 1px
+				.gradient-overlay
+					border-radius 8px
+					cursor pointer
+					opacity 0.4
+					position absolute
+					left 0
+					top 0
+					width 100%
+					height  100%
+					/*background-image url(/images/proj_gradient.svg)
+					background-size cover*/
+					background: linear-gradient(180deg, #CCCCCC 0%, #666666 100%);
+			.profile-tab
+				m-flex()
+				background: #FFFFFF;
+				box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+				.tabs					
+					m-flex(space-between)
+					position relative
+					.tab-button
+						padding 8px 20px
+						m-font(Roboto, normal ,500, normal, 12px)
+						color: #666666
+						cursor pointer
+						&.active
+							color $first-color
+					.but-seperator
+						width 1px
+						height 13px
+						background: linear-gradient(180deg, #FFF 0%, #CCC 100%);
+				.hide-mobile
+					position absolute
+					right 20px				
+				.buttons
+					position relative
+					m-flex(space-between)			
+					img
+						cursor pointer
+			.help-menu
+				background: #FFF
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				position: absolute
+				transition: .3s
+				overflow: hidden;
+				border-radius: 8px;
+				height: 0
+				left: -75px
+				top 30px
+				right 0
+				padding 0px
+				z-index 80
+				&:before
+					content: ' ';
+					position: absolute;
+					top: -8px;
+					left: 6px;
+					border-bottom: 15px solid #fff;
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+					width: 0;
+					height: 0;
+				.submenu
+					color: #666666;
+					cursor: pointer
+					padding: 5px 15px 5px 10px
+					m-flex(flex-start)
+					&:hover
+						background: #eee
+					img
+						width 13px
+						height 13px
+					._label
+						margin-left: 8px
+						m-font(Roboto, normal, normal, normal, 12px)
+				.header
+					padding 0px 10px
+					font-size 10px
+					svg
+						cursor pointer
+				&.open
+					padding 5px 0px
+					overflow: visible
+					height: auto
+					transition: .3s
+			.user-info
+				position absolute
+				top 58px
+				left 12px
+				right 10px
+				m-flex(space-between)
+				.user-wrapper
+					m-flex(flex-start)
+					.user-name
+						color #FFF
+						margin-left 5px
+						margin-top: 0
+						margin-bottom: 20px
+						text-overflow: ellipsis
+						overflow: hidden
+						white-space: nowrap
+						m-font(Roboto, normal, bold, 14px, 14px)
+						.address
+							color #ffffff
+							margin-left: 5px
+							m-font(Roboto, normal, bold, normal, 12px)
+					.check-mark
+						margin-left: 10px
+						margin-top: -20px
+				.addition-buttons
+					display none
+					.buttons
+						position relative
+						.help-menu
+							left -85px
+							right unset
+							top 25px
+							&:before
+								left unset
+								right 10px
+			.user-detail-info
+				padding 8px 12px 16px
+				m-flex()
+				flex-direction column
+				.detail-info
+					m-flex(space-between, center)
+					.but-seperator
+						width 1px
+						height 20px
+						background: linear-gradient(180deg, #FFF 0%, #CCC 100%);
+					.column
+						padding 0px 14px
+						text-align center
+						cursor pointer
+						text-decoration none
+						.number
+							m-font(Roboto, normal, 500, normal, 14px)
+							text-align center
+							color $first-color
+							border-radius 8px
+						.label
+							m-font(Roboto, normal, normal, normal, 12px)
+							margin 5px 0 0 0
+							padding 0
+							text-align center
+							color #666
+							border-radius 8px					
+				.user-detail-mobile
+					m-flex(space-between, center)
+					display none
+					width: 100%
+					margin-bottom 10px
+				.button-groups
+					m-flex(space-between)
+	.donor-stats-mobile
+		margin 20px auto
+		box-sizing border-box	
+	.nonprofit-about-us
+		margin: 20px auto		
+		box-sizing border-box
+		.section-title
+			m-font(Roboto, normal, 500, normal, 14px)
+			color: #666
+		.section-description
+			padding 8px
+			m-font(Roboto, normal, normal, 17px, 14px)
+			color #666
+			text-align left
+			white-space pre-wrap
+			word-break break-word
+	.locked
+		margin 16px 0px
+		m-flex()
+		flex-direction column
+		.lock-img
+			width 98px
+			height 98px
+		.lock-title
+			m-font(Roboto, normal, normal, normal,  20px)
+			color #000
+			text-align center
+		.lock-desc
+			m-font(Roboto, normal, normal, normal, 14px)
+			color #000
+			text-align center
+	.profileDiscoverClaim
+			padding 20px 30px
+			margin 0 auto
+			.iconRow
+				display flex
+				justify-content space-around
+			.descriptionRow
+				display flex
+				justify-content space-around
+				text-align center
+				div
+					width 45%
+					p
+						font-size 17px
+			.buttonRow
+				display flex
+				justify-content space-around
+				text-align center
+				div
+					width 45%
+					text-align center
+					button
+						margin 0 auto
+						padding 4px 15px
+						span
+							font-size 18px !important
+	.claim-wizard-content
+		display flex
+		flex-direction column
+		align-items center
+		.claim-desc
+			m-font(Roboto, normal, normal, 17px, 14px)
+			color #666
+		.passcode
+			color #666
+			padding 5px 10px
+			border 1px solid #ddd
+			box-sizing border-box
+			border-radius 16px
+			m-font(Roboto, normal, normal, 19px, 14px)
+			outline none
+			&:placeholder
+				m-font(Open Sans, normal, normal, 19px, 14px)
+		.btn-contact
+			padding 5px 10px
+			m-font(Roboto, nomral, normal, 17px, 14px)
+			color $first-color
+			cursor pointer
+@media all and (max-width: 768px)
+	.myProfileWrapper		
+		.MyProfilePage
+			.profile-info
+				.header-picture
+					.real-picture
+						.edit-menu
+							right unset
+							right 10px
+							&:before
+								left unset
+								right 10px
+				.user-info
+					.user-wrapper
+						max-width: 80%
+					.addition-buttons
+						display flex
+						.buttons
+							button
+								margin-bottom: 25px
+								margin-right: -5px
+				.user-detail-info
+					justify-content center
+					flex-wrap wrap
+					.user-detail-mobile
+						display flex
+		.profileDiscoverClaim
+			padding 20px 30px
+			margin 0 auto
+			.iconRow
+				display flex
+				justify-content space-around
+			.descriptionRow
+				display flex
+				justify-content space-around
+				text-align center
+				div
+					width 45%
+					p
+						font-size 17px
+			.buttonRow
+				display flex
+				justify-content space-around
+				text-align center
+				div
+					width 45%
+					text-align center
+					button
+						margin 0 auto
+						padding 4px 15px
+						span
+							font-size 18px !important

@@ -1,0 +1,568 @@
+@import './AboutMe/style.styl'
+@import './MissionForm/style.styl'
+@import './MySharedPostList/style.styl'
+@import './MediaList/style.styl'
+@import './UserDetailInfo/style.styl'
+@import './FinancialInfo/style.styl'
+@import './MobileInfo/style.styl'
+@import './DonateForm/style.styl'
+@import './PickupForm/style.styl'
+@import './VolunteerForm/style.styl'
+
+.newProfileWrapper
+    margin: auto
+    padding: 0 30px
+    .profileBody
+        .btn-go-back
+            cursor: pointer
+            margin: 7px 0 7px 7px
+        .myProfilePage
+            margin-top: 0
+            border-radius: 0
+            box-shadow: 0 0 20px rgba(0, 0, 0, .15)
+            .profileInfo
+                position: relative
+                height: 500px
+                .headerPicture
+                    height: 500px
+                    input
+                        display: none
+                    .gradientOverlay
+                        cursor: pointer
+                        opacity: .3
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 100%
+                        height: 500px
+                        background: -webkit-linear-gradient(top,#ccc,#666)
+                        background: linear-gradient(180deg,#ccc,#666)
+                    .noPicture
+                        width: 100%
+                        height: 500px
+                        > img
+                            width: 100%
+                            height: 500px
+                            object-fit: cover
+                        .mainPicture
+                            width: 100%
+                            .content
+                                width: 100%
+                    .realPicture
+                        img
+                            width: 100%
+                            height: 500px
+                            object-fit: cover
+                        .gradientOverlay
+                            width: 100%
+                            height: 500px
+                        > div
+                            .actionPicture
+                                position: absolute
+                                top: 18px
+                                right: 23px
+                                color: #FFF
+                                cursor: pointer
+                            .editMenu
+                                background: #FFF
+                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                position: absolute
+                                transition: .3s
+                                overflow: hidden;
+                                border-radius: 0
+                                height: 0
+                                top: 40px
+                                right: 5px
+                                padding: 0px
+                                z-index: 80
+                                &:before
+                                    content: ' ';
+                                    position: absolute;
+                                    top: -8px;
+                                    right: 15px;
+                                    border-bottom: 15px solid #fff;
+                                    border-left: 10px solid transparent;
+                                    border-right: 10px solid transparent;
+                                    width: 0;
+                                    height: 0;
+                                .submenu
+                                    color: #666666;
+                                    cursor: pointer
+                                    padding: 5px 15px 5px 10px
+                                    m-flex(flex-start)
+                                    &:hover
+                                        background: #eee
+                                    img
+                                        width: 13px
+                                        height: 13px
+                                    ._label
+                                        margin-left: 8px
+                                        m-font(Roboto, normal, normal, normal, 14px)
+                                .header
+                                    padding: 0px 10px
+                                    font-size: 10px
+                                    svg
+                                        cursor: pointer
+                                &.open
+                                    padding: 5px 0px
+                                    overflow: visible
+                                    height: auto
+                                    transition: .3s
+                .userInfo
+                    position: absolute
+                    left: 113px
+                    bottom: 57px
+                    right: 10px
+                    m-flex(space-between)
+                    .userWrapper
+                        m-flex(flex-start)
+                        align-items: flex-end
+                        .userTitleBody
+                            max-width: 850px
+                            margin-left: 20px
+                            p
+                                color: #ffffff
+                                margin-left: 5px
+                                margin-top: 0
+                                margin-bottom: 20px
+                                text-overflow: ellipsis
+                                overflow: hidden
+                                white-space: nowrap
+                                margin: 0
+                                &.userName
+                                    m-font(Roboto, normal, bold, 55px, 50px)
+                                &.address
+                                    display: flex
+                                    m-font(Roboto, normal, normal, normal, 21px)
+                                    .geoLocationIcon
+                                        margin-right: 5px
+                        .checkMark
+                            margin-left: 30px
+                            margin-bottom: 40px
+                            width: 20px
+                    .additionButtons
+                        display: none
+                        .buttons
+                            position: relative
+                            .helpMenu
+                                left: -85px
+                                right: unset
+                                top: 25px
+                                &:before
+                                    left: unset
+                                    right: 10px
+            .userDetailInfo
+                padding: 65px 60px
+                display: flex
+                .infoBody
+                    flex: 3.5 1
+                    display: flex
+                    .eachInfo
+                        flex: 1 1
+                        text-align: center
+                        cursor: pointer
+                        position: relative
+                        a
+                            text-decoration: none
+                        p
+                            color: #000000
+                            margin: 0
+                            text-align: center
+                            &.number
+                                font-size: 25px
+                                font-weight: 600
+                                height: 30px
+                                margin-bottom: 10px
+                            &.label
+                                font-size: 15px
+                                font-weight: normal
+                                line-height: 21px
+                        > div
+                            .blueUnderline
+                                display: none
+                                position: absolute
+                                top: 68px
+                                left: 20px
+                                width: 85px
+                                height: 5px
+                                background-color: #20afff
+                                &.show
+                                    display: block
+                .middleBody
+                    flex: 1.5 1
+                    display: flex
+                .actionBody
+                    flex: 5 1
+                    display: flex
+                    .buttonGroups
+                        flex: 1 1
+                        display: flex
+                        > div
+                            display: flex
+                            &.twoButtons
+                                flex: 2 1
+                                button
+                                    cursor: pointer
+                                    display: flex
+                                    align-items: center
+                                    border: 1px solid #20AFFF
+                                    border-radius: 0
+                                    margin: 0 3px
+                                    height: 45px
+                                    padding: 4px 10px
+                                    background-color: #ffffff
+                                    img
+                                        margin-right: 10px
+                                        &.desktop
+                                            display: block
+                                        &.mobile
+                                            display: none
+                                    span
+                                        font-size: 18px
+                                        font-weight: bold
+                                        color: #20AFFF
+                                        padding: 0 20px
+                            &.buttons
+                                flex: 1 1
+                                position: relative
+                                button
+                                    cursor: pointer
+                                    display: flex
+                                    align-items: center
+                                    border: 1px solid #20AFFF
+                                    border-radius: 0
+                                    margin: 0 5px
+                                    height: 45px
+                                    padding: 4px 10px
+                                    background-color: #ffffff
+                                    img
+                                        margin-right: 10px
+                                        &.desktop
+                                            display: block
+                                        &.mobile
+                                            display: none
+                                    span
+                                        font-size: 18px
+                                        font-weight: bold
+                                        color: #20AFFF
+                                        padding: 0 20px
+                                .helpMenu
+                                    display: none
+                                    background: #FFF
+                                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                                    position: absolute
+                                    transition: .3s
+                                    overflow: hidden
+                                    height: 0
+                                    left: 5px
+                                    top: 45px
+                                    right: 0
+                                    padding: 0px
+                                    z-index: 80
+                                    .submenu
+                                        color: #666666
+                                        cursor: pointer
+                                        padding: 12px 15px 12px 10px
+                                        m-flex(flex-start)
+                                        &:hover
+                                            background: #eee
+                                        img
+                                            width: 17px
+                                            height: 17px
+                                        ._label
+                                            margin-left: 15px
+                                            color: #000000
+                                            m-font(Roboto, normal, bold, 18px, 15px)
+                                    .header
+                                        padding: 0px 10px
+                                        font-size: 14px
+                                        svg
+                                            cursor: pointer
+                                    &.open
+                                        padding: 5px 0px
+                                        overflow: visible
+                                        height: auto
+                                        transition: .3s
+                                    &.open
+                                        display: block
+                            &.postBtnBody
+                                justify-content: flex-end
+                                button
+                                    padding: 1px 30px !important
+    .tabSection
+        .tabBody
+            padding: 50px 300px
+            ul
+                &:after
+                    content: ' '
+                    display: table
+                    clear: both
+                &.tabs
+                    position: relative
+                    margin: 0
+                    padding: 0
+                    list-style: none
+                li
+                    text-align: center
+                    display: inline-block
+                    &.tab
+                        padding: 10px 40px
+                        cursor: pointer
+                        font-size: 25px
+                        font-weight: bold
+                        line-height: 30px
+                        color: #828282
+                        &.active
+                            color: #000000
+                        &:hover
+                            color: #000000
+                    &.tabs
+                        &__tab
+                            float: left
+                            width: 33.333%
+                            text-align: center
+                            &:first-child.active ~ .tabs__presentation-slider
+                                left: 0
+                            &:nth-child(2).active ~ .tabs__presentation-slider
+                                left: 33.333%
+                            &:nth-child(3).active ~ .tabs__presentation-slider
+                                left: calc(33.333% * 2)
+                        &__presentation-slider
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            width: 33.333%
+                            height: 5px
+                            background-color: #20AFFF
+                            transition: left .25s
+    .listSection
+        padding: 0 100px
+        display: flex
+        .listBody
+            width: 620px
+            &.desktop
+                display: block
+            &.mobile
+                display: none
+        .infoBody
+            margin-left: 50px
+            width: 350px
+            &.desktop
+                display: block
+                .donateFormCard
+                    padding: 15px 10px !important
+            &.mobile
+                display: none
+    .infoSection
+        padding: 0 100px
+        display: flex
+        &.desktop
+            display: flex
+        &.mobile
+            display: none
+        .detailInfoBody
+            width: 350px
+        .finacialsBody
+            margin-left: 30px
+            width: 635px
+    .modalSection
+        .donateFormModal
+            border-radius: 0
+        .pickupFormModal
+            border-radius: 0
+        .volunteerFormModal
+            border-radius: 0
+        .locked
+            margin 16px 0px
+            m-flex()
+            flex-direction column
+            .lock-img
+                width 98px
+                height 98px
+            .lock-title
+                m-font(Roboto, normal, normal, normal,  20px)
+                color #000
+                text-align center
+            .lock-desc
+                m-font(Roboto, normal, normal, normal, 14px)
+                color #000
+                text-align center
+
+/*==========  Desktop First  ========== */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1400px) {
+	/* */
+    .newProfileWrapper {
+        max-width: 1280px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    /* */
+    .hidden-lg {
+        display: none;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 1050px)
+	.newProfileWrapper
+        padding: 0
+        background: #ffffff
+        .profileBody
+            .myProfilePage
+                box-shadow: none !important
+                .profileInfo
+                    height: 400px
+                    .headerPicture
+                        height: 400px
+                        .noPicture
+                            img
+                                width: 100%
+                                height: 400px
+                            .gradientOverlay
+                                height: 400px    
+                        .realPicture
+                            img
+                                width: 100%
+                                height: 400px
+                            .gradientOverlay
+                                height: 400px
+                    .userInfo
+                        left: 17px
+                        top: 80px
+                        display: block
+                        .userWrapper
+                            display: block
+                            .UserAvatar
+                                width: 130px !important
+                                height: 130px !important
+                                .avatar-wrapper 
+                                    width: 130px !important
+                                    height: 130px !important
+                                    max-width: 130px !important
+                                    max-height: 130px !important
+                            .userTitleBody
+                                .userName
+                                    margin-top: 10px
+                                    font-size: 40px !important
+                                    line-height: 45px !important
+                                    height: 90px
+                                    text-overflow: ellipsis
+                                    overflow: hidden
+                                    white-space: pre-wrap
+                                .address
+                                    display: none !important
+                            .checkMark
+                                display: none !important
+                .userDetailInfo
+                    padding: 10px 0
+                    display: block
+                    .infoBody
+                        padding: 15px 0
+                    .middleBody
+                        display: none
+                    .actionBody
+                        background-color: #20AFFF
+                        padding: 15px 7px
+                        .buttonGroups
+                            // justify-content: center
+                            .twoButtons
+                                flex: none !important
+                                button
+                                    padding: 1px 10px !important
+                                    background-color: #20AFFF !important
+                                    border: 1px solid #ffffff !important
+                                    height: 35px !important
+                                    img
+                                        margin-right: 10px !important
+                                        &.desktop
+                                            display: none !important
+                                        &.mobile
+                                            display: block !important
+                                    span
+                                        padding: 0 10px !important
+                                        color: #ffffff !important
+                                        font-size: 12px !important
+                                        line-height: 14px !important
+                                        font-weight: bold !important
+                            .buttons
+                                flex: none !important
+                                button
+                                    padding: 1px 10px !important
+                                    height: 35px !important
+                                    span
+                                        padding: 0 10px !important
+                                        font-size: 12px !important
+                                        line-height: 14px !important
+                                        font-weight: bold !important
+                                .helpMenu
+                                    width: 150px
+                                    top: 35px !important
+                                    left: -64px !important
+                                    .submenu
+                                        padding: 5px 8px 5px 8px !important
+                                        ._label
+                                            font-size: 12px !important
+                                            line-height: 15px !important
+                                            font-weight: 500 !important
+                                &.postBtnBody
+                                    width: 100%
+                                    
+        .tabSection
+            .tabBody
+                padding: 0px 10px 10px 10px
+                ul
+                    li
+                        &.tab
+                            padding: 10px 0
+                            font-size: 15px
+                            line-height: 18px
+                            font-weight: bold
+        .listSection
+            display: block
+            padding: 0 10px
+            .infoBody
+                margin-left: 0
+                width: 100%
+                &.desktop
+                    display: none
+                &.mobile
+                    display: block
+            .listBody
+                width: 100%
+                margin-top: 25px
+                &.desktop
+                    display: none
+                &.mobile
+                    display: block
+        .infoSection
+            display: block
+            padding: 0 10px
+            &.desktop
+                display: none !important
+            &.mobile
+                display: block !important
+            &.donor
+                padding: 0
+            .detailInfoBody
+                width: 100%
+            .finacialsBody
+                margin-left: 0
+                width: 100%
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 580px) {
+
+}

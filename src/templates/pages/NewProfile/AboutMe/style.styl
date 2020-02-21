@@ -1,0 +1,93 @@
+.aboutMeSection
+    .detailBody
+        border-radius: 0
+        > section
+            border-radius: 0
+            margin-top: 0
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
+        .aboutMeBody, .homeTownBody, .emailBody
+            border-radius: 0
+            margin-top: 16px
+            &.desktop
+                display: flex
+                padding: 22px 60px !important
+                .rightFlexBody
+                    flex: 1 1
+                    display: block
+                    text-align: right
+                    padding: 18px 0
+                    a
+                        span
+                            padding: 8px 35px
+                            border: 1px solid #1AAAFF
+                            font-size: 15px
+                            font-weight: normal
+                            line-height: 18px
+                            color: #1AAAFF
+            &.mobile
+                display: none
+                > div
+                    &.flexBody
+                        display: flex
+                        .rightFlexBody
+                            width: 30px
+                    p
+                        &.desc
+                            margin: 0
+            .leftFlexBody
+                flex: 4 1
+                p
+                    &.title
+                        font-size: 18px
+                        font-weight: 600
+                        line-height: 22px
+                        color: #20AFFF
+                    &.desc
+                        font-size: 14px
+                        font-weight: normal
+                        line-height: 17px
+                        color: #000000
+                        margin: 0
+        .detailCard
+            padding: 40px 25px !important
+            .headerBody
+                padding: 10px 0 !important
+                p
+                    color: #000000
+                    &.title
+                        font-size: 25px
+                        font-weight: 600
+                        line-height: 30px
+                        margin-bottom: 15px
+                    &.desc
+                        font-size: 15px
+                        font-weight: normal
+                        line-height: 21px
+            .homeTownBody, .emailBody
+                display: block
+                padding: 10px 0 !important
+                p
+                    &.title
+                        font-size: 18px
+                        font-weight: 600
+                        line-height: 22px
+                        color: #20AFFF
+                        margin-bottom: 10px
+                    &.desc
+                        font-size: 14px
+                        font-weight: normal
+                        line-height: 17px
+                        color: #000000
+
+@media all and (max-width: 768px)
+    .aboutMeSection
+        .detailBody
+            border-radius: 0
+            > section
+                border-radius: 0
+            .aboutMeBody, .homeTownBody, .emailBody
+                padding: 22px 15px !important
+                &.desktop
+                    display: none
+                &.mobile
+                    display: block

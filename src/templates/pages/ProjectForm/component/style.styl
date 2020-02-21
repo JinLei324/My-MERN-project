@@ -1,0 +1,350 @@
+.step-wrapper
+	width fit-content
+	m-flex()
+	.step
+		size(40px, 40px)
+		border-radius 50%
+		overflow hidden
+		position relative
+		background linear-gradient(to right, #a994ff 0%, #67e8e0 100%)
+		m-flex()
+		&:after
+			content ""
+			size(90%, 90%)
+			position absolute
+			display block
+			background white
+			border-radius 50%
+	.text
+		m-font(Roboto, normal, normal, 9px, 16px)
+		color #AB64f5
+		z-index 1
+		padding 0 15px
+.createProjectForm
+	span.globalErrorHandler
+		position absolute
+		left 0
+		bottom -18px
+		font-size 12px
+		color #FF90B5
+		white-space nowrap
+	.file-wrapper
+		.icon.full
+			z-index 2
+		span.globalErrorHandler
+			left auto
+			bottom 10px
+
+
+.type-wrapper
+	m-flex(space-around)
+	background #FFFFFF
+	border-radius 40px!important
+	.wrapper
+		m-flex()
+		padding 10px 0
+		flex 1
+		border-radius 40px
+		.label
+			padding 0
+		&[disabled]
+			opacity 0.5
+		&.active
+			background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+			color white
+			.label
+				color white
+				padding 0
+			&:first-child
+				border-top-left-radius 40px
+				border-bottom-left-radius 40px
+			&:last-child
+				border-top-right-radius 40px
+				border-bottom-right-radius 40px
+
+	.type-project
+		size(40px, 40px)
+		disp-pos(absolute)
+		cursor pointer
+		border 2px solid #FFF
+		border-radius 50%
+		z-index 1
+		top 25px
+		right 25px
+		&.type-0
+			background linear-gradient(180deg, #F5A623 0%, #FBD249 100%);
+		&.type-1
+			background linear-gradient(180deg, #43A047 0%, #C3DEA5 100%)
+		&.type-2
+			background linear-gradient(180deg, #1AAAFF 0%, #5EEDFD 100%)
+	.label
+		m-font(Roboto, normal, normal, 19px, 14px)
+		padding-left 16px
+		padding-right 16px
+
+
+.project-information
+	.file-wrapper
+		position relative
+		size(auto, 175px)
+		m-flex()
+		flex-direction column
+		border 8px solid rgba(255, 255, 255, 0.25)
+		background #DDD
+		.text
+			color white
+			margin-right 16px
+		input[type="file"]
+			display none
+		.icon
+			object-fit contain
+			&.full
+				size(100%, 175px)
+			&.fix
+				size(64px, 64px)
+	.image-action
+		m-flex()
+		&:after
+			background linear-gradient(to right, rgba(169, 148, 255, 0.2) 0%,rgba(103, 232, 224, 0.3) 100%)
+	
+	.title-input
+		position relative
+		input
+			m-font(Roboto, normal, 500, normal, 24px)
+			width 100%
+			
+	.description-input
+		position relative
+		margin-top 10px
+	textarea
+		&::placeholder
+			m-font(Roboto, normal, normal, 38px, 14px)
+			color rgb(150, 150, 150)
+		&.description
+			padding 0 16px
+			text-align left
+			max-height 500px
+
+	.description
+		size(100%, 40px)
+		resize none
+	.control
+		box-sizing border-box
+		border 1px solid #DDDDDD
+		border-radius 8px
+		color rgb(150, 150, 150)
+
+.needed
+	position relative
+	m-flex(space-between)
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	input[type="text"]
+		size(100%, 32px)
+		m-font(Roboto, normal, normal, 32px, 14px)
+		&::placeholder
+			color rgb(150, 150, 150)
+			font-size 10px
+		&.count
+			width 60px
+			text-align center
+			padding 0
+	
+	label[for="checkbox-soft"]
+		&:after
+			position absolute
+			top 0
+			left 0
+			size(100%, 100%)
+			content ''
+			display block
+		margin 8px auto
+		cursor pointer
+		border-radius 4px
+		size(16px, 16px)
+		display block
+		border 1px solid #DDDDDD
+
+	.icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, calc(-50% + 10px))
+	.field
+		margin-right 10px
+		.delete
+			m-flex()
+			m-font(Roboto, normal, normal, 16px, 15px)
+			size(16px, 16px)
+			cursor pointer
+			transform rotate(45deg)
+			left -20px
+			top 28px
+			border-radius 50%
+			position absolute
+			color white
+			background linear-gradient(to right, #FF5C5C 0%, #FF90B5 100%)
+		&-1
+			width 100%
+		&-3
+			margin-right 0
+	.control
+		box-sizing border-box
+		border 1px solid #DDDDDD
+		border-radius 8px
+		color rgb(150, 150, 150)
+	.description
+		size(100%, 32px)
+		text-align left
+		padding-left 10px
+		resize none
+.send
+	m-flex()
+
+.exactly-checkbox-container
+	text-align center
+	input[type="checkbox"]
+		display none
+		&:checked 
+			+ .checkmark-need
+				&:after
+					display block
+	.checkmark-need
+		position relative
+		margin: 3px 0px
+		width: 18px
+		height: 18px
+		background: #FFFFFF
+		border: 1px solid #DDDDDD
+		box-sizing: border-box;
+		display inline-block
+		&:after
+			position absolute
+			display none
+			content: ''
+			left: 2px
+			top: 4px
+			width: 13px
+			height: 9px
+			background url(/images/ui-icon/check.svg)
+
+.needed-card
+	size(fit-conent, fit-conent)
+	background #FAFAFA!important
+	.header
+		m-flex(space-between)
+	.type
+		m-flex()
+		size(fit-content, 50px)
+		box-sizing border-box
+		border-radius 48px
+		color white
+		padding 10px 15px
+		img
+			size(20px, 20px)
+			margin-right 15px
+		.quantity
+			m-font(Roboto, normal, normal, 24px, 24px)
+
+		&-0
+			background #3CC267
+		&-1
+			background #FB9E73
+		&-2
+			background #5A9EFB
+
+	.description
+		m-font(Roboto, normal, normal, 24px, 14px)
+		text-align justify
+		color #555
+		margin 0
+
+	.menu-point
+		m-font(Roboto, normal, normal, 24px, 14px)
+		margin 0
+		word-wrap break-word
+		white-space: nowrap
+		color #ab64f5
+		display block
+		opacity 0.8
+		&:hover
+			opacity 1
+		
+.time
+	display flex
+	align-items center
+	flex-wrap wrap
+	position relative
+	z-index 2
+
+	.react-datepicker__time-container
+		width 8em !important
+	.react-datepicker-time__header
+		font-size 1em !important
+	.react-datepicker-time__header--time
+		padding-left 0px !important
+		padding-right 0px !important
+	.react-datepicker__time-box
+		margin-left 0px !important
+		margin-right 0px !important
+		width 100% !important
+	.react-datepicker__time-list
+		padding 0 !important
+	.react-datepicker--time-only
+		.react-datepicker__triangle
+			left 52px
+
+	.field
+		margin-bottom 10px
+		&.date
+			flex-basis 100%
+			.react-datepicker-wrapper
+				width 100%
+				.react-datepicker__input-container
+					width 100%
+	.control
+		size(100%, 32px)
+		box-sizing: border-box
+		border: 1px solid #DDDDDD
+		border-radius: 0
+		color: rgb(150, 150, 150)
+		padding-left: 10px
+	.width
+		&-250
+			width 250px
+		&-120
+			width 120px
+		&-90
+			width 90px
+	.to
+		m-font()
+		text-align center
+		margin 0 10px
+		display inline-block
+		color #DDD
+
+.field
+	position relative
+
+.project-money
+	m-flex(justify-content, center)
+	.field
+		&-1
+			width 75%
+		&-2
+			flex-direction column
+			m-flex()
+			width 25%	
+	.control
+		width 100%
+		height 32px
+		padding-left 10px
+
+@media all and (max-width: 768px)
+	.time
+		.field.date
+			flex-basis 100%
+		.react-datepicker-wrapper,.react-datepicker__input-container
+			display block
+		.width-250
+			width 100%

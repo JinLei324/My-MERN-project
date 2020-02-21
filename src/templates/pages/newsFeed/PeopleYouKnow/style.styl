@@ -1,0 +1,70 @@
+.peopleYouKnow
+    height: 200px
+    background-color: #ffffff
+    border-radius: 8px
+    .title
+        font-size: 16px
+        font-weight: 500
+        text-align: left
+        padding: 15px
+        margin: 0
+    .slider
+        width: 100%
+        margin: 0 auto 30px
+        .slick-list
+            .slick-slide
+                width: 87px !important
+                .sliderBox
+                    width: 100%
+                    padding: 1px
+                    box-sizing: border-box
+                    ouline: none 
+                    display: inline-block
+                    .boxContent
+                        padding: 1px
+                        background-color: #ffffff
+                        height: 100%
+                        display: flex
+                        flex-direction: column
+                        box-sizing: border-box
+                        .avatarBox
+                            margin: 0 auto
+                            display: block
+                            .UserAvatar
+                                width: 55px !important 
+                                height: 55px !important
+                                .avatar-wrapper
+                                    width: 55px !important
+                                    height: 55px !important
+                        .nameBox
+                            padding: 8px 0
+                            p
+                                text-align: center
+                                margin: 0
+                                font-size: 10px
+                                line-height: 16px
+                                height: 32px
+                                text-overflow: ellipsis
+                                overflow: hidden
+                        .btnBox
+                            margin: 0 auto
+                            display: block
+    .slick-arrow
+        top: unset
+        bottom: 55px
+        background-size: contain
+        z-index: 999
+        width: 22px !important
+        height: 22px !important
+        border-radius: 50% !important
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        &.slick-prev
+            left: 23px
+            transform: translateX(-39px)
+            &:before
+                content: '' !important
+        &.slick-next
+            right: -3px
+            transform: translateX(13px)
+            &:before
+                content: '' !important

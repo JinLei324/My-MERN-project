@@ -1,0 +1,70 @@
+.request-form
+    margin-top 30px
+    .type-project
+        size(40px, 40px)
+        position absolute
+        border 2px solid white
+        border-radius 50%
+        z-index 1
+        top -20px
+        right -20px
+        &.type-0
+            background linear-gradient(180deg, #F5A623 0%, #FBD249 100%);
+        &.type-1
+            background linear-gradient(180deg, #43A047 0%, #C3DEA5 100%)
+        &.type-2
+            background linear-gradient(180deg, #1AAAFF 0%, #5EEDFD 100%)
+        img.type
+            width: 100%;
+            height: 100%;
+            transform: scale(0.5);
+    .request-info
+        position relative
+        .avatar-wrapper
+            m-flex(flex-start, flex-start)
+            .user-info
+                cursor pointer
+                margin-left 10px
+                m-flex(center, flex-start)
+                flex-direction column
+                .name
+                    m-font(Roboto, normal, 500, normal, 14px)
+                    color #333
+                .location
+                    m-font(Roboto, normal, 500, normal, 12px)
+                    color #666
+        .detail-info
+            position relative
+            text-align left
+            m-font(Roboto, normal, normal, 20px, 14px)
+            color #666
+            margin-top 20px
+            .type-info
+                font-weight 500
+                color #666
+            .icon
+                display inline-block
+                border-radius 4px
+                width 8px
+                height 8px
+                &.pickup
+                    background linear-gradient(180deg, #1AAAFF 0%, #5EEDFD 100%)
+                &.clock
+                    width 11px
+                    height 11px
+                    background-image url('/images/ui-icon/icon-clock.svg')
+            .pick-item
+                padding-right 5px
+    .reply
+        m-font(Roboto, normal, 500, normal, 14px)
+        &.accept
+            color $first-color
+        &.decline
+            color #666
+        &.cancel
+            color #FF3627
+@media all and (max-width: 768px)
+    .request-form
+        .request-info
+            .avatar-wrapper
+                max-width 100%

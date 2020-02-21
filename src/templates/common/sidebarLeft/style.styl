@@ -1,0 +1,140 @@
+.SidebarLeft
+	position fixed
+	top 53px	
+	box-sizing border-box
+	height 100%
+	z-index 2
+	background-color white
+	box-shadow 0px 1px 5px rgba(0, 0, 0, 0.1)
+	.leftMenu
+		position relative
+		display flex
+		flex-direction column
+		top 40px
+		margin 0
+		padding 0
+		li
+			position relative
+			> a
+				display block
+				position relative
+				text-align center
+				text-decoration none
+				font-weight 500
+				font-size 12px
+				text-transform capitalize
+				color #666666
+				background-repeat no-repeat
+				background-position top center
+				padding 30px 5px 30px 5px
+				transition .3s
+				&:before
+					content ''
+					display block
+					position relative
+					bottom -25px
+					height 2px
+					width 0
+					transition .3s
+					margin 0 auto
+					background-color #666666
+				&.dashboardMainLink
+					background-image url("/images/ui-icon/sidemenu/menu_home.svg")
+				&.myProfileMainLink
+					background-image url("/images/ui-icon/sidemenu/menu_myprofile.svg")
+				&.gameMainLink
+					background-image url("/images/ui-icon/sidemenu/menu_game.svg")
+				&.newsFeedMainLink
+					background-image url("/images/ui-icon/sidemenu/menu_newsfeed.svg")
+				&.projectsMainLink
+					background-image url("/images/ui-icon/sidemenu/menu_projects.svg")
+				&.campaignsMainLink
+					background-image url("/images/ui-icon/sidemenu/menu_campaigns.svg")
+					&.donations
+						background-image url("/images/ui-icon/sidemenu/menu_donation.svg")
+					&.volunteer
+						background-image url("/images/ui-icon/sidemenu/menu_volunteer.svg")
+					&.pickup
+						background-image url("/images/ui-icon/sidemenu/menu_pickup.svg")
+				&.connectsMainLink
+					background-image url("/images/ui-icon/sidemenu/menu_connects.svg")
+				&.chatsMainLink
+					background-image url("/images/ui-icon/sidemenu/menu_chats.svg")
+				&:hover
+					&:before
+						transition .3s
+						width 90%
+				&.active
+					transition .3s
+					color $first-color
+					&.dashboardMainLink
+						background-image url("/images/ui-icon/sidemenu/active_menu_home.svg")
+					&.myProfileMainLink
+						background-image url("/images/ui-icon/sidemenu/active_menu_myprofile.svg")
+					&.gameMainLink
+						background-image url("/images/ui-icon/sidemenu/active_menu_game.svg")
+					&.newsFeedMainLink
+						background-image url("/images/ui-icon/sidemenu/active_menu_newsfeed.svg")
+					&.projectsMainLink
+						background-image url("/images/ui-icon/sidemenu/active_menu_projects.svg")
+					&.campaignsMainLink
+						background-image url("/images/ui-icon/sidemenu/active_menu_campaigns.svg")
+						&.donations
+							background-image url("/images/ui-icon/sidemenu/active_menu_donation.svg")
+						&.volunteer
+							background-image url("/images/ui-icon/sidemenu/active_menu_volunteer.svg")
+						&.pickup
+							background-image url("/images/ui-icon/sidemenu/active_menu_pickup.svg")
+					&.connectsMainLink
+						background-image url("/images/ui-icon/sidemenu/active_menu_connects.svg")
+					&.chatsMainLink
+						background-image url("/images/ui-icon/sidemenu/active_menu_chats.svg")
+					&:before
+						transition .3s
+						width 90%
+						background-color $first-color
+				span.showMobile
+					display none
+			.submenu
+				opacity 0
+				visibility hidden
+				height auto
+				max-height 0
+				transition .3s
+				width auto
+				a
+					display block
+					padding 5px
+					transition .3s
+					background-repeat no-repeat
+					background-position top center
+					text-decoration none
+					margin-bottom 10px
+					font-size 12px
+					color #666666
+					span
+						display block
+						text-align center
+						margin-top 35px
+					&.campaignsDonationMainLink
+						background-image url("/images/ui-icon/sidemenu/menu_donation.svg")
+					&.campaignsVolunteerMainLink
+						background-image url("/images/ui-icon/sidemenu/menu_volunteer.svg")
+					&.campaignsPickupMainLink
+						background-image url("/images/ui-icon/sidemenu/menu_pickup.svg")
+					&.active
+						color $first-color
+						&.campaignsDonationMainLink
+							background-image url("/images/ui-icon/sidemenu/active_menu_donation.svg")
+						&.campaignsVolunteerMainLink
+							background-image url("/images/ui-icon/sidemenu/active_menu_volunteer.svg")
+						&.campaignsPickupMainLink
+							background-image url("/images/ui-icon/sidemenu/active_menu_pickup.svg")
+				&.open
+					opacity 1
+					visibility visible
+					max-height 1000px
+
+@media all and (max-width: 768px)
+	.SidebarLeft
+		display none

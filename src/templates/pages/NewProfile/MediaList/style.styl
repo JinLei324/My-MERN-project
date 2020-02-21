@@ -1,0 +1,24 @@
+.media-list
+    margin 0 auto
+    max-width 634px
+    .card-mail-class
+        border-radius: 0
+        margin-top: 30px
+    .eachMedia
+        max-height: 360px
+        .media-preview
+            max-height 360px
+            width 100%
+            object-fit cover
+        .preview-video
+            object-fit fill
+
+@media only screen and (max-width: 768px)
+    .media-list
+        .card-mail-class
+            padding: 0 10px !important
+            box-shadow: none !important
+        .eachMedia
+            padding: 0 10px
+            &:first-child
+                margin-top: 10px

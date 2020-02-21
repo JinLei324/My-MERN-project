@@ -1,0 +1,98 @@
+.rc-trigger-popup
+    z-index: 100
+.post-options
+    margin: 0 auto
+    width: 620px
+    border-radius: 0
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15)
+    .post-box
+        padding: 20px 32px 5px 32px
+        display: flex
+        justify-content space-between
+        .post-content  
+            font-weight: 500
+            line-height: 20px
+            font-size: 14px
+            resize: none
+            border: 2px solid #E0E0E0
+            color: #000000
+            outline: none
+            width: 100%
+            min-height: 100px
+            max-height: 300px
+            margin: 0px 0 0 10px
+            padding: 10px
+            &::placeholder
+                color: #4F4F4F
+    .preview-file
+        position: relative
+        .preview
+            box-sizing: border-box
+            padding: 20px            
+            width: 100%;
+            object-fit: fill;
+            max-height: 280px;
+        .preview-video
+            video
+                padding: 20px
+                box-sizing: border-box
+                max-height: 280px
+                object-fit: fill
+        .preview-close
+            width: 10px
+            height: 10px
+            position: absolute
+            right: 30px
+            top: 30px
+            padding: 10px
+            background: #ccc
+            border-radius: 20px
+    .post-lower
+        display: flex
+        background: #FFFFFF
+        border-radius: 0px 0px 8px 8px
+        padding: 10px 32px
+        .post-bottom
+            display: flex
+        input[type="file"]
+            display none
+        .post-lower-wrap
+            m-flex(flex-start)
+            flex: 2 1
+            > div
+                &.mr-5
+                    margin-right 25px
+        .rightFlexBody
+            flex: 1 1
+            .shareBtn
+                align-self: flex-start
+                border-radius: 0
+                span
+                    font-size: 18px !important
+                    font-weight: bold
+                    line-height: 22px
+    .mr-10
+        margin-right: 25px
+    
+@media all and (max-width: 768px)
+    .post-options
+        max-width $max-card-width
+        width unset
+        .post-box
+            padding: 15px
+            display: block
+            .UserAvatar
+                margin: 15px auto
+            .post-content
+                margin: 0
+        .post-lower
+            display: block
+            padding: 0 15px 15px 15px
+            .post-lower-wrap
+                margin-bottom: 20px
+                > div
+                    flex 1 1
+                    min-width: 85px
+            .rightFlexBody
+                button
+                    margin: auto

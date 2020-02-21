@@ -1,0 +1,27 @@
+.notify-item
+    padding 20px 0px 15px
+    border-bottom 1px solid #CCCCCC
+    m-flex(space-between)
+    position relative
+    .main-info
+        m-flex(flex-start)
+        ._content
+            display flex
+            flex-direction column
+            ._name
+                m-font(Roboto, normal, 500, 15px, 14px)
+                color #333
+                .solid
+                    color $first-color
+            ._time
+                m-font(Roboto, normal, normal, 18px, 10px)
+                color #3E4A59
+                opacity 0.7
+    ._img
+        width 56px
+        height 45px
+        margin-right 13px
+    ._close
+        position absolute
+        top 5px
+        right 13px

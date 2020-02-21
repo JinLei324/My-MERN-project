@@ -1,0 +1,129 @@
+@import './LovedProject/style.styl'
+
+.discovers
+    margin: 20px auto
+    .title
+        margin: 30px 0 10px 0
+        text-align: center
+        color: #1AAAFF
+        font-size: 24px
+        font-weight: bold
+        line-height: 28px
+    .sub-title
+        margin: 10px 0
+        text-align: center
+        color: #324148
+        font-size: 16px
+        font-weight: normal
+        font-style: normal
+        line-height: 24px
+    .main
+        padding: 0 15px
+        .caption
+            font-size: 18px
+            font-weight: bold
+            color: #324148
+            line-height: 24px
+            margin: 30px 0 10px 0
+        ul
+            margin: 0
+            padding: 0
+            list-style: none
+            display: flex
+            align-items: center
+            justify-content: space-around
+            li
+                display: block
+                flex-basis: 25%
+                list-style-type: none
+        .more
+            font-size: 12px
+            font-weight: normal
+            color: #324148
+            text-align: right
+            margin: 5px 0
+            cursor: pointer
+            padding: 0 20px
+    
+/* Large Devices, Wide Screens */
+/* @media only screen and (max-width : 1200px) */
+
+/* Medium Devices, Desktops */
+/* @media only screen and (max-width : 992px) */
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+    .discovers
+        width: 100%
+        margin: 0 auto
+        .title
+            margin: 0 0 10px 0
+            
+/* Large Devices, Wide Screens */
+/* @media only screen and (max-width : 1200px) */
+
+/* Medium Devices, Desktops */
+/* @media only screen and (max-width : 992px) */
+
+/* Small Devices, Tablets */
+/* @media only screen and (max-width : 768px) */
+
+/* Extra Small Devices, Phones */ 
+/* @media only screen and (max-width : 480px) */
+
+/* Custom, iPhone Retina */ 
+/* @media only screen and (max-width : 320px) */
+
+@media all and (max-width: 425px)
+    .discovers
+        width: 100%
+        margin: 0 auto
+        .title
+            margin: 0 0 10px 0
+        .main
+            ul
+                padding: 0 10px
+                li
+                    flex-basis: 100%
+                    display: none
+                    &:first-child
+                        display: block
+
+@media (max-width: 575.98px)
+	.discovers
+        width: 100%
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+	.discovers
+        margin: 20px auto
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+	.discovers
+        margin: 20px auto
+
+// Extra large devices 1 (large desktops, 1024px and up)
+@media (min-width: 1024px) and (max-width: 1279.98px)
+	.discovers
+        width: 900px
+
+// Extra large devices 2 (large desktops, 1200px and up)
+@media (min-width: 1280px) and (max-width: 1365.98px)
+	.discovers
+        width: 900px
+
+// Extra large devices 3 (large desktops, 1366px and up)
+@media (min-width: 1366px) and (max-width: 1599.98px)
+	.discovers
+        width: 1024px
+
+// Extra large devices 4 (large desktops, 1600px and up)
+@media (min-width: 1600px) and (max-width: 1921.98px)
+	.discovers
+        width: 1024px
+
+// Extra large devices 5 (large desktops, 1920px and up)
+@media (min-width: 1920px)
+    .discovers
+        width: 1024px

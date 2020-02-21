@@ -1,0 +1,46 @@
+.icon-user-groups, .icons-receive-cash, .icon-find-user-male, .valunteer, .donate, .icon-pick-up, .icon-marker{
+	background: url(sprites.png) no-repeat;
+}
+
+.icon-user-groups{
+	background-position: 0 0;
+	width: 56px;
+	height: 56px;
+}
+
+.icons-receive-cash{
+	background-position: -74px -1px ;
+	width: 56px;
+	height: 56px;
+}
+
+.icon-find-user-male{
+	background-position: -159px 0;
+	width: 56px;
+	height: 56px;
+}
+
+.valunteer{
+	background-position: -238px -10px ;
+	width: 36px;
+	height: 36px;
+}
+
+.donate{
+	background-position: -295px -11px ;
+	width: 36px;
+	height: 36px;
+}
+
+.icon-pick-up{
+	background-position: -350px -10px ;
+	width: 36px;
+	height: 36px;
+}
+
+.icon-marker{
+	background-position: -409px -24px ;
+	width: 15px;
+	height: 15px;
+}
+

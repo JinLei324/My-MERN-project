@@ -1,0 +1,49 @@
+.NewStudent,
+.NewDonor
+	.chooseGenderBlock
+		background linear-gradient(0deg, #FFFFFF, #FFFFFF), #FAFAFA
+		box-shadow 0px 5px 15px rgba(0, 0, 0, 0.1)
+		border-radius 40px
+		margin 10px 0 10px 0
+		display flex
+		justify-content space-between
+		.chooseGender
+			display none
+			+ label[for*="gender"],
+			+ label[htmlfor*="gender"]
+				padding 15px 24px
+				font-weight 500
+				color #666666
+				cursor pointer
+				border-radius 30px
+				font-size 16px
+				text-align center
+				transition .2s
+			&.checked
+				+ label[for*="gender"],
+				+ label[htmlfor*="gender"]
+					background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+					color white
+					transition .2s
+	.interest_input
+		display none
+	.privacy-toggle
+		.secondTitle
+			font-weight 500
+			line-height 32px
+			font-size 16px
+			text-align center
+			color #333333
+			&.marginNotification,&.marginAccount
+				margin 35px 0 0 0
+		.set_description
+			m-font(Open Sans, normal, normal, normal, 14px)
+			color #666
+			padding 5px
+		.pushNotification
+			display flex
+			justify-content space-between
+			h4
+				font-weight 500
+				font-size 14px
+				color #333333

@@ -1,0 +1,158 @@
+.offer-nonprofits
+    width: 900px
+    margin: 20px auto
+    .title
+        margin: 30px 0 10px 0
+        text-align: center
+        color: #1AAAFF
+        font-size: 24px
+        font-weight: bold
+        line-height: 28px
+    .main
+        .desktop-view
+            position: relative
+            display: flex
+            flex-wrap: wrap
+            width: 100%
+            margin: 30px 0
+            .each
+                margin: 0 auto
+                flex-basis: 33.3333333333%
+                width: 33.3333333333%
+                text-align: center
+                > div
+                    margin: 0 15px
+                section
+                    &.each-card
+                        border-radius: 12px
+                        padding: 15px !important
+                        min-height: 150px
+                        margin: 50px 10px 0 10px
+                    .header
+                        display: flex
+                        flex-wrap: wrap
+                        width: 100%
+                        &.giving-platform
+                            > div
+                                img
+                                    padding: 5px 9px
+                        &.social-media-features
+                            > div
+                                img
+                                    padding: 5px 9px
+                        &.volunteer-management
+                            > div
+                                img
+                                    padding: 5px 7px
+                        &.basic-donor-analytics
+                            > div
+                                img
+                                    padding: 5px 7px                                
+                        > div
+                            border-radius: 50%
+                            background: rgba(26,170,255,0.15)
+                            img
+                                width: 20px
+                        p
+                            padding-left: 10px
+                            font-size: 19px
+                            margin: 5px 0
+                            font-weight: bold
+                    .body
+                        p
+                            word-break: break-word
+                            white-space: pre-wrap
+                            font-size: 16px
+                            line-height: 20px
+                            text-align: left
+                            margin: 10px 0
+                img
+                    width: 100%
+                    height: auto
+        .mobile-view
+            display: none
+
+/* Large Devices, Wide Screens */
+/* @media only screen and (max-width : 1200px) */
+
+/* Medium Devices, Desktops */
+/* @media only screen and (max-width : 992px) */
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+    .offer-nonprofits
+        width: 100%
+        .main
+            .desktop-view
+                display: none
+            .mobile-view
+                display: block
+                > div
+                    &:first-child
+                        margin-top: 30px
+                .each-card
+                    border-radius: 12px
+                    padding: 15px !important
+                    min-height: 150px
+                    margin: 20px auto
+                    max-width: 300px
+                    &:last-child
+                        margin-bottom: 50px
+                .header
+                    display: flex
+                    flex-wrap: wrap
+                    width: 100%
+                    &.giving-platform
+                        > div
+                            img
+                                padding: 5px 9px
+                    &.social-media-features
+                        > div
+                            img
+                                padding: 5px 9px
+                    &.volunteer-management
+                        > div
+                            img
+                                padding: 5px 7px
+                    &.basic-donor-analytics
+                        > div
+                            img
+                                padding: 5px 7px                                
+                    > div
+                        border-radius: 50%
+                        background: rgba(26,170,255,0.15)
+                        img
+                            width: 20px
+                    p
+                        padding-left: 10px
+                        font-size: 19px
+                        margin: 5px 0
+                        font-weight: bold
+                .body
+                    p
+                        word-break: break-word
+                        white-space: pre-wrap
+                        font-size: 16px
+                        line-height: 20px
+                        text-align: left
+                        margin: 10px 0
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px)
+    .offer-nonprofits
+        width: 100%
+        .main
+            .desktop-view
+                display: none
+            .mobile-view
+                display: block
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px)
+    .offer-nonprofits
+        width: 100%
+        .main
+            .desktop-view
+                display: none
+            .mobile-view
+                display: block

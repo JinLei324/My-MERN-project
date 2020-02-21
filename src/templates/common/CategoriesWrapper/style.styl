@@ -1,0 +1,39 @@
+.categoryWrapper
+    m-flex(space-between, flex-start)
+    flex-basis: 100%
+    .categoryWrapperCard
+        padding: 15px 20px 60px!important
+        flex-basis: 100%
+        .categoryHeader
+            margin-top: 0
+            color: white
+        .categoryList
+            // display: flex
+            flex-wrap: wrap
+            margin-top: 15px
+            .categoryBtn
+                border: 2px solid #ffffff
+                background: $blue-color
+                margin: 5px auto
+                width: 100%
+                span
+                    color: white
+                &.checked
+                    border: 2px solid #ffffff
+                    background: #ffffff
+                    span
+                        color: $blue-color
+        .moreCaption
+            color: white
+            font-size: 15px
+            text-align: center
+            margin: 15px 0 0 0
+            cursor: pointer
+            text-decoration: underline
+        .btn-invite
+            padding: 10px 24px
+            background-color: white
+            color: $blue-color
+            border: none
+            margin-top: 20px
+            cursor: pointer

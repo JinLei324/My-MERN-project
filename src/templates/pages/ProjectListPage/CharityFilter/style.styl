@@ -1,0 +1,165 @@
+.charity-filter
+    padding: 8px 20px !important
+    .card-header
+        position: relative
+        margin-top: 10px
+        cursor: default
+        &.isOnlyDesktop
+            display: block
+        &.isOnlyMobile
+            display: none
+		h3
+            cursor: default
+            color: white
+            &.main-font
+                margin: 0
+		.caret
+            position: absolute
+            right: 0
+            top: 5px
+            transition: 0.3s
+            width: 15px
+            height: 9px
+            z-index: 2
+            display: block
+            background-size: cover
+            background-image: url(/images/ui-icon/close_tab_white_icon.svg)
+            cursor: pointer
+    .card-body
+        p
+            margin: 16px 0 5px 0
+        .filter
+            m-flex(center, center)
+            padding: 1.2rem 0
+        .t_title, .t_date, .t_interests
+            color: white
+        .Select-menu-outer 
+            > div
+                > div:nth-child(1), > div:nth-child(2)
+                    border-radius: 0!important
+                    border: none
+                    box-shadow: none                 
+                             
+    &.open
+        max-height 1000px!important
+        .card-body
+            visibility visible!important
+        .card-header
+            .caret
+                transform rotateX(180deg)
+    .input-control-wrapper
+        display: flex
+        flex-direction: row
+        align-items: center
+        align-content: stretch
+        height: 38px
+        background-color: white
+        padding-right: 5px
+        margin-top: 5px
+        &.isOnlyMobile
+            display: none
+        .icon-search
+            flex-basis: 20px
+            color: #828282
+            background-color: white
+            //padding-right: 5px
+            order: 2              
+        .control
+            flex-basis: calc(100vh - 20px)        
+            border: none
+            color rgb(150, 150, 150)
+            text-indent: 10px
+            order: 1
+            &:focus
+                outline none
+@media all and (max-width: 425px)
+    .charity-filter
+        max-height: 100px
+        transition: max-height .3s
+        .card-header
+            &.isOnlyDesktop
+                display: none
+            &.isOnlyMobile
+                display: block
+                h3
+                    cursor: pointer
+        .card-body
+            visibility: hidden
+            transition: visibility .1s
+        .input-control-wrapper
+            &.isOnlyMobile
+                display: flex
+@media all and (max-width: 768px)
+	.charity-filter
+        max-height: 100px
+        transition: max-height .3s
+        .card-header
+            &.isOnlyDesktop
+                display: none
+            &.isOnlyMobile
+                display: block
+                h3
+                    cursor: pointer
+        .card-body
+            visibility: hidden
+            transition: visibility .1s
+        .input-control-wrapper
+            &.isOnlyMobile
+                display: flex
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)
+	.charity-filter
+        max-height: 100px
+        transition: max-height .3s
+        .card-header
+            &.isOnlyDesktop
+                display: none
+            &.isOnlyMobile
+                display: block
+                h3
+                    cursor: pointer
+        .card-body
+            visibility: hidden
+            transition: visibility .1s
+        .input-control-wrapper
+            &.isOnlyMobile
+                display: flex
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+	.charity-filter
+        max-height: 100px
+        transition: max-height .3s
+        .card-header
+            &.isOnlyDesktop
+                display: none
+            &.isOnlyMobile
+                display: block
+                h3
+                    cursor: pointer
+        .card-body
+            visibility: hidden
+            transition: visibility .1s
+        .input-control-wrapper
+            &.isOnlyMobile
+                display: flex
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+	.charity-filter
+        max-height: 100px
+        transition: max-height .3s
+        .card-header
+            &.isOnlyDesktop
+                display: none
+            &.isOnlyMobile
+                display: block
+                h3
+                    cursor: pointer
+        .card-body
+            visibility: hidden
+            transition: visibility .1s
+        .input-control-wrapper
+            &.isOnlyMobile
+                display: flex

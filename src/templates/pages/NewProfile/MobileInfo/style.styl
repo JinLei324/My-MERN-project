@@ -1,0 +1,250 @@
+.mobileInfoSection
+    .mobileInfoCard
+        padding: 47px 31px 0 31px
+        box-shadow: 0 0 20px rgba(0, 0, 0, .15)
+        border-radius: 0
+        .userInfoBody
+            .ratingBody
+                width: 100%
+                display: flex
+                padding: 45px 25px 30px 25px
+                .caption
+                    width: 180px
+                    p
+                        margin: 0
+                        font-family: Montserrat,sans-serif
+                        &.title
+                            color: #000000
+                            font-size: 25px
+                            line-height: 31px
+                            font-weight: bold
+                    .desc
+                        display: flex
+                        img
+                            vertical-align: middle
+                            margin-right: 10px
+                        p
+                            color: #4F4F4F
+                            font-size: 14px
+                            line-height: 17px
+                            font-weight: normal
+                .star
+                    width: 100%
+                    margin-top: -10px
+                    position: relative
+                    z-index: 999
+                    .dv-star-rating
+                        position: absolute
+                        left: 0
+                        top: 0
+                        label
+                            font-size: 32px
+            .ourMissionBody
+                padding: 0 25px
+                .overview
+                    p
+                        margin: 0
+                        font-style: normal
+                        line-height: normal
+                        color: #000000
+                        font-family: Roboto
+                        font-size: 15px
+                        font-weight: normal
+                        &.title
+                            font-size: 25px
+                            line-height: 30px
+                            font-weight: bold
+                            letter-spacing: 0.3px
+                        &.description
+                            padding: 15px 0
+                            line-height: 21px
+                            text-align: left
+            .financialInfoBody
+                padding: 25px 25px
+                .titleBody
+                    display: block
+                    p
+                        color: #000000
+                        font-weight: bold
+                        &.caption
+                            font-size: 25px
+                            line-height: 31px
+                        &.value
+                            font-size: 17px
+                            line-height: 21px
+                            span
+                                margin-left: 10px
+                                color: #20AFFF
+                                font-size: 25px
+                                line-height: 30px
+                .subInfo
+                    margin: 5px 0
+                    padding: 8px 0
+                    &.managementSpend
+                        margin-bottom: 25px
+                    .dollarSign
+                        font-size: 22px
+                        color: #1aaaff
+                        font-weight: bold
+                    .annualBudget
+                        margin-left: 5px
+                        border: none
+                        border-bottom: 1px solid #1aaaff
+                        outline: none
+                        max-width: 60px
+                        text-align: center
+                        padding-left: 10px
+                        box-sizing: border-box
+                        font-family: Roboto
+                        font-style: normal
+                        font-weight: bold
+                        line-height: normal
+                        font-size: 22px
+                        color: #1aaaff
+                    .annualBudgetCaption
+                        margin: 5px
+                        color: #000000
+                        font-family: Roboto
+                        font-size: 14px
+                        font-weight: normal
+                    .summary
+                        display: flex
+                        justify-content: space-between
+                        p
+                            font-size: 16px
+                            font-weight: 500
+                            margin: 0
+                            &.summaryCaption
+                                color: #000000
+                            &.percent
+                                color: #1AAAFF
+                    .flexWrapper
+                        margin-top: 10px
+                        margin-right: 0
+                        width: 100%
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        .progressBar
+                            display: flex
+                            flex-wrap: wrap
+                            flex-basis: 100%
+                            width: 100%
+                            .progressWrapper
+                                width: 100%
+                                flex-basis: 100%
+                                .progress
+                                    height: 10px
+                                    background: #ddd
+                                    position: relative
+                                    .progressContain
+                                        height: 10px
+                                        position: absolute
+                                        left: 0
+                                        top: 0
+                                        background: -webkit-gradient(linear, left top, right top, from(#1aaaff), to(#5eedfd))
+                                        background: -webkit-linear-gradient(left, #1aaaff 0%, #5eedfd 100%)
+                                        background: linear-gradient(90deg, #1aaaff 0%, #5eedfd 100%)
+                .programsTitle
+                    font-size: 25px
+                    font-weight: bold
+                    line-height: 30px
+                    margin: 50px 0 20px 0
+                .programSection
+                    padding: 8px 0
+                    p
+                        margin: 0
+                        font-style: normal
+                        line-height: normal
+                        color: #000000
+                        font-family: Roboto
+                        font-size: 15px
+                        &.title
+                            font-weight: 500
+                            letter-spacing: 0.3px
+                    .subInfo
+                        margin: 8px 0
+                        padding: 0
+                        p
+                            margin: 0
+                            font-style: normal
+                            line-height: 18px
+                            color: #000000
+                            font-family: Roboto
+                            font-size: 14px
+                            font-weight: 500
+                            text-align: left
+                            &.subTitle
+                                color: #1aaaff
+                            &.description
+                                color: #000000
+                                font-weight: normal
+            .contactInfoBody
+                padding: 20px 25px
+                p
+                    color: #000000
+                    font-size: 15px
+                    line-height: 21px
+                    &.title
+                        font-weight: bold
+                        font-size: 25px
+                        line-height: 35px
+            .reviewBody
+                padding: 45px 25px 30px 25px
+                .review-title
+                    m-flex(space-between)
+                    .title
+                        color: #000000
+                        font-weight: bold
+                        font-size: 25px
+                        line-height: 31px
+                    img
+                        cursor: pointer
+                    .btn-new
+                        width 20px
+                        height 18px
+                        background-color #c4c4c4
+                        visibility hidden
+                        &.active
+                            visibility visible
+                .review-list
+                    padding: 15px 0
+                .star-rating
+                    m-flex(flex-start)
+                    .dv-star-rating
+                        .dv-star-rating-star
+                            i
+                                font-size 30px        
+                    .review-count
+                        margin-left 20px
+                        color: #666
+                        m-font(Roboto, normal, 500, normal, 14px)
+                .review-tab
+                    m-flex()
+                    .dv-star-rating
+                        .dv-star-rating-star
+                            padding 0px 10px
+                .new-review
+                    border-radius: 0
+                    .title
+                        color: #000000
+                        font-weight: bold
+                        font-size: 25px
+                        line-height: 31px
+                    ._review
+                        m-font(Open Sans, normal, normal, normal, 14px )
+                        color #666
+                        background #FFFFFF
+                        border 1px solid #DDDDDD
+                        box-sizing border-box
+                        border-radius 0
+                        outline none
+                        padding 10px
+                        width 100%
+                        resize none
+                        &:placeholder
+                            color #CCCCCC
+                    .bot-border
+                        border-bottom 1px solid #F3ECEC
+                    .submit-btn
+                        m-flex(flex-end)

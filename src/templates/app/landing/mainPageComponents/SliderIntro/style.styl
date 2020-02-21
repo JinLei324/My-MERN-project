@@ -1,0 +1,362 @@
+.homeContent
+    box-sizing border-box
+    margin 150px auto 16px
+    width: 100%
+    padding: 0 60px
+    z-index: 99
+    opacity: 1
+    .introBox
+        flex-shrink 0
+        align-self center
+        .captionTitle
+            margin-top 0
+            margin-bottom: 10px
+            font-size: 41px
+            font-weight 900
+            color #1AAAFF
+        .subtitle
+            color: #ffffff
+            font-size: 19px
+            font-weight: 500
+            line-height: 46px   
+            strong
+                color: #1aaaff
+        .searchBox
+            display: none
+        .signUpBox
+            m-flex(flex-start)
+            margin-top 20px
+            a
+                text-decoration none
+            .signUp
+                box-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+                margin-right 10px
+            .discover
+                box-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+    .descBox
+        margin-top: 80px
+        width: 100%
+        p
+            color: #ffffff
+            font-size: 12px
+            font-weight: normal
+            line-height: 30px
+
+@media all and (max-width: 768px)
+    .pageContent
+        flex-direction column
+        .subtext
+            line-height 2.2
+    .homeContent
+        .LearnMore
+            margin-top 30px
+        .leftSide
+            width 100%
+            flex-basis 100%
+        .leftSide
+            .sign-up-box
+                m-flex(center)
+                flex-direction column
+                .sign-up
+                    margin-bottom 10px
+            .searchBox
+                display: none
+
+@media all and (max-width: 425px)
+    .homeContent
+        width: 100%
+        margin: 0 auto
+        padding: 0 25px
+        .introBox
+            width: 100%
+            flex-basis: 100%
+            margin-top: 40px
+            .captionTitle
+                font-size: 40px
+            .subtitle
+                display: none
+            .signUpBox
+                display: block
+                .signUp
+                    margin: 10px auto
+                .discover
+                    margin: 10px auto
+            .searchBox
+                display: block
+                position: relative
+                margin: 40px 40px 50px 40px
+                .icon-button
+                    position: absolute
+                    top: 10px
+                    left: 10px
+                input
+                    background: #ffffff
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    border-radius: 30px
+                    border: none
+                    outline: none
+                    font-size: 12px
+                    padding: 11px 11px 11px 30px
+                    width: 100%
+                    box-sizing: border-box
+                    &:placeholder
+                        color: #9C9B9F
+        .descBox
+            display: none
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)
+    .homeContent
+        width: 100%
+        margin: 0 auto
+        padding: 0 25px
+        .introBox
+            width: 100%
+            flex-basis: 100%
+            margin-top: 40px
+            .captionTitle
+                font-size: 40px
+            .subtitle
+                display: none
+            .signUpBox
+                display: block
+                .signUp
+                    margin: 10px auto
+                    span
+                        font-size: 14px !important
+                        line-height: 20px !important
+                .discover
+                    margin: 10px auto
+                    span
+                        font-size: 14px !important
+                        line-height: 20px !important
+            .searchBox
+                display: block
+                position: relative
+                margin: 40px 40px 50px 40px
+                .icon-button
+                    position: absolute
+                    top: 10px
+                    left: 10px
+                input
+                    background: #ffffff
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    border-radius: 30px
+                    border: none
+                    outline: none
+                    font-size: 12px
+                    padding: 11px 11px 11px 30px
+                    width: 100%
+                    box-sizing: border-box
+                    &:placeholder
+                        color: #9C9B9F
+        .descBox
+            display: none
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+    .homeContent
+        width: 100%
+        margin: 0 auto
+        padding: 0 120px
+        .introBox
+            width: 100%
+            flex-basis: 100%
+            margin-top: 40px
+            .captionTitle
+                font-size: 30px
+            .subtitle
+                display: none
+            .signUpBox
+                display: block
+                .signUp
+                    margin: 10px auto
+                    span
+                        font-size: 15px !important
+                        line-height: 22px !important
+                .discover
+                    margin: 10px auto
+                    span
+                        font-size: 15px !important
+                        line-height: 22px !important
+            .searchBox
+                display: block
+                position: relative
+                margin: 50px 40px 70px 40px
+                .icon-button
+                    position: absolute
+                    top: 10px
+                    left: 10px
+                input
+                    background: #ffffff
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    border-radius: 30px
+                    border: none
+                    outline: none
+                    font-size: 12px
+                    padding: 11px 11px 11px 30px
+                    width: 100%
+                    box-sizing: border-box
+                    &:placeholder
+                        color: #9C9B9F
+        .descBox
+            display: none
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1023.98px)
+    .homeContent
+        box-sizing border-box
+        margin 130px auto 16px
+        .introBox
+            .captionTitle
+                font-size: 22px
+                line-height: 30px
+            .subtitle
+                font-size: 16px
+                line-height: 40px
+            .signUpBox
+                margin-top: 30px
+                .signUp
+                    span
+                        font-size: 17px !important
+                        line-height: 22px !important
+                .discover
+                    span
+                        font-size: 17px !important
+                        line-height: 22px !important
+        .descBox
+            margin-top: 100px
+            p
+                font-size: 11px
+                line-height: 26px
+
+// Extra large devices 1 (large desktops, 1024px and up)
+@media (min-width: 1024px) and (max-width: 1279.98px)
+    .homeContent
+        box-sizing border-box
+        margin 110px auto 16px
+        padding: 0 45px
+        .introBox
+            .captionTitle
+                font-size: 24px
+                line-height: 36px
+            .subtitle
+                font-size: 18px
+                line-height: 46px
+            .signUpBox
+                margin-top: 35px
+                .signUp
+                    span
+                        font-size: 18px !important
+                        line-height: 24px !important
+                .discover
+                    span
+                        font-size: 18px !important
+                        line-height: 24px !important
+        .descBox
+            margin-top: 90px
+            p
+                font-size: 12px
+                line-height: 28px
+
+// Extra large devices 2 (large desktops, 1200px and up)
+@media (min-width: 1280px) and (max-width: 1365.98px)
+    .homeContent
+        box-sizing border-box
+        margin 160px auto 16px
+        padding: 0 56px
+        .introBox
+            .captionTitle
+                font-size: 30px
+                line-height: 45px
+            .subtitle
+                font-size: 22px
+                line-height: 58px
+            .signUpBox
+                margin-top: 40px
+                .signUp
+                    span
+                        font-size: 21px !important
+                        line-height: 26px !important
+                .discover
+                    span
+                        font-size: 21px !important
+                        line-height: 26px !important
+        .descBox
+            margin-top: 120px
+            p
+                font-size: 15px
+                line-height: 34px
+
+// Extra large devices 3 (large desktops, 1366px and up)
+@media (min-width: 1366px) and (max-width: 1599.98px)
+    .homeContent
+        box-sizing border-box
+        margin 184px auto 16px
+        padding: 0 60px
+        .introBox
+            .captionTitle
+                font-size: 32px
+                line-height: 48px
+            .subtitle
+                font-size: 24px
+                line-height: 52px
+            .signUpBox
+                margin-top: 45px
+                .signUp
+                    span
+                        font-size: 24px !important
+                        line-height: 28px !important
+                .discover
+                    span
+                        font-size: 24px !important
+                        line-height: 28px !important
+        .descBox
+            margin-top: 150px
+            p
+                font-size: 16px
+                line-height: 36px
+                    
+
+// Extra large devices 4 (large desktops, 1600px and up)
+@media (min-width: 1600px) and (max-width: 1921.98px)
+    .homeContent
+        box-sizing border-box
+        margin 210px auto 16px
+        padding: 0 70px
+        .introBox
+            .captionTitle
+                font-size: 41px
+                line-height: 58px
+            .subtitle
+                font-size: 30px
+                line-height: 70px
+            .signUpBox
+                margin-top: 45px
+                .signUp
+                    span
+                        font-size: 28px !important
+                        line-height: 32px !important
+                .discover
+                    span
+                        font-size: 28px !important
+                        line-height: 32px !important
+        .descBox
+            margin-top: 190px
+            p
+                font-size: 18px
+                line-height: 38px
+
+// Extra large devices 5 (large desktops, 1920px and up)
+@media (min-width: 1920px)
+    .homeContent
+        box-sizing border-box
+        margin 280px auto 16px
+        padding: 0 85px
+        .introBox
+            .captionTitle
+                font-size: 45px
+                line-height: 68px
+            .subtitle
+                font-size: 33px
+                line-height: 86px

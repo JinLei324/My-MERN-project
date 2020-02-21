@@ -1,0 +1,49 @@
+
+
+.SlideIn-appear
+	transform translateY(10px)
+	opacity 0
+	&.SlideIn-appear-active
+		opacity 1
+		transform translateY(0)
+		transition all 0.6s ease 
+.SlideIn-enter
+	opacity 0
+	transform translateY(10px)
+	&.SlideIn-enter-active
+		opacity 1
+		transform translateY(0)
+		transition all 0.2s ease 0.4s
+.SlideIn-leave 
+	opacity 1
+	transform translateY(0)
+	&.SlideIn-leave-active
+		opacity 0
+		position absolute
+		width 100%
+		transform translateY(-10px)
+		transition all 0.2s ease
+
+
+.SlideOut-appear
+	transform translateY(-10px)
+	opacity 0
+	&.SlideOut-appear-active
+		opacity 1
+		transform translateY(0)
+		transition all 0.6s ease
+.SlideOut-enter
+	opacity 0
+	transform translateY(-10px)
+	&.SlideOut-enter-active
+		opacity 1
+		transform translateY(0)
+		transition all 0.2s ease 0.4s
+.SlideOut-leave 
+	opacity 1
+	transform translateY(0)
+	&.SlideOut-leave-active
+		opacity 0
+		position absolute
+		width 100%
+		transition all 0.2s ease

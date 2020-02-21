@@ -1,0 +1,57 @@
+.projectSummaryModal
+	m-flex()
+	position absolute
+	top 0
+	right 0
+	left 0
+	bottom 0
+	z-index 30
+	background-color #00000066
+	opacity 0
+	visibility hidden
+	transition opacity .3s
+	border-radius 0
+	&.open
+		opacity 1
+		visibility visible
+	label
+		font-weight 500
+	.projectSummaryContent
+		position relative
+		width 280px
+		padding 20px
+		background-color #fff
+		text-align center
+		box-sizing border-box
+		.summary-item
+			line-height 25px
+		.project-type
+			size(40px, 40px)
+			disp-pos(absolute)
+			border 2px solid white
+			border-radius 50%
+			z-index 1
+			top -20px
+			right -20px
+			&.type-0
+				background linear-gradient(180deg, #F5A623 0%, #FBD249 100%);
+			&.type-1
+				background linear-gradient(180deg, #43A047 0%, #C3DEA5 100%)
+			&.type-2
+				background linear-gradient(180deg, #1AAAFF 0%, #5EEDFD 100%)
+			.type
+				size(100%, 100%)
+				transform scale(0.5)
+		.count
+			color $first-color
+		.pickups
+			m-flex()
+			flex-wrap wrap
+			.pickup
+				font-size 10px
+				width 50%
+				flex-basis 50%
+		.action-buttons
+			m-flex()
+			.button-main-class:not(:last-child)
+				margin-right 5px

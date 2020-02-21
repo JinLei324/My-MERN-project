@@ -1,0 +1,35 @@
+.SignUp
+	.smallHeader
+		font-size 14px
+		margin 12px 0 20px 0
+		text-align center
+		color #999999
+	.checkbox-container
+		m-font(Roboto, normal, 500, normal, 14px)
+		text-transform none
+		a
+			color $first-color
+	.chooseUserTypes
+		background linear-gradient(0deg, #FFFFFF, #FFFFFF), #FAFAFA
+		box-shadow 0px 5px 15px rgba(0, 0, 0, 0.1)
+		border-radius 40px
+		margin-bottom 25px
+		display flex
+		justify-content space-between
+		.chooseAccountType
+			display none
+			+ label[for*="userType"],
+			+ label[htmlfor*="userType"]
+				padding 15px 24px
+				color #666666
+				cursor pointer
+				border-radius 30px
+				font-size 16px
+				text-align center
+				transition .2s
+			&.checked
+				+ label[for*="userType"],
+				+ label[htmlfor*="userType"]
+					background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+					color white
+					transition .2s

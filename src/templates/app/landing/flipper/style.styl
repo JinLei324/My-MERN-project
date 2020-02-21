@@ -1,0 +1,74 @@
+.landingContainer
+	.Countdown
+		margin 10px auto
+		width 820px
+		.Countdown-col
+			display inline-block
+			h5
+				display block
+				text-align center
+				margin 33px 0 20px 0 
+				font-weight normal
+				line-height normal
+				font-size 16px
+				letter-spacing 0.01em
+				color #666666
+			.Countdown-col-element
+				margin 0 20px
+				display flex
+				flex-direction row
+				strong
+					position relative
+					font-size 48px
+					padding 17px
+					margin 0 4px
+					z-index 2
+					text-align center
+					color #9686D7
+					box-sizing border-box
+					border 2px solid #B7B2C7
+					box-shadow 0px 2px 0px rgba(0, 0, 0, 0.2)
+					border-radius 8px
+					&:before
+						content ''
+						position absolute
+						top 50%
+						z-index -1
+						left 0
+						height 1px
+						background-color #d8d8d8
+						display block
+						width 100%
+					.next-number
+						opacity 0
+						display block
+						position absolute
+						transition 1s
+					.current-number
+						opacity 1
+						position relative
+						display block
+						transition 1s
+
+@media all and (max-width: 835px)
+	.landingContainer
+		.Countdown
+			width 583px
+			.Countdown-col
+				.Countdown-col-element
+					margin 0 15px
+					strong
+						padding 4px
+					
+
+@media all and (max-width: 600px)
+	.landingContainer
+		.Countdown
+			width 320px
+			.Countdown-col
+				.Countdown-col-element
+					margin 0 5px
+					strong
+						padding 1px
+						font-size 30px
+						

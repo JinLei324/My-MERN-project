@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0,  user-scalable=0" />
+	
+	<!-- , shrink-to-fit=no -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="robots" content="all,follow">
+	<meta name="theme-color" content="#fff" />
+	<meta name="p:domain_verify" content="f944dfed3408268674cfebe8360fe502" />
+	<meta http-equiv="content-type" content="text/plain; charset=UTF-8" />
+	<meta name="Description"
+		content="OneGivv is a social, giving platform that connects you to the communities and causes you care about.">
+
+	<meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/ui-icon/favicon/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	
+	<link rel="icon" href="%PUBLIC_URL%/favicon.png" type="image/svg+xml" sizes="any" />
+
+	<!-- <link rel="stylesheet" type="text/css" href="/css/slick.css"/> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/> -->
+	<link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="/css/aos.css">
+
+	<title>OneGivv</title>
+
+	<script type='text/javascript'
+		src='//platform-api.sharethis.com/js/sharethis.js#property=5d381a2db8c053001244324c&product=inline-share-buttons'
+		async='async'></script>
+	<!-- <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> -->
+
+	<!-- <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> -->
+	<script type="text/javascript">
+		// stLight.options({
+		// 	publisher: '12345',
+		// });
+	</script>
+
+	<script src="https://websdk.getsocial.im/sdk.min.js"></script>
+	<script>
+		// var getSocial = new GetSocialSDK({ appId: "X8JYP07m8Ln" });
+		// console.log(getSocial)
+	</script>
+	<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body class="home">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128570924-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || []
+		function gtag() {
+			dataLayer.push(arguments)
+		}
+		gtag('js', new Date())
+
+		gtag('config', 'UA-128570924-1')
+	</script>
+
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuMQs00SaxXjB7pQz0cwIGj-3gIVZYOGI&libraries=geometry,drawing,places"></script>
+	<script async src="https://static.addtoany.com/menu/page.js"></script>
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+		(function () {
+			var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/5cd4ea32d07d7e0c6392d70c/default';
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+
+
+		Tawk_API.onChatMinimized = function () {
+			// console.log("minimized")
+		}
+	</script>
+	<!--End of Tawk.to Script-->
+	<noscript> You need to enable JavaScript to run this app. </noscript>
+	<div id="root"></div>
+	<script id="stripe-js" src="https://js.stripe.com/v3/" async></script>
+
+	<!-- <script>
+		window.intercomSettings = {
+			app_id: "q4hnc1xx"
+		};
+	</script> -->
+	<script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/q4hnc1xx'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();</script>
+	
+	<!-- <span id="button_1"></span>
+	<script>
+		stWidget.addEntry({
+			"service": "sharethis",
+			"element": document.getElementById('button_1'),
+			"url": "http://sharethis.com",
+			"title": "sharethis",
+			"type": "large",
+			"text": "ShareThis",
+			"image": "http://www.softicons.com/download/internet-icons/social-superheros-icons-by-iconshock/png/256/sharethis_hulk.png",
+			"summary": "this is description1"
+		});
+	</script> -->
+	<script type="text/javascript">
+		function inviteFriendsViaGetSocial(channel) {
+			var getSocial = new GetSocialSDK({ appId: "X8JYP07m8Ln" });
+			var params = {
+				identity_type: "email",
+				value: "zhicheng@onebenefactor.com",
+				token: "d7sf9sd8f7s9d8f78sd"
+			};
+			getSocial.auth.authenticate(params)
+				.then(function (response) {
+					console.log("Auth Response #" + JSON.stringify(response.user));
+					console.log("User #" + response.user.id + " is authenticated");
+
+					params = {
+						"channel": channel,
+						"custom_data": {
+							"key": "value"
+						}
+					};
+					getSocial.smartInvites.create(params)
+						.then(function (invite) {
+							console.log(invite.url);
+							window.open(invite.url)
+						})
+						.catch(function (error) {
+							console.log(error);
+						});
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+		}
+	</script>
+	<div id="fb-root"></div>
+	<script type="text/javascript">
+		// window.fbAsyncInit = function () {
+		// 	FB.init({
+		// 		appId: '2471452612875140',
+		// 		autoLogAppEvents: true,
+		// 		xfbml: true,
+		// 		version: 'v2.11'
+		//   	});
+	
+		//   	// Broadcast an event when FB object is ready
+		//   	var fbInitEvent = new Event('FBObjectReady');
+		//   	document.dispatchEvent(fbInitEvent);
+		// };
+	
+		// (function (d, s, id) {
+		//   	var js, fjs = d.getElementsByTagName(s)[0];
+		//   	if (d.getElementById(id)) { return; }
+		//   	js = d.createElement(s); js.id = id;
+		//   	js.src = "https://connect.facebook.net/en_US/sdk.js";
+		//   	fjs.parentNode.insertBefore(js, fjs);
+		// }(document, 'script', 'facebook-jssdk'));
+
+		// fbAsyncInit();
+	</script>
+
+	<script type="text/javascript" src="/js/jquery.lazy.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.lazy.plugins.min.js"></script>
+	<script type="text/javascript" src="/js/sly.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.ba-throttle-debounce.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="/js/simpleParallax.min.js"></script>
+	<script type="text/javascript" src="/js/parallax.min.js"></script>
+	<script type="text/javascript" src="/js/aos.min.js"></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+	<script type="text/javascript" src="/js/custom.js"></script>
+</body>
+
+</html>

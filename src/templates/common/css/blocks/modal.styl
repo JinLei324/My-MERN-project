@@ -1,0 +1,182 @@
+@import "../vars.styl";
+
+.white-popup {
+  // background-image: linear-gradient(to right, #fff 0%, $blue 100%);
+  background-color: #fff;
+  background-image: url(/images/ui-icon/back/call-back.jpg);
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 35px 30px;
+  text-align: left;
+  max-width: 378px;
+  margin: 40px auto;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    content: '';
+    opacity: 0.2;
+    z-index: -1;
+  }
+  h2 {
+    text-align: center;
+  }
+  br {
+    display: none;
+  }
+  h3 {
+    position: relative;
+    margin-bottom: 1.5em;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #fff;
+    text-align: center;
+  }
+
+  .form__control {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .popup-modal-dismiss {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    svg {
+      path {
+        fill: #fff
+      }
+    }
+  }
+
+}
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+
+  transform: translateY(-20px) perspective(600px) rotateX(10deg);
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+
+  transform: translateY(0) perspective(600px) rotateX(0);
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+  opacity: 0;
+
+  transform: translateY(-10px) perspective(600px) rotateX(10deg);
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+  opacity: 0;
+
+  transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+  padding: 0;
+}
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+  top: 0;
+  bottom: 0;
+}
+
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0;
+}
+
+/*
+
+for zoom animation
+uncomment this part if you haven't added this code anywhere else
+
+*/
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

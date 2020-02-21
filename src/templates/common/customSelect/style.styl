@@ -1,0 +1,44 @@
+.customSelect
+	position relative
+	.arrowInside
+		position absolute
+		width 25px
+		transition .3s
+		height 30px
+		right 5px
+		top 30px
+		background-image url(/images/ui-icon/toggle_main_menu_submenu.svg)
+		background-color white
+		z-index 3
+		background-position center
+		background-repeat no-repeat
+	&.open
+		.arrowInside
+			transition .3s
+			transform rotateX(180deg)
+		ul.dropInput
+			visibility visible
+			transition .3s
+			max-height 400px
+	ul.dropInput
+		margin 0
+		list-style none
+		position absolute
+		bottom 46px
+		background-color white
+		z-index 6
+		overflow hidden
+		transition .3s
+		visibility hidden
+		max-height 0
+		width calc(100% - 35px)
+		border-radius 8px
+		box-shadow 0 1px 5px 1px rgba(0, 0, 0, 0.15)
+		font-size 'Open Sans', sans-serif
+		color #999999
+		padding 5px 15px
+		li
+			cursor pointer
+			padding 5px 0
+			&:hover
+				color $first-color

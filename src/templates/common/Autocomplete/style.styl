@@ -1,0 +1,74 @@
+.autocomplete
+	position relative
+	input
+		width 100%
+		height 32px
+		text-align left
+		padding-left 10px
+		resize none
+		box-sizing border-box
+		border 1px solid #ddd
+		outline none
+.input-wrapper
+	&.with-location
+		margin-bottom 10px
+.autocomplete-dropdown-container
+	position absolute
+	border-radius 0
+	overflow hidden
+	box-shadow 0 1px 5px 1px rgba(0, 0, 0, 0.15)
+	background-color white
+	padding 5px 15px
+	width 100%
+	box-sizing border-box
+	z-index 999
+	.item-city
+		font-size 12px
+		line-height 2
+		font-size 'Open Sans', sans-serif
+		background-color transparent!important
+		span:first-child
+			color #777
+		span:last-child
+			color #ccc
+		&:hover span
+			color $first-color
+
+	+ .placeholder
+		font-size 14px
+		color #999999
+		position absolute
+		left 5px
+		transition .1s
+		z-index 1
+		top 15px
+		&:not([value=""]),
+		&:focus
+			+ .placeholder
+				transition .1s
+				top -10px
+.AuthModal
+	.form-wrapper
+		.input-wrapper
+			&.autocomplete-modal-window
+				.input-modal-auth
+					+ .placeholder
+						top 8px
+					&:not([value=""]),
+					&:focus
+						+ .placeholder
+							top -20px
+
+.autocomplete-settings
+	margin 30px 0 7px 0 !important
+	/*input
+		border-radius 8px
+		outline none
+		&:focus
+			border 1px solid $first-color!important*/
+	.placeholder
+		margin: 0 0 4px 0
+		font-size 12px
+		color #666
+		position relative
+		top -55px

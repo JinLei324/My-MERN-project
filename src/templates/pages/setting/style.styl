@@ -1,0 +1,161 @@
+.SettingPage
+    background #FFFFFF
+    box-shadow 0px 1px 5px rgba(0, 0, 0, 0.1)
+    border-radius 0
+    padding 40px
+    max-width $max-card-width
+    margin 16px auto 0
+    .btn-back
+        cursor pointer
+    .firstTitle
+        font-weight 500
+        line-height 32px
+        font-size 24px
+        text-align center
+        color #333333
+        margin 0 0 0 0 
+    .secondTitle
+        font-weight 500
+        line-height 32px
+        font-size 16px
+        text-align center
+        color #333333
+        &.marginNotification,&.marginAccount
+            margin 35px 0 0 0
+    .set_description
+        m-font(Open Sans, normal, normal, normal, 14px)
+        color #666
+        padding 5px
+    .horizontalTab
+        .mainSettingTitle
+            position relative
+            cursor pointer
+            font-weight 500
+            margin 0
+            padding 19px 0
+            font-size 14px
+            color #333333
+            .arrowBlock
+                position absolute
+                right 0
+                top 19px
+                border-radius 48px
+                width 24px
+                height 24px                  
+                background linear-gradient(90deg, $first-color 0%, $second-color 100%)
+                + .arrow
+                    transition .3s
+                    width 8px
+                    height 5px 
+                    position absolute
+                    right 8px
+                    top 29px
+                    z-index 2
+                    display block
+                    background-size cover
+                    background-image url(/images/ui-icon/close_tab_icon.svg)
+                &:before
+                    content ''
+                    display block
+                    position absolute
+                    width calc(100% - 2px)
+                    height calc(100% - 2px)
+                    border-radius 48px
+                    left 1px
+                    top 1px
+                    background-color white
+        .innerTab
+            transition .3s
+            overflow hidden
+            max-height 0
+            .changeMainButton,
+            .changePasswordButton,
+            .changeEmailButton {
+                display block
+                margin 27px auto 39px auto
+            }
+            .restorePassword
+                font-family 'Open Sans'
+                font-size 14px
+                text-align center
+                color #666666
+                .routerlinkForgot
+                    color $first-color
+                    margin-left 5px
+                    cursor pointer
+                    text-decoration underline
+            form.input-form
+                display flex
+                flex-wrap wrap
+            .input-wrapper
+                margin 7px 0 7px 0
+                padding 0 5px
+                position relative
+                box-sizing border-box
+                flex-basis 100%
+                &.width-50
+                    width: 50%;
+                    flex-basis: 50%;
+                .labelForInput
+                    font-weight 500
+                    margin 0 0 4px 0
+                    font-size 12px
+                    color #666666
+                .settingsInput
+                    font-family 'Open Sans'
+                    width 100%
+                    padding 6px 16px
+                    margin-bottom 18px
+                    font-size 14px
+                    background #FFFFFF
+                    outline none 
+                    border-radius 0
+                    border 1px solid #DDDDDD
+                    box-sizing border-box
+                    &:focus
+                        border-color #A994FF
+                .input-modal-auth
+                    margin-bottom 0px 
+                    font-family 'Open Sans'
+                    width 100%
+                    padding 6px 16px
+                    font-size 14px
+                    background #FFFFFF
+                    outline none 
+                    border-radius 0
+                    border 1px solid #DDDDDD
+                    box-sizing border-box
+                    &:focus
+                        border-color #A994FF
+                .about-me
+                    width 100%
+                    outline none
+                    resize none
+                .errorHandler
+                    position absolute
+                    bottom 0
+                    margin 4px 0 0 0
+                    font-size 12px
+                    color #FF90B5
+        &.open
+            .innerTab
+                transition .5s
+                max-height 1000px
+            .mainSettingTitle
+                .arrowBlock
+                    + .arrow
+                        transition .5s
+                        background-image url(/images/ui-icon/open_tab_icon.svg)
+        &:not(:last-of-type)
+            border-bottom 1px solid #DDDDDD
+    .pushNotification
+        display flex
+        justify-content space-between
+        h4
+            font-weight 500
+            font-size 14px
+            color #333333
+
+@media all and (max-width: 768px)
+    .SettingPage
+        padding 40px 15px

@@ -1,0 +1,49 @@
+.my-achivement-card
+    display: flex
+    padding: 20px 0px
+    align-items: center
+    justify-content: space-between
+    cursor: pointer
+    &.active
+        color: #1AAAFF
+    .icon
+        display: flex
+        flex-direction: column
+        flex-basis: 60px
+        position: relative
+        img
+            width: 45px
+            height: auto
+        > div
+            position: absolute
+            left: 0
+            top: 16px
+            width: 45px
+            .pointVal
+                font-size: 11px
+                text-align: center
+    .info
+        display: flex
+        flex-direction: column
+        flex-basis: 70%
+        > div
+            p
+                margin: 3px 0
+                &.title
+                    m-font(Roboto, normal, 500, 15px, 14px)
+                    color: #333
+                    margin-bottom: 3px
+                    &.active
+                        color: #1AAAFF
+                &.desc
+                    m-font(Roboto, normal, normal, 18px, 13px)
+                    color: #3E4A59
+                    opacity: 0.7
+    .point
+        p
+            font-weight: bold
+            font-size: 13px
+            vertical-align: top
+            color: #666666
+            &.active
+                color: #1AAAFF                
